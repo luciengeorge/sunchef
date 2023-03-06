@@ -1,0 +1,86 @@
+#home {
+  .intro {
+      background-color: #d5eee9;
+      padding: 100px 0;
+    }
+
+    .intro__svg {
+      width: 200px;
+    }
+
+
+    .find-your-balance {
+      background-color: #f8cfc5;
+      padding: 0 0 100px 0;
+    }
+
+    .title__red {
+      color: #e24340;
+    }
+
+    .title {
+      position: relative;
+      bottom: 90px;
+
+      h1 {
+        font-size: 80px;
+        line-height: 0.9;
+        font-weight: bold;
+      }
+    }
+
+    .subtitle {
+      color: #ed8d77;
+      font-weight: bold;
+    }
+
+    .sparkles {
+      fill: #ed8d77;
+      width: 50px;
+    }
+
+    .illustration {
+      height: 750px;
+      right: 100px;
+      bottom: 50px;
+    }
+
+    .grid {
+      height: 50vw;
+      color: $white;
+      h2 {
+        font-size: 100px;
+        font-weight: bold;
+      }
+    }
+
+    .grid__top__left {
+      background-color: #fad685;
+    }
+
+    .grid__top__right {
+      background-color: #f8cfc5;
+    }
+
+    .grid__bottom__left {
+      background-color: #cad6ab;
+    }
+
+    .grid__bottom__right {
+      background-color: #d5eee9;
+    }
+
+    .grid__image__wrapper {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .grid__svg {
+        width: 200px;
+      }
+    }
+
+    .middle__section {
+      padding: 100px 0;
+    }
+}

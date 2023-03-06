@@ -1,0 +1,24 @@
+#navbar {
+  .logo {
+    width: 33%;
+    height: 250px;
+    object-fit: contain;
+    object-position: center;
+    position: relative;
+    top: 110px;
+  }
+
+  .navbar__left {
+    width: 33%;
+  }
+
+  .navbar__right {
+    width: 33%;
+  }
+
+  .navbar__link {
+    color: #000000;
+    font-style: italic;
+    text-decoration: none;
+  }
+}

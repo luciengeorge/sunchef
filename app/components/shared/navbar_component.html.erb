@@ -1,0 +1,14 @@
+<div class="container">
+  <div id="navbar" class="d-flex justify-content-around align-items-center">
+    <div class="navbar__left d-flex justify-content-around align-items-center">
+      <%= link_to "home", root_path, class: "navbar__link" %>
+      <%= link_to "about", about_path, class: "navbar__link" %>
+    </div>
+    <%= image_tag "logo.png", alt: "Sunchef Logo", class: "logo" %>
+    <div class="navbar__right d-flex justify-content-around align-items-center">
+      <%= link_to "cook", "#", class: "navbar__link" %>
+      <%= link_to "coaching", "#", class: "navbar__link" %>
+      <%= link_to "shop", "#", class: "navbar__link" %>
+    </div>
+  </div>
+</div>

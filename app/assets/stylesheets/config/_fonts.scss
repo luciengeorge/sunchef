@@ -1,0 +1,66 @@
+@font-face {
+  font-family: 'SuisseIntl';
+  src: font-url('SuisseIntl-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: font-url('SuisseIntl-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: font-url('SuisseIntl-LightItalic.otf');
+  font-weight: light;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: font-url('SuisseIntl-Medium.otf');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SuisseIntl';
+  src: font-url('SuisseIntl-RegularItalic.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: font-url('Raleway-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: font-url('Raleway-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: font-url('Raleway-LightItalic.ttf');
+  font-weight: light;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Raleway';
+  src: font-url('Raleway-Medium.ttf');
+  font-weight: medium;
+  font-style: normal;
+}
+
+
+$body-font: 'SuisseIntl', sans-serif;
+$headers-font: 'Raleway', sans-serif;
