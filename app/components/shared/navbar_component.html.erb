@@ -9,6 +9,9 @@
       <%= link_to "cook", "#", class: class_names("navbar__link", active: false) %>
       <%= link_to "coaching", "#", class: class_names("navbar__link", active: false) %>
       <%= link_to "shop", "#", class: class_names("navbar__link", active: false) %>
+      <% if user_signed_in %>
+        <%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar__link" %>
+      <% end %>
     </div>
   </div>
 </div>
