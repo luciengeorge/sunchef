@@ -1,0 +1,26 @@
+inherit_gem:
+  rubocop-shopify: rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 3.1
+  Exclude:
+    - "db/**/*"
+    - "bin/**/*"
+    - "test/tmp/**/*"
+    - "vendor/bundle/**/*"
+    - "sorbet/**/*"
+
+Style/MethodCallWithArgsParentheses:
+  Exclude:
+    - "**/Gemfile"
+    - "test/**/*"
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "test/**/*"
+
+Style/Documentation:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: true

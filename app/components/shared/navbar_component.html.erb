@@ -1,14 +1,17 @@
 <div class="container">
   <div id="navbar" class="d-flex justify-content-around align-items-center">
     <div class="navbar__left d-flex justify-content-around align-items-center">
-      <%= link_to "home", root_path, class: "navbar__link" %>
-      <%= link_to "about", about_path, class: "navbar__link" %>
+      <%= link_to "home", root_path, class: class_names("navbar__link", active: current_page?(root_path)) %>
+      <%= link_to "about", about_path, class: class_names("navbar__link", active: current_page?(about_path)) %>
     </div>
     <%= image_tag "logo.png", alt: "Sunchef Logo", class: "logo" %>
     <div class="navbar__right d-flex justify-content-around align-items-center">
-      <%= link_to "cook", "#", class: "navbar__link" %>
-      <%= link_to "coaching", "#", class: "navbar__link" %>
-      <%= link_to "shop", "#", class: "navbar__link" %>
+      <%= link_to "cook", "#", class: class_names("navbar__link", active: false) %>
+      <%= link_to "coaching", "#", class: class_names("navbar__link", active: false) %>
+      <%= link_to "shop", "#", class: class_names("navbar__link", active: false) %>
+      <% if user_signed_in %>
+        <%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar__link" %>
+      <% end %>
     </div>
   </div>
 </div>
