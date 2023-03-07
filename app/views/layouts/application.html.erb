@@ -12,6 +12,7 @@
 
   <body>
     <%= render Shared::NavbarComponent.new %>
+    <%= render Shared::FlashComponent.new(notice:, alert:) %>
     <%= yield %>
   </body>
 </html>
