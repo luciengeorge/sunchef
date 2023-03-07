@@ -83,4 +83,30 @@
     .middle__section {
       padding: 100px 0;
     }
+
+    .breakfast-image-wrapper {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), asset-url("breakfast.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .breakfast-title-bottom {
+      font-size: 60px;
+      font-weight: bold;
+    }
+
+    .breakfast-title-bottom {
+      font-size: 80px;
+      font-weight: bold;
+    }
+
+    .breakfast-btn {
+      background-color: #ff7f77;
+      border: none;
+      padding: 30px 50px;
+      color: $black;
+      border-radius: 100px;
+      font-size: 40px;
+      width: 100%;
+    }
 }

@@ -14,5 +14,6 @@
     <%= render Shared::NavbarComponent.new(user_signed_in: user_signed_in?) %>
     <%= render Shared::FlashComponent.new(notice:, alert:) %>
     <%= yield %>
+    <%= render Shared::FooterComponent.new %>
   </body>
 </html>

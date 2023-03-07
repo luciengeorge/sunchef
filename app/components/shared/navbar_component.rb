@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 # typed: true
 
+require "sorbet-runtime"
 module Shared
   class NavbarComponent < ViewComponent::Base
     extend T::Sig

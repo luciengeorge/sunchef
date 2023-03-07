@@ -13,6 +13,7 @@ AllCops:
 Style/MethodCallWithArgsParentheses:
   Exclude:
     - "**/Gemfile"
+    - "**/Gemfile.lock"
     - "test/**/*"
 
 Style/ClassAndModuleChildren:

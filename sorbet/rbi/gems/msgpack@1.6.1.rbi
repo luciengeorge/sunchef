@@ -48,8 +48,6 @@ class Hash
   def to_msgpack_with_packer(packer); end
 end
 
-# Enhance the Integer class with a XML escaped character conversion.
-#
 # source://msgpack//lib/msgpack/core_ext.rb#98
 class Integer < ::Numeric
   include ::MessagePack::CoreExt
@@ -279,9 +277,6 @@ class NilClass
   def to_msgpack_with_packer(packer); end
 end
 
-# Enhance the String class with a XML escaped character version of
-# to_s.
-#
 # source://msgpack//lib/msgpack/core_ext.rb#57
 class String
   include ::Comparable
