@@ -9,33 +9,34 @@
     }
 
 
-    .find-your-balance {
-      background-color: #f8cfc5;
+    .find_your_balance__section {
+      background-color: $light-pink;
       padding: 0 0 100px 0;
-    }
 
-    .title__red {
-      color: #e24340;
-    }
+      .title--red {
+        color: $red;
+      }
 
-    .title {
-      position: relative;
-      bottom: 90px;
+      .title {
+        position: relative;
+        bottom: 90px;
 
-      h1 {
-        font-size: 80px;
-        line-height: 0.9;
-        font-weight: bold;
+        h1 {
+          font-size: 80px;
+          line-height: 0.9;
+          font-weight: bold;
+        }
       }
     }
 
+
     .subtitle {
-      color: #ed8d77;
+      color: $pink;
       font-weight: bold;
     }
 
     .sparkles {
-      fill: #ed8d77;
+      fill: $pink;
       width: 50px;
     }
 
@@ -49,25 +50,36 @@
       height: 50vw;
       color: $white;
       h2 {
-        font-size: 100px;
+        font-size: 2rem;
+        @include media-breakpoint-up(sm) {
+          font-size: 3rem;
+        }
+
+        @include media-breakpoint-up(md) {
+          font-size: 4rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+          font-size: 5rem;
+        }
         font-weight: bold;
       }
     }
 
     .grid__top__left {
-      background-color: #fad685;
+      background-color: $light-yellow;
     }
 
     .grid__top__right {
-      background-color: #f8cfc5;
+      background-color: $light-pink;
     }
 
     .grid__bottom__left {
-      background-color: #cad6ab;
+      background-color: $kaki;
     }
 
     .grid__bottom__right {
-      background-color: #d5eee9;
+      background-color: $light-blue;
     }
 
     .grid__image__wrapper {
@@ -84,24 +96,24 @@
       padding: 100px 0;
     }
 
-    .breakfast-image-wrapper {
+    .breakfast__section {
       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), asset-url("breakfast.jpg");
       background-size: cover;
       background-position: center;
     }
 
-    .breakfast-title-bottom {
+    .breakfast__section--title-top {
       font-size: 60px;
       font-weight: bold;
     }
 
-    .breakfast-title-bottom {
+    .breakfast__section--title-bottom {
       font-size: 80px;
       font-weight: bold;
     }
 
     .breakfast-btn {
-      background-color: #ff7f77;
+      background-color: $pink;
       border: none;
       padding: 30px 50px;
       color: $black;
