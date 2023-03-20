@@ -4,6 +4,13 @@ Rails.application.routes.draw do
   authenticate :user, ->(user) { user.admin? } do
     namespace :admin do
       resources :users
+      resources :recipes do
+        delete :images, on: :member, action: :destroy_image
+      end
+      resources :categories
+      resources :ingredients
+      resources :instructions
+      resources :testimonials
 
       root to: "users#index"
     end

@@ -8,9 +8,11 @@ ruby "3.1.2"
 gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
 gem "administrate"
+gem "administrate-field-active_storage"
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2.2"
 gem "devise"
+gem "image_processing"
 gem "importmap-rails"
 gem "jbuilder"
 gem "jquery-rails"

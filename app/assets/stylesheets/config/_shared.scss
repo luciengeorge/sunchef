@@ -5,3 +5,8 @@ abbr {
 .object-fit-cover {
   object-fit: cover;
 }
+
+
+.min-body-height {
+  min-height: calc(100vh - 349.2px);
+}
