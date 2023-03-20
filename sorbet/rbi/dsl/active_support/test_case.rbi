@@ -6,5 +6,20 @@
 
 class ActiveSupport::TestCase
   sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def categories(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def ingredients(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def instructions(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def recipes(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def testimonials(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
   def users(*fixture_names); end
 end

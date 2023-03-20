@@ -167,6 +167,136 @@ class Administrate::Engine < ::Rails::Engine
   end
 end
 
+# source://administrate//lib/administrate/field/deferred.rb#4
+module Administrate::Field; end
+
+# source://administrate//lib/administrate/field/base.rb#6
+class Administrate::Field::Base
+  # @return [Base] a new instance of Base
+  #
+  # source://administrate//lib/administrate/field/base.rb#35
+  def initialize(attribute, data, page, options = T.unsafe(nil)); end
+
+  # Returns the value of attribute attribute.
+  #
+  # source://administrate//lib/administrate/field/base.rb#81
+  def attribute; end
+
+  # Returns the value of attribute data.
+  #
+  # source://administrate//lib/administrate/field/base.rb#81
+  def data; end
+
+  # source://administrate//lib/administrate/field/base.rb#43
+  def html_class; end
+
+  # source://administrate//lib/administrate/field/base.rb#47
+  def name; end
+
+  # Returns the value of attribute options.
+  #
+  # source://administrate//lib/administrate/field/base.rb#81
+  def options; end
+
+  # Returns the value of attribute page.
+  #
+  # source://administrate//lib/administrate/field/base.rb#81
+  def page; end
+
+  # @return [Boolean]
+  #
+  # source://administrate//lib/administrate/field/base.rb#55
+  def required?; end
+
+  # Returns the value of attribute resource.
+  #
+  # source://administrate//lib/administrate/field/base.rb#81
+  def resource; end
+
+  # source://administrate//lib/administrate/field/base.rb#51
+  def to_partial_path; end
+
+  class << self
+    # @return [Boolean]
+    #
+    # source://administrate//lib/administrate/field/base.rb#15
+    def associative?; end
+
+    # @return [Boolean]
+    #
+    # source://administrate//lib/administrate/field/base.rb#19
+    def eager_load?; end
+
+    # source://administrate//lib/administrate/field/base.rb#27
+    def field_type; end
+
+    # source://administrate//lib/administrate/field/base.rb#11
+    def html_class; end
+
+    # source://administrate//lib/administrate/field/base.rb#31
+    def permitted_attribute(attr, _options = T.unsafe(nil)); end
+
+    # @return [Boolean]
+    #
+    # source://administrate//lib/administrate/field/base.rb#23
+    def searchable?; end
+
+    # source://administrate//lib/administrate/field/base.rb#7
+    def with_options(options = T.unsafe(nil)); end
+  end
+end
+
+# source://administrate//lib/administrate/field/deferred.rb#5
+class Administrate::Field::Deferred
+  # @return [Deferred] a new instance of Deferred
+  #
+  # source://administrate//lib/administrate/field/deferred.rb#6
+  def initialize(deferred_class, options = T.unsafe(nil)); end
+
+  # source://administrate//lib/administrate/field/deferred.rb#18
+  def ==(other); end
+
+  # @return [Boolean]
+  #
+  # source://administrate//lib/administrate/field/deferred.rb#24
+  def associative?; end
+
+  # Returns the value of attribute deferred_class.
+  #
+  # source://administrate//lib/administrate/field/deferred.rb#11
+  def deferred_class; end
+
+  # @return [Boolean]
+  #
+  # source://administrate//lib/administrate/field/deferred.rb#28
+  def eager_load?; end
+
+  # source://administrate//lib/administrate/field/deferred.rb#60
+  def html_class(*_arg0, **_arg1, &_arg2); end
+
+  # source://administrate//lib/administrate/field/deferred.rb#13
+  def new(*args); end
+
+  # Returns the value of attribute options.
+  #
+  # source://administrate//lib/administrate/field/deferred.rb#11
+  def options; end
+
+  # source://administrate//lib/administrate/field/deferred.rb#51
+  def permitted_attribute(attr, opts = T.unsafe(nil)); end
+
+  # @return [Boolean]
+  #
+  # source://administrate//lib/administrate/field/deferred.rb#32
+  def searchable?; end
+
+  # source://administrate//lib/administrate/field/deferred.rb#36
+  def searchable_field; end
+
+  # source://administrate//lib/administrate/field/deferred.rb#43
+  def searchable_fields; end
+end
+
 # source://administrate//lib/administrate/namespace/resource.rb#2
 class Administrate::Namespace
   # @return [Namespace] a new instance of Namespace

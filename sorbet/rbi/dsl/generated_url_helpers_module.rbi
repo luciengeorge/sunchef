@@ -12,7 +12,37 @@ module GeneratedUrlHelpersModule
   def about_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def admin_categories_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_category_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_ingredient_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_ingredients_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_instruction_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_instructions_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_recipe_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_recipes_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def admin_root_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_testimonial_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_testimonials_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def admin_user_url(*args); end
@@ -21,10 +51,22 @@ module GeneratedUrlHelpersModule
   def admin_users_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def cancel_user_registration_url(*args); end
+  def destroy_user_session_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def destroy_user_session_url(*args); end
+  def edit_admin_category_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_ingredient_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_instruction_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_recipe_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_testimonial_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def edit_admin_user_url(*args); end
@@ -36,7 +78,22 @@ module GeneratedUrlHelpersModule
   def edit_user_password_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def edit_user_registration_url(*args); end
+  def images_admin_recipe_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_category_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_ingredient_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_instruction_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_recipe_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_testimonial_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_admin_user_url(*args); end
@@ -49,9 +106,6 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_password_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def new_user_registration_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_session_url(*args); end
@@ -154,9 +208,6 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def user_password_url(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def user_registration_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def user_session_url(*args); end

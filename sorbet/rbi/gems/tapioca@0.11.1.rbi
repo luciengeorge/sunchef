@@ -3207,8 +3207,6 @@ end
 # source://tapioca//lib/tapioca/version.rb#5
 Tapioca::VERSION = T.let(T.unsafe(nil), String)
 
-# Must be kept in sync with the one in Tapioca
-#
 # source://tapioca//lib/tapioca/helpers/source_uri.rb#7
 class URI::Source < ::URI::File
   # source://tapioca//lib/tapioca/helpers/source_uri.rb#58

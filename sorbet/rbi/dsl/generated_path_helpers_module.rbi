@@ -12,7 +12,37 @@ module GeneratedPathHelpersModule
   def about_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def admin_categories_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_category_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_ingredient_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_ingredients_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_instruction_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_instructions_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_recipe_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_recipes_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def admin_root_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_testimonial_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_testimonials_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def admin_user_path(*args); end
@@ -21,10 +51,22 @@ module GeneratedPathHelpersModule
   def admin_users_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def cancel_user_registration_path(*args); end
+  def destroy_user_session_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def destroy_user_session_path(*args); end
+  def edit_admin_category_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_ingredient_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_instruction_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_recipe_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_testimonial_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def edit_admin_user_path(*args); end
@@ -36,7 +78,22 @@ module GeneratedPathHelpersModule
   def edit_user_password_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
-  def edit_user_registration_path(*args); end
+  def images_admin_recipe_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_category_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_ingredient_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_instruction_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_recipe_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_testimonial_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_admin_user_path(*args); end
@@ -49,9 +106,6 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_password_path(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def new_user_registration_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_user_session_path(*args); end
@@ -154,9 +208,6 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def user_password_path(*args); end
-
-  sig { params(args: T.untyped).returns(String) }
-  def user_registration_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def user_session_path(*args); end
