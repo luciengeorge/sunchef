@@ -149,7 +149,6 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    language_server-protocol (3.17.0.3)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -186,7 +185,6 @@ GEM
       ast (~> 2.4.1)
     pg (1.4.6)
     popper_js (2.11.6)
-    prettier_print (1.2.0)
     public_suffix (5.0.1)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -253,10 +251,6 @@ GEM
       parser (>= 3.2.1.0)
     rubocop-shopify (2.12.0)
       rubocop (~> 1.44)
-    ruby-lsp (0.4.1)
-      language_server-protocol (~> 3.17.0)
-      sorbet-runtime
-      syntax_tree (>= 6, < 7)
     ruby-progressbar (1.11.0)
     ruby-vips (2.1.4)
       ffi (~> 1.12)
@@ -300,8 +294,6 @@ GEM
       sprockets (>= 3.0.0)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
-    syntax_tree (6.0.2)
-      prettier_print (>= 1.2.0)
     tapioca (0.11.1)
       bundler (>= 1.17.3)
       netrc (>= 0.11.0)
@@ -377,7 +369,6 @@ DEPENDENCIES
   redis (~> 4.0)
   rubocop
   rubocop-shopify
-  ruby-lsp
   sass-rails
   selenium-webdriver
   simple_form

@@ -28,6 +28,30 @@
     background-color: $blue;
   }
 
+  .flower-container {
+    background-color: $beige;
+    height: 100%;
+    .flower-image {
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      z-index: 100;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .blobs-image {
+      left: 0;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
   .blue-blob {
     position: absolute;
     z-index: 0;

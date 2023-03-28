@@ -37,7 +37,6 @@ group :development do
   gem "rack-mini-profiler"
   gem "rubocop"
   gem "rubocop-shopify"
-  gem "ruby-lsp", require: false
   gem "tapioca", require: false
   gem "web-console"
 end
