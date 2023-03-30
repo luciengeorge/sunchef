@@ -1,0 +1,2 @@
+class SellingPoint < ApplicationRecord
+end

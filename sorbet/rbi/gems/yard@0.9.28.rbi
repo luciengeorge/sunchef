@@ -451,6 +451,18 @@ class Insertion
   def insertion(val, rel, recursive = T.unsafe(nil), list = T.unsafe(nil)); end
 end
 
+# == Attribute Accessors per Thread
+#
+# Extends the module object with class/module and instance accessors for
+# class/module attributes, just like the native attr* accessors for instance
+# attributes, but does so on a per-thread basis.
+#
+# So the values are scoped within the Thread.current space under the class name
+# of the module.
+#
+# Note that it can also be scoped per-fiber if +Rails.application.config.active_support.isolation_level+
+# is set to +:fiber+.
+#
 # source://yard//lib/yard/core_ext/module.rb#2
 class Module
   # Returns the class name of a full module namespace path
@@ -463,6 +475,24 @@ class Module
   def class_name; end
 end
 
+# --
+# Most objects are cloneable, but not all. For example you can't dup methods:
+#
+#   method(:puts).dup # => TypeError: allocator undefined for Method
+#
+# Classes may signal their instances are not duplicable removing +dup+/+clone+
+# or raising exceptions from them. So, to dup an arbitrary object you normally
+# use an optimistic approach and are ready to catch an exception, say:
+#
+#   arbitrary_object.dup rescue object
+#
+# Rails dups objects in a few critical spots where they are not that arbitrary.
+# That rescue is very expensive (like 40 times slower than a predicate), and it
+# is often triggered.
+#
+# That's why we hardcode the following cases and check duplicable? instead of
+# using that rescue idiom.
+# ++
 class Object < ::BasicObject
   include ::Kernel
   include ::PP::ObjectMixin
@@ -490,6 +520,8 @@ RUBY19 = T.let(T.unsafe(nil), TrueClass)
 #
 # source://yard//lib/yard/server/rack_adapter.rb#85
 class Rack::Request
+  # @return [Request] a new instance of Request
+  #
   # source://rack/2.2.6.3/lib/rack/request.rb#26
   def initialize(env); end
 
@@ -523,14 +555,25 @@ class Rack::Request
   def xhr?; end
 
   class << self
+    # Returns the value of attribute ip_filter.
+    #
     # source://rack/2.2.6.3/lib/rack/request.rb#16
     def ip_filter; end
 
+    # Sets the attribute ip_filter
+    #
+    # @param value the value to set the attribute ip_filter to.
+    #
     # source://rack/2.2.6.3/lib/rack/request.rb#16
     def ip_filter=(_arg0); end
   end
 end
 
+# String inflections define new methods on the String class to transform names for different purposes.
+# For instance, you can figure out the name of a table from the name of a class.
+#
+#   'ScaleScore'.tableize # => "scale_scores"
+#
 # source://yard//lib/yard/core_ext/string.rb#2
 class String
   include ::Comparable

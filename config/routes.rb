@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :ingredients
       resources :instructions
       resources :testimonials
+      resources :selling_points
 
       root to: "users#index"
     end

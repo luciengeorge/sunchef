@@ -10,7 +10,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="container-lg">
+  <body>
     <%= render Shared::FlashComponent.new(notice:, alert:) %>
     <div class="min-body-height">
       <%= render Shared::NavbarComponent.new(user_signed_in: user_signed_in?) %>
