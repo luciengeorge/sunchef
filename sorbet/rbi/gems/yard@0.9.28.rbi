@@ -520,8 +520,6 @@ RUBY19 = T.let(T.unsafe(nil), TrueClass)
 #
 # source://yard//lib/yard/server/rack_adapter.rb#85
 class Rack::Request
-  # @return [Request] a new instance of Request
-  #
   # source://rack/2.2.6.3/lib/rack/request.rb#26
   def initialize(env); end
 
@@ -555,15 +553,9 @@ class Rack::Request
   def xhr?; end
 
   class << self
-    # Returns the value of attribute ip_filter.
-    #
     # source://rack/2.2.6.3/lib/rack/request.rb#16
     def ip_filter; end
 
-    # Sets the attribute ip_filter
-    #
-    # @param value the value to set the attribute ip_filter to.
-    #
     # source://rack/2.2.6.3/lib/rack/request.rb#16
     def ip_filter=(_arg0); end
   end

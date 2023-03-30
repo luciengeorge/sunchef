@@ -13,7 +13,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     id: Field::Number,
     category: Field::BelongsTo,
     images: Field::ActiveStorage.with_options(
-      destroy_url: proc do |_namespace, _resource, attachment|
+      images_admin_recipe_url: proc do |_namespace, _resource, attachment|
         [:images_admin_recipe, { attachment_id: attachment.id }]
       end,
     ),
