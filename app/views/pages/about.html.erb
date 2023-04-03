@@ -6,7 +6,6 @@
         <h1 class="fw-bold greeting greeting--bottom">sunshines</h1>
       </div>
       <%= image_tag 'woman.svg', class: "woman" %>
-      <%= image_tag Recipe.first.images.first.url, alt: "text" %>
     </div>
   </section>
   <section class="section--height">
@@ -39,6 +38,39 @@ Nutrition began.</p>
 How you eat is essential to creating balance in your life - it has the ability to nurture or hinder your experience. </p>
   </section>
   <section class="section--green p-5">
-
+    <div class="row m-0">
+      <div class="col-5">
+        <%= image_tag "pepper-yellow.svg", alt: "yellow pepper", class: "yellow-pepper" %>
+      </div>
+      <div class="col-7">
+        <div class="d-flex flex-column align-items-center justify-content-center h-100">
+          <div>
+            <p>Sunchef's mission is to help you <span class="text-green">become an expert on you!</span> Together, we can design a personalised path towards the best version of yourself, and inspire you to find pleasure in cooking.</p>
+            <p>Remember: healthy food doesn have to compromise on taste!</p>
+            <p class="green-quote">-</p>
+            <p class="green-quote">Health and happiness are always just around the corner.</p>
+            <p class="text-success fst-italic fs-1 text">Only if you're-ready :)</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+  <section>
+    <div class="p-5">
+      <div class="row m-0">
+        <div class="col-7">
+          <div class="d-flex align-items-end justify-content-end">
+            <%= image_tag "soraya.png", alt: "Soraya", class: "w-75 soraya-image" %>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="d-flex justify-content-center">
+            <%= image_tag "logo.png", alt: "logo", class: "w-25" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="block-yellow"></div>
+  </section>
+  <section class="p-5"></section>
 </div>
