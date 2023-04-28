@@ -6,7 +6,7 @@
     </div>
     <%= image_tag "logo.png", alt: "Sunchef Logo", class: "logo" %>
     <div class="navbar__right d-flex justify-content-around align-items-center">
-      <%= link_to "cook", "#", class: class_names("navbar__link", active: false) %>
+      <%= link_to "cook", cook_path, class: class_names("navbar__link", active: current_page?(cook_path)) %>
       <%= link_to "coaching", "#", class: class_names("navbar__link", active: false) %>
       <%= link_to "shop", "#", class: class_names("navbar__link", active: false) %>
       <% if user_signed_in %>
