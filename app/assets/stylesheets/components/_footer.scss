@@ -4,35 +4,61 @@
   position: relative;
 
   .footer--title {
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 12px;
     letter-spacing: 1px;
+    line-height: 16px;
+    color: #0D2B27;
   }
 
   .footer--tagline {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
     letter-spacing: 1px;
+    line-height: 35px;
+    color: #0D2B27;
   }
 
   .footer-btn {
     border-radius: 10px;
-    background-color: #ffb850;
-    color: $black;
-    padding: 20px 40px;
+    background-color: #FFB850;
+    color: #0D2B27;
+    width: 215px;
+    height: 54px;
     border: none;
+    font-size: 12px;
+  }
+
+  .footer--paragraph {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    color: #0D2B27;
   }
 
   .footer--notice {
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 33px;
+    font-size: 15px;
     letter-spacing: 1px;
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 400;
+    color: #0D2B27;
+  }
+
+  .footer--asterix {
+    width: 16px;
+    height: 16px;
+    margin-left: 17px;
+    margin-bottom: 15px;
   }
 
   .blobs-footer {
     position: absolute;
-    width: 200px;
-    left: -40px;
+    width: 273px;
+    height: 290px;
+    object-fit: contain;
+    object-position: center;
+    left: -75px;
+    top: 35px;
   }
 }

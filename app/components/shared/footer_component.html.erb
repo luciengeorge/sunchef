@@ -7,9 +7,11 @@
           <div>
             <h6 class="footer--title">sunchef</h6>
             <h3 class="footer--tagline">
-              i don't answer when i'm hangry*
+              i don't answer when i'm hangry
+              <%= image_tag 'asterix.png', alt: 'asterix', class: 'footer--asterix' %>
             </h3>
-            <p>If you’re curious and hungry for more, reach out! Take that first step. Let’s connect!</p>
+            <p class="footer--paragraph mb-0">If you're curious and hungry for more, reach out! Take that first step.</p>
+            <p class="footer--paragraph">Let's connect!</p>
             <%= button_tag "sunchef my life asap", class: "footer-btn" %>
             <p class="footer--notice"><abbr><strong>*</strong></abbr> but try your luck anyway</p>
           </div>

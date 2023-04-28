@@ -1,7 +1,19 @@
 #home {
   .intro {
       background-color: #d5eee9;
-      padding: 100px 0;
+      height: 261px;
+
+      .title {
+        h1 {
+          font-size: 54px;
+          line-height: 0.9;
+          font-weight: bold;
+        }
+      }
+
+      .title--red {
+        color: $red;
+      }
     }
 
     .intro__svg {
@@ -9,30 +21,18 @@
     }
 
 
-    .find_your_balance__section {
-      background-color: $light-pink;
-      padding: 0 0 100px 0;
-
-      .title--red {
-        color: $red;
-      }
-
-      .title {
-        position: relative;
-        bottom: 90px;
-
-        h1 {
-          font-size: 80px;
-          line-height: 0.9;
-          font-weight: bold;
-        }
+    .pink_section {
+      background-color: #F8CFC5;
+      height: 172px;
+      p {
+        font-size: 17px;
       }
     }
 
 
     .subtitle {
-      color: $pink;
-      font-weight: bold;
+      color: #ED8D77;;
+      font-size: 12px;
     }
 
     .sparkles {
@@ -50,20 +50,17 @@
       height: 50vw;
       max-height: 50vh;
       color: $white;
+      padding: 32px;
       h2 {
-        font-size: 2rem;
+        font-size: 74px;
         @include media-breakpoint-up(sm) {
-          font-size: 3rem;
+          font-size: 58px;
         }
 
         @include media-breakpoint-up(md) {
-          font-size: 4rem;
+          font-size: 66px;
         }
-
-        @include media-breakpoint-up(lg) {
-          font-size: 5rem;
-        }
-        font-weight: bold;
+        font-weight: 700;
       }
     }
 
@@ -73,6 +70,9 @@
 
     .grid__top__right {
       background-color: $light-pink;
+      h2 {
+        margin-left: 113px;
+      }
     }
 
     .grid__bottom__left {
@@ -81,6 +81,9 @@
 
     .grid__bottom__right {
       background-color: $light-blue;
+      h2 {
+        color: #FF7F77;
+      }
     }
 
     .grid__image__wrapper {
@@ -88,38 +91,45 @@
       bottom: 0;
       left: 0;
       right: 0;
-      .grid__svg {
-        width: 200px;
+      .grid__mushroom {
+        width: 227px;
+        height: 362px;
+        object-fit: contain;
+        object-position: center;
       }
     }
 
     .middle__section {
-      padding: 100px 0;
+      height: 273px;
     }
 
     .breakfast__section {
       background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), asset-url("breakfast.jpg");
       background-size: cover;
       background-position: center;
+      margin-bottom: 51px;
     }
 
     .breakfast__section--title-top {
-      font-size: 60px;
-      font-weight: bold;
+      font-size: 21px;
+      font-weight: 700;
+      margin-left: 32px;
+      line-height: 25px;
     }
 
     .breakfast__section--title-bottom {
-      font-size: 80px;
-      font-weight: bold;
+      font-size: 65px;
+      font-weight: 700;
+      line-height: 84px;
     }
 
     .breakfast-btn {
-      background-color: $pink;
+      background-color: #FF7F77;;
       border: none;
-      padding: 30px 50px;
-      color: $black;
+      color: #0D2B27;;
       border-radius: 100px;
-      font-size: 40px;
-      width: 100%;
+      font-size: 21px;
+      width: 333px;
+      height: 70px;
     }
 }

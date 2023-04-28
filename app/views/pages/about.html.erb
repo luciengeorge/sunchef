@@ -12,7 +12,6 @@
     <div class="row m-0 h-100">
       <div class="col-6 m-0 p-0">
         <div class="flower-container position-relative">
-          <%= image_tag "flowers.svg", class: "flower-image position-absolute" %>
           <%= image_tag "blobs.svg", class: "blobs-image position-absolute" %>
         </div>
       </div>
@@ -22,55 +21,60 @@
           <%= image_tag "yellow-blob.svg", class: "yellow-blob" %>
           <div class="position-absolute yellow-blob-cover"></div>
           <div class="px-4 w-75 z-index-above">
-            <h5 class="mb-0">I'm Soraya founder of Sunchef</h5>
-            <h5>and a certified holistic health coach.</h5>
-            <p>I'm here to help you understand how to find your balance. There is no one size fits all formula - your journey is unique to you. It is always crucial, however, to understand our own agency - our health is a vehicle and we are able to navigate it.</p>
+            <h5 class="mb-0">I'm Soraya, founder of Sunchef</h5>
+            <h5 class="bottom">and a certifed holistic health coach.</h5>
+            <p class="paragraph">I'm here to help you understand how to fnd your balance. There is no one size fts all formula - your journey is unique to you. It is always crucial, however, to understand our own agency - our health is a vehicle and we are able to navigate it.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="p-5">
-    <h2 class="fw-bold">It started with a growing curiosity..</h2>
-    <p>My journey of enlightenment towards holistic health began when I became curious about how the food I ate made me feel, and how it affected my body. Once this seed was planted and I started to understand the relationship between what I eat and my overall wellbeing, I became hungry for more information. This is where my education in holistic health through Integrative
+  <section class="about_description_section">
+    <h2>It started with a growing curiosity..</h2>
+    <p class="top">My journey of enlightenment towards holistic health began when I became curious about how the food I ate made me feel, and how it affected my body. Once this seed was planted and I started to understand the relationship between what I eat and my overall wellbeing, I became hungry for more information. This is where my education in holistic health through Integrative
 Nutrition began.</p>
-    <p>What stuck with me most is the fact that it all starts with what goes into your body. In other words - food.
+    <p class="mb-0">What stuck with me most is the fact that it all starts with what goes into your body. In other words - food.
 How you eat is essential to creating balance in your life - it has the ability to nurture or hinder your experience. </p>
   </section>
-  <section class="section--green p-5">
+  <section class="section--green">
     <div class="row m-0">
-      <div class="col-5">
+      <div class="col-5 d-flex align-items-end justify-content-center">
         <%= image_tag "pepper-yellow.svg", alt: "yellow pepper", class: "yellow-pepper" %>
       </div>
       <div class="col-7">
         <div class="d-flex flex-column align-items-center justify-content-center h-100">
           <div>
-            <p>Sunchef's mission is to help you <span class="text-green">become an expert on you!</span> Together, we can design a personalised path towards the best version of yourself, and inspire you to find pleasure in cooking.</p>
-            <p>Remember: healthy food doesn have to compromise on taste!</p>
             <p class="green-quote">-</p>
-            <p class="green-quote">Health and happiness are always just around the corner.</p>
-            <p class="text-success fst-italic fs-1 text">Only if you're-ready :)</p>
+            <p class="green-quote small-line-height">Health and</p>
+            <p class="green-quote small-line-height">happiness are</p>
+            <p class="green-quote small-line-height">always just around</p>
+            <p class="green-quote small-line-height">the corner.</p>
+            <p class="small-green-quote">Only if you're-ready :)</p>
+            <p class="mission">Sunchef's mission is to help you <span class="mission-green">become an expert on you!</span></p>
+            <p class="mission">Together, we can design a personalised path towards the best</p>
+            <p class="mission">version of yourself, and inspire you to find pleasure in cooking.</p>
+            <p class="mission bottom">Remember: healthy food doesn have to compromise on taste!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section>
-    <div class="p-5">
-      <div class="row m-0">
-        <div class="col-7">
-          <div class="d-flex align-items-end justify-content-end">
-            <%= image_tag "soraya.png", alt: "Soraya", class: "w-75 soraya-image" %>
-          </div>
-        </div>
-        <div class="col-5">
-          <div class="d-flex justify-content-center">
-            <%= image_tag "logo.png", alt: "logo", class: "w-25" %>
-          </div>
+  <section class="soraya-section">
+    <div class="row h-100 m-0">
+      <div class="col-6 p-0">
+        <div class="d-flex align-items-end justify-content-end">
+          <%= image_tag "soraya.png", alt: "Soraya", class: "soraya-image" %>
         </div>
       </div>
+      <div class="col-6 p-0">
+        <h2 class="heading">Walk the Talk</h2>
+        <p class="paragraph">“I consider myself to be my frst client. </p>
+        <p class="paragraph">It is important to honor my journey and continually </p>
+        <p class="paragraph">evolve as a person in order to to guide and help you</p>
+        <p class="paragraph">to the best of my abilities.”</p>
+        <%= image_tag "sunchef_signature.svg", alt: "signature", class: "sunchef-signature" %>
+      </div>
     </div>
-    <div class="block-yellow"></div>
   </section>
-  <section class="p-5"></section>
+  <div class="block-yellow"></div>
 </div>

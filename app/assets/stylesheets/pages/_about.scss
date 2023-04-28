@@ -1,21 +1,23 @@
 #about {
   .section--purple--yellow {
-    background-image: linear-gradient(to bottom, $purple 75%, $light-yellow 25%);
+    background-image: linear-gradient(to bottom, #D8C3DD 70%, #FAD685 30%);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
 
   .section--height {
-    height: 440px;
+    height: 428px;
   }
 
   .greeting {
-    font-size: 104px;
-    line-height: 0.8;
+    font-size: 105px;
+    line-height: 0.2;
+    font-weight: 700;
     color: $black;
     &--bottom {
-      margin-bottom: 27px;
+      margin-bottom: 52px;
+      line-height: 123px;
     }
   }
 
@@ -25,27 +27,31 @@
   }
 
   .about-container {
-    background-color: $blue;
+    background-color: #A1BFCD;
+    h5 {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 23px;
+      &.bottom {
+        margin-bottom: 28px;
+      }
+    }
+    .paragraph {
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 17px;
+    }
   }
 
   .flower-container {
-    background-color: $beige;
+    background-color: #E7E1D5;
     height: 100%;
-    .flower-image {
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      width: 100%;
-      z-index: 100;
-      object-fit: contain;
-      object-position: bottom;
-    }
 
     .blobs-image {
-      left: 0;
-      height: 100%;
-      top: 0;
-      bottom: 0;
+      left: -75px;
+      width: 274px;
+      height: 286px;
+      top: 23px;
       object-fit: contain;
       object-position: center;
     }
@@ -54,50 +60,137 @@
   .blue-blob {
     position: absolute;
     z-index: 0;
-    left: -165px;
-    width: 330px;
-    top: 100px;
+    left: -214px;
+    width: 337px;
+    height: 111px;
+    top: 38px;
+    object-fit: contain;
+    object-position: center;
   }
 
   .yellow-blob {
     position: absolute;
     z-index: 0;
-    left: -155px;
+    left: -178px;
     width: 213px;
-    top: 217px;
+    height: 132px;
+    object-fit: contain;
+    object-position: center;
+    top: 203px;
   }
 
   .yellow-blob-cover {
-    background-color: $blue;
+    background-color: #A1BFCD;
     height: 135px;
     width: 60px;
     left: 0;
-    top: 217px;
+    top: 203px;
   }
 
   .section--green {
     background-color: $light-green;
+    padding-bottom: 98px;
   }
 
   .yellow-pepper {
-    width: 100%;
-    height: 100%;
+    width: 240.61px;
+    height: 304.98px;
     object-fit: contain;
     object-position: center;
   }
 
   .green-quote {
-    font-size: 100px;
-    color: #51b266;
-    line-height: 1;
+    font-size: 54.04px;
+    color: #52B267;
+    line-height: 65.4px;
+    margin-top: 15.12px;
+    font-weight: 700;
+    &.small-line-height {
+      line-height: 1;
+      margin: 0;
+    }
+  }
+
+  .small-green-quote {
+    color: #52B267;
+    font-weight: 700;
+    font-size: 27px;
+    line-height: 31px;
+    margin-top: 17px;
+    font-style: italic;
+  }
+  .mission {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 0;
+    &.bottom {
+      margin-top: 21px;
+      margin-bottom: 0;
+    }
+  }
+
+  .mission-green {
+    color: #52B267;
+  }
+
+  .soraya-section {
+    height: 476px;
+
+    .heading {
+      color: #EEBF00;
+      font-size: 64px;
+      margin-bottom: 50px;
+      margin-top: 173px;
+      font-weight: 700;
+    }
+
+    .paragraph {
+      font-size: 17px;
+      font-style: italic;
+      font-weight: 400;
+      margin-bottom: 7px;
+    }
+
+    .sunchef-signature {
+      margin-left: 317px;
+      width: 85px;
+      height: 19px;
+      object-fit: contain;
+      object-fit: center;
+    }
   }
 
   .soraya-image {
-    transform: translateY(20%);
+    // transform: translateY(20%);
+    margin-top: 124px;
+    width: 392px;
+    height: 392px;
+    margin-right: 60px;
   }
 
   .block-yellow {
-    height: 200px;
+    height: 141px;
     background-color: $light-yellow;
+    margin-bottom: 64px;
+  }
+
+  .about_description_section {
+    height: 264px;
+    padding: 30px 50px;
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 35px;
+      color: #0D2B27;
+    }
+
+    p {
+      color: #0D2B27;
+      font-size: 15px;
+      line-height: 18px;
+      &.top {
+        margin-bottom: 21px;
+      }
+    }
   }
 }

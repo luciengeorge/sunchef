@@ -1,12 +1,12 @@
 #navbar {
-  height: 135px;
+  height: 100px;
   .logo {
-    width: 33%;
-    height: 185px;
+    width: 145px;
+    height: 150px;
     object-fit: contain;
     object-position: center;
     position: relative;
-    top: 50px;
+    top: 30px;
   }
 
   .navbar__left {
@@ -19,7 +19,6 @@
 
   .navbar__link {
     color: #000000;
-    font-style: italic;
     text-decoration: none;
     &::after {
       content: '';
