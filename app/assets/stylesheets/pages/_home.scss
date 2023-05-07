@@ -36,8 +36,11 @@
     }
 
     .sparkles {
-      fill: $pink;
-      width: 50px;
+      width: 60px;
+      height: 50px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 22px;
     }
 
     .illustration {
