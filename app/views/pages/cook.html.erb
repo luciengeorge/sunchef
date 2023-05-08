@@ -4,19 +4,72 @@
   </section>
   <section class="story-section">
     <div class="row m-0 h-100">
-      <div class="col-12 col-md-6 p-0 h-100">
+      <div class="col-12 col-md-6 p-0 min-height">
         <div class="pan position-relative h-100 d-flex align-items-center justify-content-center">
           <%= image_tag "pot.png", alt: "pot", class: "pot" %>
           <%= image_tag "blobs-cook.svg", alt: "blobs", class: "blobs-cook" %>
           <%= image_tag "blobs-cook-2.svg", alt: "blobs", class: "blobs-cook-2" %>
         </div>
       </div>
-      <div class="col-12 col-md-6 p-0 h-100">
+      <div class="col-12 col-md-6 p-0 min-height">
         <div class="story h-100">
           <strong class="story-heading">So my story goes...</strong>
           <p class="paragraph">I've always found such joy in eating.. Choosing my breakfast, lunch or dinner has forever been an important part of my day. In fact, when I was younger, my father used to ask me every night what I wanted for breakfast the next day because he knew that this was the only way that would get me to go to sleep - I had something delicious to look forward to!</p>
           <p class="paragraph">So it was only natural that I took it upon myself to learn how to cook. It started when I moved to London at 18 years old. Living alone was the frst opportunity I got to care of myself, and I didn’t want to live of of food deliveries. </p>
           <%= link_to "Read more", "#", class: "read-more-link" %>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sunchef-cook-section d-flex align-items-center justify-content-center">
+    <div class="position-relative">
+      <%= link_to "#", class: 'position-absolute category-link lunch' do %>
+        <%= image_tag "lunch.svg", alt: "lunch" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link dinner' do %>
+        <%= image_tag "dinner.svg", alt: "dinner" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link sweets' do %>
+        <%= image_tag "sweets.svg", alt: "sweets" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link smoothies' do %>
+        <%= image_tag "smoothies.svg", alt: "smoothies" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link drinks' do %>
+        <%= image_tag "drinks.svg", alt: "drinks" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link snacks' do %>
+        <%= image_tag "snacks.svg", alt: "snacks" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link dressings' do %>
+        <%= image_tag "dressings.svg", alt: "dressings" %>
+      <% end %>
+      <%= link_to "#", class: 'position-absolute category-link breakfast' do %>
+        <%= image_tag "breakfast.svg", alt: "breakfast" %>
+      <% end %>
+      <%= image_tag "cook-sunchef.svg", alt: "Sunchef", class: "sunchef-cook-img" %>
+    </div>
+  </section>
+  <section>
+    <div class="shake-blend-section">
+      <%= image_tag "casserol-and-blobs.svg", alt: "casserol and blobs", class: "casserol-and-blobs" %>
+      <div class="row m-0">
+        <div class="col-12 col-md-8 p-0 shake-bake-wrapper">
+          <h2 class="shake-bake-title">shake, blend</h2>
+          <h2 class="shake-bake-title">& bake your way</h2>
+          <h2 class="shake-bake-title">to the top!</h2>
+
+          <p class="shake-bake-paragraph">Cooking is an act of self care. Beyond providing nourishment, it can be a therapeutic and absolutely pleasurable activity. When you immerse yourself in the experience of preparing a dish - you take time for yourself and engage all fve of your senses. It can help you get out of your head and be present. Working with pure, healthy ingredients also makes cooking a time to regard and be grateful towards nature and our fabulous earth. </p>
+        </div>
+      </div>
+    </div>
+    <div class="tips-section">
+      <div class="row m-0">
+        <div class="col-12 col-md-7 offset-md-5">
+          <p class="mb-0">Get comfortable! Create an ambience and play your favorite tunes. </p>
+          <p class="mb-0">Get organised! Arrange your ingredients on the table for easy access. </p>
+          <p class="mb-0">Get ahead! Read the recipe in advance for a smooth and stress free process. </p>
+          <p class="mb-0">Get yourself some water!</p>
         </div>
       </div>
     </div>
