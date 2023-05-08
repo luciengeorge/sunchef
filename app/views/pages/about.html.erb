@@ -8,18 +8,16 @@
       <%= image_tag 'woman.svg', class: "woman" %>
     </div>
   </section>
-  <section class="section--height">
+  <section>
     <div class="row m-0 h-100">
-      <div class="col-6 m-0 p-0">
+      <div class="col-12 col-md-6 m-0 p-0">
         <div class="flower-container position-relative">
-          <%= image_tag "blobs.svg", class: "blobs-image position-absolute" %>
+          <%= image_tag "blobs.svg", alt: "blobs", class: "blobs-image position-absolute" %>
+          <%= image_tag "blobs-about.svg", alt: "blobs", class: "blobs-about position-absolute" %>
         </div>
       </div>
-      <div class="col-6 m-0 p-0">
-        <div class="about-container position-relative h-100 d-flex justify-content-center align-items-center">
-          <%= image_tag "blob-blue.svg", class: "blue-blob" %>
-          <%= image_tag "yellow-blob.svg", class: "yellow-blob" %>
-          <div class="position-absolute yellow-blob-cover"></div>
+      <div class="col-12 col-md-6 m-0 p-0">
+        <div class="about-container position-relative d-flex justify-content-center align-items-center">
           <div class="px-4 w-75 z-index-above">
             <h5 class="mb-0">I'm Soraya, founder of Sunchef</h5>
             <h5 class="bottom">and a certifed holistic health coach.</h5>
@@ -38,10 +36,10 @@ How you eat is essential to creating balance in your life - it has the ability t
   </section>
   <section class="section--green">
     <div class="row m-0">
-      <div class="col-5 d-flex align-items-end justify-content-center">
+      <div class="col-12 col-md-5 d-flex align-items-end justify-content-center">
         <%= image_tag "pepper-yellow.svg", alt: "yellow pepper", class: "yellow-pepper" %>
       </div>
-      <div class="col-7">
+      <div class="col-12 col-md-7">
         <div class="d-flex flex-column align-items-center justify-content-center h-100">
           <div>
             <p class="green-quote">-</p>
@@ -61,18 +59,20 @@ How you eat is essential to creating balance in your life - it has the ability t
   </section>
   <section class="soraya-section">
     <div class="row h-100 m-0">
-      <div class="col-6 p-0">
-        <div class="d-flex align-items-end justify-content-end">
+      <div class="col-12 col-md-6 p-0">
+        <div class="d-flex align-items-end justify-content-center justify-content-md-end">
           <%= image_tag "soraya.png", alt: "Soraya", class: "soraya-image" %>
         </div>
       </div>
-      <div class="col-6 p-0">
-        <h2 class="heading">Walk the Talk</h2>
-        <p class="paragraph">“I consider myself to be my frst client. </p>
-        <p class="paragraph">It is important to honor my journey and continually </p>
-        <p class="paragraph">evolve as a person in order to to guide and help you</p>
-        <p class="paragraph">to the best of my abilities.”</p>
-        <%= image_tag "sunchef_signature.svg", alt: "signature", class: "sunchef-signature" %>
+      <div class="col-12 col-md-6 p-0 d-flex align-items-center justify-content-center">
+        <div>
+          <h2 class="heading">Walk the Talk</h2>
+          <p class="paragraph">“I consider myself to be my frst client. </p>
+          <p class="paragraph">It is important to honor my journey and continually </p>
+          <p class="paragraph">evolve as a person in order to to guide and help you</p>
+          <p class="paragraph">to the best of my abilities.”</p>
+          <%= image_tag "sunchef_signature.svg", alt: "signature", class: "sunchef-signature" %>
+        </div>
       </div>
     </div>
   </section>

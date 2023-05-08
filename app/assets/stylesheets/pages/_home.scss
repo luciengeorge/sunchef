@@ -74,7 +74,9 @@
     .grid__top__right {
       background-color: $light-pink;
       h2 {
-        margin-left: 113px;
+        @include media-breakpoint-up(md) {
+          margin-left: 113px;
+        }
       }
     }
 
