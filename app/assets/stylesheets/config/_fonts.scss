@@ -61,9 +61,10 @@
   font-style: normal;
 }
 
-
-$body-font: 'SuisseIntl', sans-serif;
-$headers-font: 'Raleway', sans-serif;
+$suisse-intl: 'SuisseIntl', sans-serif;
+$raleway: 'Raleway', sans-serif;
+$body-font: $suisse-intl;
+$headers-font: $raleway;
 
 body {
   font-family: $body-font;

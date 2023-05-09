@@ -50,7 +50,7 @@
       <%= image_tag "cook-sunchef.svg", alt: "Sunchef", class: "sunchef-cook-img" %>
     </div>
   </section>
-  <section>
+  <section class="position-relative">
     <div class="shake-blend-section">
       <%= image_tag "casserol-and-blobs.svg", alt: "casserol and blobs", class: "casserol-and-blobs" %>
       <div class="row m-0">
@@ -63,16 +63,25 @@
         </div>
       </div>
     </div>
-    <div class="tips-section">
+    <div class="tips-section d-flex flex-column justify-content-end">
+      <div class="d-flex d-md-block justify-content-center mb-4 mb-md-0">
+        <%= image_tag "bottle.svg", alt: "bottle", class: "bottle-img" %>
+      </div>
       <div class="row m-0 h-100">
-        <div class="col-12 col-md-7 offset-md-5 h-100 d-flex align-items-end tips-text-wrapper">
-          <div>
+        <div class="col-12 col-md-7 offset-md-5 h-100 d-flex align-items-end justify-content-center tips-text-wrapper">
+          <div class="tips-text">
             <p class="mb-0">Get comfortable! Create an ambience and play your favorite tunes. </p>
             <p class="mb-0">Get organised! Arrange your ingredients on the table for easy access. </p>
             <p class="mb-0">Get ahead! Read the recipe in advance for a smooth and stress free process. </p>
             <p class="mb-0">Get yourself some water!</p>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="remember-breath-section d-flex align-items-center justify-content-end">
+      <div class="d-flex align-items-end justify-content-end">
+        <%= image_tag "star.svg", alt: "star", class: "me-2" %>
+        <p class="m-0">Oh, & remember to breathe.</p>
       </div>
     </div>
   </section>

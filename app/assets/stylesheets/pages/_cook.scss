@@ -192,10 +192,34 @@
 
   .tips-section {
     background-color: #FEF49C;
-    height: 215.31px;
+    min-height: 215.31px;
 
     .tips-text-wrapper {
       padding-bottom: 35.7px;
     }
+
+    .tips-text {
+      font-family: $suisse-intl;
+    }
+  }
+
+  .remember-breath-section {
+    min-height: 162px;
+    font-family: $suisse-intl;
+    padding: 24.28px;
+  }
+
+  .bottle-img {
+    width: 409px;
+    height: 443px;
+    object-fit: contain;
+    object-position: center;
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      bottom: 75px;
+      left: 89px;
+      z-index: 1000;
+    }
+
   }
 }
