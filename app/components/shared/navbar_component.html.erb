@@ -8,7 +8,7 @@
     <div class="navbar__right d-flex justify-content-around align-items-center">
       <%= link_to "cook", cook_path, class: class_names("navbar__link", active: current_page?(cook_path)) %>
       <%= link_to "coaching", "#", class: class_names("navbar__link", active: false) %>
-      <%= link_to "shop", "#", class: class_names("navbar__link", active: false) %>
+      <%= link_to "shop", shop_path, class: class_names("navbar__link", active: current_page?(shop_path)) %>
       <% if user_signed_in %>
         <%= link_to "sign out", destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar__link" %>
       <% end %>

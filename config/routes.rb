@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   root "pages#home"
   get :about, to: "pages#about"
   get :cook, to: "pages#cook"
+  get :shop, to: "pages#shop"
 end

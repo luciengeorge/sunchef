@@ -1,0 +1,38 @@
+<div id="shop">
+  <section class="intro">
+    <%= image_tag "shop-title.svg", alt: "Shop so you don't drop", class: "shop-title" %>
+  </section>
+  <section class="belly">
+    <div class="row m-0">
+      <div class="col-12 col-md-6 belly-height belly-left">
+        <div class="belly-text">
+          <h2 class="mb-0">from my</h2>
+          <h2 class="mb-0">happy <span class="blue">belly</span></h2>
+          <h2 class="last">to yours.</h2>
+          <p class="blue mb-0">Pure, vegan, and homemade goodies.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 belly-height belly-right">
+        <p>In 2020 I had some friends over for brunch and decided to whip up a meal made entirely from scratch - from the sweet potato fatbread to the almond butter. I spent an entire morning preparing.</p>
+        <p>My almond butter was a hit! After some prompting and motivation from loved ones, I started making and selling almond butter while studying for my Health Coaching certifcate. What started as a side project eventually evolved into a small business with a limited product range of almond butter, peanut butter, and granolas. The ingredients I use are pure, vegan, and without preservatives.  (& many satisfed customers!) can guarantee delicious taste and great quality yummies jam-packed with nutrients.  </p>
+      </div>
+    </div>
+  </section>
+  <section class="support-section">
+    <h2 class="mb-0 support-text">If you want to support Sunchef’s food products </h2>
+    <h2 class="support-text">and make your belly happy, here is where you can fnd me: </h2>
+    <p class="support-subtext">(In Lebanon only… for now!)</p>
+    <p class="mb-0 locations">Mint Basil Market | Liv Good | Emak Urban Spa | A New Earth Store | amat Beirut</p>
+    <p class="mb-0 locations">Convivio | Le Panier du Coin | Tusk Bakery | Fine Bouche | La Vie Claire | en Fraicheur</p>
+    <p class="mb-0 locations">Chi Tabi3i | Akiki Frere | eir el Oumara</p>
+  </section>
+  <section>
+    <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
+      <% 10.times do %>
+        <div class="carousel-slide">
+          <%= image_tag "carousel-placeholder.png", alt: "carousel" %>
+        </div>
+      <% end %>
+    </div>
+  </section>
+</div>

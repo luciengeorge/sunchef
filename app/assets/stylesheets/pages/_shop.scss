@@ -1,0 +1,106 @@
+#shop {
+  .intro {
+    height: 428px;
+    background: linear-gradient(to bottom, #CFE1FA 70%, #CBD6AB 30%);
+    display: flex;
+    align-items: end;
+
+    @include media-breakpoint-down(md) {
+      display: flex;
+      align-items: end;
+      justify-content: center;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-left: 72px;
+    }
+
+    padding-bottom: 48px;
+
+    .shop-title {
+      width: 561px;
+      height: 161px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .belly {
+    .belly-height {
+      min-height: 422px;
+    }
+
+    .belly-left {
+      background-color: #D8C3DD;
+      padding: 80px 65px;
+      .blue {
+          color: #6269B2;
+        }
+      h2 {
+        color: #FFFFFF;
+        font-size: 54px;
+        font-weight: bold;
+        line-height: 53px;
+        &.last {
+          margin-bottom: 35px;
+        }
+      }
+    }
+
+    .belly-right {
+      background-color: #E7E1D5;
+      padding: 65px;
+      font-family: $raleway;
+      font-weight: medium;
+      font-size: 15px;
+    }
+  }
+
+  .support-section {
+    min-height: 319px;
+    padding: 86px 65px;
+
+    .support-text {
+      font-weight: bold;
+      font-size: 30px;
+      color: #0D2B27;
+    }
+
+    .support-subtext {
+      font-family: $raleway;
+      font-weight: light;
+      font-style: italic;
+      font-size: 21px;
+      color: #0D2B27;
+    }
+
+    .locations {
+      font-size: 15px;
+      font-weight: medium;
+      font-family: $raleway;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 65px;
+
+    i {
+      cursor: pointer;
+    }
+
+    .carousel-slide {
+      height: 310px;
+      padding: 8px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

@@ -6,4 +6,5 @@ class PagesController < ApplicationController
   def home; end
   def about; end
   def cook; end
+  def shop; end
 end
