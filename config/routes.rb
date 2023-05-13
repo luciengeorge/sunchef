@@ -24,4 +24,5 @@ Rails.application.routes.draw do
   get :about, to: "pages#about"
   get :cook, to: "pages#cook"
   get :shop, to: "pages#shop"
+  get :coaching, to: "pages#coaching"
 end

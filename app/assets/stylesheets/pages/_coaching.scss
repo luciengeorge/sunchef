@@ -1,0 +1,63 @@
+#coaching {
+  .intro {
+      min-height: 428px;
+      background: linear-gradient(to bottom, #E7B6A2 70%, #FAD685 30%);
+      display: flex;
+      align-items: end;
+
+      @include media-breakpoint-down(md) {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        padding-top: 48px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-left: 40px;
+      }
+
+      .coaching-title {
+        width: 608px;
+        height: 144px;
+        object-fit: contain;
+        object-position: center;
+        margin-bottom: 51px;
+      }
+
+      .yoga-img {
+        width: 280px;
+        @include media-breakpoint-up(md) {
+          margin-right: 65px;
+        }
+        margin-bottom: 5px;
+      }
+    }
+
+    .health-coaching {
+      height: 285px;
+      padding: 54px 0;
+
+      .sparkles {
+        margin-bottom: 18px;
+      }
+
+      h2 {
+        color: #E85F5B;
+        font-size: 25px;
+        font-weight: bold;
+        font-family: $suisse-intl;
+        margin-bottom: 0;
+      }
+
+      button {
+        text-decoration: none;
+        display: inline-block;
+        color: #FFFFFF;
+        background-color: #E85F5B;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin-top: 34px;
+        border: none;
+      }
+    }
+}

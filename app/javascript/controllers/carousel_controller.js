@@ -13,8 +13,8 @@ export default class extends Controller {
       adaptiveHeight: true,
       autoplay: true,
       lazyLoad: 'ondemand',
-      prevArrow: '<i class="bi bi-arrow-left-short"></i>',
-      nextArrow: '<i class="bi bi-arrow-right-short"></i>',
+      prevArrow: '<i class="bi bi-chevron-left"></i>',
+      nextArrow: '<i class="bi bi-chevron-right"></i>',
       responsive: [
         {
           breakpoint: 768,

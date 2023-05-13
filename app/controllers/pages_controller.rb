@@ -7,4 +7,5 @@ class PagesController < ApplicationController
   def about; end
   def cook; end
   def shop; end
+  def coaching; end
 end
