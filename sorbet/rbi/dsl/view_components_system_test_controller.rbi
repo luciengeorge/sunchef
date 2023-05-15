@@ -26,6 +26,7 @@ class ViewComponentsSystemTestController
     include ::ActionController::Base::HelperMethods
     include ::ApplicationHelper
     include ::PagesHelper
+    include ::TestimonialsHelper
     include ::PreviewHelper
     include ::DeviseHelper
   end

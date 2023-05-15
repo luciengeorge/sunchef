@@ -13,4 +13,76 @@
       <button>BOOK A CALL WITH ME</button>
     </div>
   </section>
+  <section class="self-empowerement-section">
+    <div class="row m-0 h-100">
+      <div class="col-12 col-md-6 m-0 p-0">
+        <div class="tree-container position-relative h-100">
+          <%= image_tag "tree-and-blobs.svg", alt: "tree", class: "tree-img" %>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 m-0 p-0">
+        <div class="text-container h-100 d-flex flex-column align-items-center justify-content-center">
+          <div id="carousel-indicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-item-inner">
+                  <p class="mb-0">I am eager to share what I’ve learned to help</p>
+                  <p><strong>empower you on your journey. </strong></p>
+                  <p>As a Holistic Health Coach, my goal is to help you become your best self by achieving a balanced lifestyle through habits and choices. I do this by raising awareness about how your mind and body can cooperate to create a healthy body and a thriving internal life.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-item-inner">
+                  <p>My personal experience with mindful living, as well as the course I completed at the Institute of Integrative Nutrition, have given me the tools required to help you help yourself! </p>
+                  <p>I offer strengths-based support and guide you towards making connections, identifying patterns, shifting limiting beliefs and using a growth mind-set. </p>
+                  <br>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-item-inner">
+                  <p class="mb-0">In a series of conversations, I learn what makes my client tick:</p>
+                  <p>your habits, needs, and aims. In addition to supporting you with specifc goals, I provide the space for you to choose health-promoting behaviors tailored to you. Together, we establish a solid blueprint for organic transformation through long-term behavior changes.</p>
+                  <p>It brings me such joy to see my clients become kinder to themselves and approach their health with openness and curiosity.</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-indicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-indicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="testimonials">
+    <div class="d-flex align-items-center justify-content-center flex-column h-100">
+      <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
+      <h2 class="testimonial-text mb-0">Are you ready to</h2>
+      <h2 class="testimonial-text last">be an expert on yourself?</h2>
+      <p>Don’t take my word for it - here’s what they have to say:</p>
+      <%= link_to "testimonials", testimonials_path %>
+    </div>
+  </section>
+  <section class="featured-testimonials mb-3">
+    <div class="row m-0">
+      <% @testimonials.each_with_index do |testimonial, index| %>
+        <div class="col-12 col-md-6 p-0">
+          <div class="testimonial" style="background-color: <%= @colors[index] %>">
+            <%= image_tag "testimonial-img.svg", alt: "testimonial" %>
+            <h3><%= testimonial.name %></h3>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </section>
 </div>

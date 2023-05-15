@@ -25,4 +25,6 @@ Rails.application.routes.draw do
   get :cook, to: "pages#cook"
   get :shop, to: "pages#shop"
   get :coaching, to: "pages#coaching"
+
+  resources :testimonials, only: :index
 end

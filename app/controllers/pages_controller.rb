@@ -7,5 +7,9 @@ class PagesController < ApplicationController
   def about; end
   def cook; end
   def shop; end
-  def coaching; end
+
+  def coaching
+    @testimonials = Testimonial.limit(4)
+    @colors = ["#FAD685", "#F8CFC5", "#CBD6AB", "#D5EEE9"]
+  end
 end

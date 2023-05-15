@@ -1,63 +1,162 @@
 #coaching {
   .intro {
-      min-height: 428px;
-      background: linear-gradient(to bottom, #E7B6A2 70%, #FAD685 30%);
+    min-height: 428px;
+    background: linear-gradient(to bottom, #E7B6A2 70%, #FAD685 30%);
+    display: flex;
+    align-items: end;
+
+    @include media-breakpoint-down(md) {
       display: flex;
       align-items: end;
+      justify-content: center;
+      padding-top: 48px;
+    }
 
-      @include media-breakpoint-down(md) {
-        display: flex;
-        align-items: end;
-        justify-content: center;
-        padding-top: 48px;
-      }
+    @include media-breakpoint-up(md) {
+      padding-left: 40px;
+    }
 
+    .coaching-title {
+      width: 608px;
+      height: 144px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 51px;
+    }
+
+    .yoga-img {
+      width: 280px;
       @include media-breakpoint-up(md) {
-        padding-left: 40px;
+        margin-right: 65px;
+      }
+      margin-bottom: 5px;
+    }
+  }
+
+  .health-coaching {
+    height: 285px;
+    padding: 54px 0;
+
+    .sparkles {
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      color: #E85F5B;
+      font-size: 25px;
+      font-weight: bold;
+      font-family: $suisse-intl;
+      margin-bottom: 0;
+    }
+
+    button {
+      text-decoration: none;
+      display: inline-block;
+      color: #FFFFFF;
+      background-color: #E85F5B;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 34px;
+      border: none;
+    }
+  }
+
+  .self-empowerement-section {
+    height: 598px;
+
+    .tree-container {
+      background-color: #CBD6AB;
+    }
+
+    .text-container {
+      background-color: #D5EEE9;
+      p {
+        font-family: $raleway;
+        font-weight: medium;
+        font-size: 15px;
       }
 
-      .coaching-title {
-        width: 608px;
-        height: 144px;
-        object-fit: contain;
-        object-position: center;
-        margin-bottom: 51px;
-      }
-
-      .yoga-img {
-        width: 280px;
-        @include media-breakpoint-up(md) {
-          margin-right: 65px;
-        }
-        margin-bottom: 5px;
+      .carousel-item-inner {
+        min-height: 275px;
+        padding: 50px 100px;
       }
     }
 
-    .health-coaching {
-      height: 285px;
-      padding: 54px 0;
+    .tree-img {
+      width: 700px;
+      height: 570px;
+      position: absolute;
+      bottom: 0;
+      left: -300px;
+    }
+  }
 
-      .sparkles {
-        margin-bottom: 18px;
-      }
+  .testimonials {
+    min-height: 400px;
+    padding: 70px 0;
 
-      h2 {
-        color: #E85F5B;
-        font-size: 25px;
-        font-weight: bold;
-        font-family: $suisse-intl;
-        margin-bottom: 0;
-      }
+    .sparkles {
+      width: 75px;
+      height: 70px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 18px;
+    }
 
-      button {
-        text-decoration: none;
-        display: inline-block;
-        color: #FFFFFF;
-        background-color: #E85F5B;
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-top: 34px;
-        border: none;
+    .testimonial-text {
+      font-family: $suisse-intl;
+      font-weight: bold;
+      font-size: 26px;
+      color: #E85F5B;
+      &.last {
+        margin-bottom: 43px;
       }
     }
+
+    p {
+      font-family: $suisse-intl;
+      font-weight: medium;
+      font-size: 16px;
+      margin-bottom: 11px;
+      color: #0D2B27;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0D2B27;
+      font-family: $suisse-intl;
+      font-size: 30px;
+      transition: all .3s;
+      display: inline-block;
+      border-bottom: 1px solid #0D2B27;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .featured-testimonials {
+    .testimonial {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 495px;
+    }
+
+    img {
+      width: 271px;
+      height: 126px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      color: #E85F5B;
+      font-size: 35px;
+      font-weight: bold;
+      font-family: $suisse-intl;
+    }
+  }
 }

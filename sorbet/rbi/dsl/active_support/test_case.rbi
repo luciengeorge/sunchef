@@ -18,6 +18,9 @@ class ActiveSupport::TestCase
   def recipes(*fixture_names); end
 
   sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
+  def selling_points(*fixture_names); end
+
+  sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }
   def testimonials(*fixture_names); end
 
   sig { params(fixture_names: T.any(String, Symbol)).returns(T.untyped) }

@@ -39,6 +39,12 @@ module GeneratedPathHelpersModule
   def admin_root_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def admin_selling_point_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_selling_points_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def admin_testimonial_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -49,6 +55,12 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def admin_users_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def coaching_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def cook_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def destroy_user_session_path(*args); end
@@ -64,6 +76,9 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def edit_admin_recipe_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_selling_point_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def edit_admin_testimonial_path(*args); end
@@ -91,6 +106,9 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_admin_recipe_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_selling_point_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_admin_testimonial_path(*args); end
@@ -193,6 +211,12 @@ module GeneratedPathHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def root_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def shop_path(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def testimonials_path(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def turbo_recede_historical_location_path(*args); end

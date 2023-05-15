@@ -39,6 +39,12 @@ module GeneratedUrlHelpersModule
   def admin_root_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
+  def admin_selling_point_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def admin_selling_points_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
   def admin_testimonial_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
@@ -49,6 +55,12 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def admin_users_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def coaching_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def cook_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def destroy_user_session_url(*args); end
@@ -64,6 +76,9 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def edit_admin_recipe_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def edit_admin_selling_point_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def edit_admin_testimonial_url(*args); end
@@ -91,6 +106,9 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def new_admin_recipe_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def new_admin_selling_point_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def new_admin_testimonial_url(*args); end
@@ -193,6 +211,12 @@ module GeneratedUrlHelpersModule
 
   sig { params(args: T.untyped).returns(String) }
   def root_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def shop_url(*args); end
+
+  sig { params(args: T.untyped).returns(String) }
+  def testimonials_url(*args); end
 
   sig { params(args: T.untyped).returns(String) }
   def turbo_recede_historical_location_url(*args); end
