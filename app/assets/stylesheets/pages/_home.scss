@@ -1,13 +1,18 @@
 #home {
   .intro {
       background-color: #d5eee9;
-      height: 261px;
+      min-height: 400px;
 
       .title {
+        margin-top: 48px;
+        @include media-breakpoint-up(md) {
+          margin-top: 117px;
+        }
         h1 {
-          font-size: 54px;
+          font-size: 70px;
           line-height: 0.9;
           font-weight: bold;
+          font-family: $raleway;
         }
       }
 
@@ -23,47 +28,53 @@
 
     .pink_section {
       background-color: #F8CFC5;
-      height: 172px;
+      height: 270px;
       p {
-        font-size: 17px;
+        font-size: 25px;
+        font-family: $raleway;
+        z-index: 1000;
       }
     }
 
 
     .subtitle {
       color: #ED8D77;;
-      font-size: 12px;
+      font-size: 20px;
     }
 
     .sparkles {
-      width: 60px;
-      height: 50px;
+      width: 115px;
+      height: 93px;
       object-fit: contain;
       object-position: center;
-      margin-bottom: 22px;
+      margin-bottom: 58px;
     }
 
     .illustration {
-      height: 750px;
-      right: 100px;
-      bottom: 50px;
+      height: 870px;
+      width: 319px;
+      object-fit: contain;
+      object-position: center;
+      right: 50px;
+      @include media-breakpoint-up(md) {
+        right: 144px;
+        bottom: 99px;
+        position: absolute;
+      }
     }
 
     .grid {
-      height: 50vw;
-      max-height: 50vh;
+      height: 752px;
       color: $white;
-      padding: 32px;
+      padding: 32px;;
       h2 {
+        font-family: $suisse-intl;
         font-size: 74px;
-        @include media-breakpoint-up(sm) {
-          font-size: 58px;
-        }
 
         @include media-breakpoint-up(md) {
-          font-size: 66px;
+          font-size: 96px;
         }
-        font-weight: 700;
+        font-weight: bold;
       }
     }
 
@@ -105,7 +116,7 @@
     }
 
     .middle__section {
-      height: 273px;
+      height: 407px;
     }
 
     .breakfast__section {
@@ -116,15 +127,15 @@
     }
 
     .breakfast__section--title-top {
-      font-size: 21px;
-      font-weight: 700;
+      font-size: 30px;
+      font-weight: bold;
       margin-left: 32px;
       line-height: 25px;
     }
 
     .breakfast__section--title-bottom {
-      font-size: 65px;
-      font-weight: 700;
+      font-size: 80px;
+      font-weight: bold;
       line-height: 84px;
     }
 

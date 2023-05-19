@@ -7,102 +7,122 @@
   }
 
   .section--height {
-    height: 428px;
+    min-height: 651px;
+    padding-top: 50px;
+    @include media-breakpoint-up(md) {
+      padding-top: 0;
+    }
   }
 
   .greeting {
-    font-size: 105px;
-    line-height: 0.2;
+    font-size: 70px;
     font-weight: 700;
     color: $black;
+    @include media-breakpoint-up(md) {
+      line-height: 0.5;
+      font-size: 140px;
+      margin-left: 153px;
+      margin-right: 137px;
+    }
     &--bottom {
-      margin-bottom: 52px;
-      line-height: 123px;
+      margin-bottom: 0;
+      @include media-breakpoint-up(md) {
+        margin-bottom: 105px;
+        line-height: 150px;
+      }
     }
   }
 
   .woman {
-    width: 400px;
-    height: 440px;
+    width: 295px;
+    height: 632px;
+    object-fit: contain;
+    object-position: center;
   }
 
   .about-container {
+    height: 667px;
     background-color: #A1BFCD;
-    height: 428px;
     h5 {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 500;
-      line-height: 23px;
+      line-height: 30px;
       &.bottom {
         margin-bottom: 28px;
       }
     }
     .paragraph {
-      font-size: 15px;
+      font-family: $raleway;
+      font-size: 25px;
       font-weight: 500;
-      line-height: 17px;
+      line-height: 25px;
     }
   }
 
   .flower-container {
     background-color: #E7E1D5;
-    height: 428px;
+    height: 667px;
+    overflow: hidden;
 
     .blobs-image {
-      left: -75px;
-      width: 274px;
-      height: 286px;
-      top: 23px;
+      left: -125px;
+      width: 456px;
+      height: 476px;
+      top: 58px;
       object-fit: contain;
       object-position: center;
     }
+
+    .blobs-about {
+      width: 555px;
+      height: 490px;
+      object-fit: contain;
+      object-position: center;
+      right: -187px;
+      top: 65px;
+    }
   }
 
-  .blobs-about {
-    width: 338px;
-    height: 298px;
-    object-fit: contain;
-    object-position: center;
-    right: -122.58px;
-    top: 38px;
-  }
 
   .section--green {
     background-color: $light-green;
     padding-bottom: 98px;
+    min-height: 882px;
   }
 
   .yellow-pepper {
-    width: 240.61px;
-    height: 304.98px;
+    width: 449px;
+    height: 569px;
+    margin-top: 153px;
     object-fit: contain;
     object-position: center;
   }
 
   .green-quote {
-    font-size: 54.04px;
+    font-size: 70px;
     color: #52B267;
-    line-height: 65.4px;
+    line-height: 80px;
     margin-top: 15.12px;
+    font-family: $raleway;
     font-weight: 700;
     &.small-line-height {
-      line-height: 1;
+      line-height: 80px;
       margin: 0;
     }
   }
 
   .small-green-quote {
     color: #52B267;
-    font-weight: 700;
-    font-size: 27px;
-    line-height: 31px;
-    margin-top: 17px;
+    font-size: 40px;
+    line-height: 45px;
+    margin-top: 25px;
     font-style: italic;
   }
   .mission {
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 22px;
+    font-weight: medium;
     margin-bottom: 0;
+    font-family: $raleway;
     &.bottom {
       margin-top: 21px;
       margin-bottom: 0;
@@ -115,15 +135,16 @@
 
   .soraya-section {
     @include media-breakpoint-down(md) {
-      min-height: 476px;
+      min-height: 714px;
     }
     @include media-breakpoint-up(md) {
-      height: 476px;
+      height: 714px;
     }
 
     .heading {
       color: #EEBF00;
-      font-size: 64px;
+      font-size: 90px;
+      font-family: $raleway;
       margin-bottom: 50px;
       margin-top: 50px;
       @include media-breakpoint-up(md) {
@@ -133,16 +154,17 @@
     }
 
     .paragraph {
-      font-size: 17px;
+      font-size: 25px;
       font-style: italic;
       font-weight: 400;
+      font-family: $raleway;
       margin-bottom: 7px;
     }
 
     .sunchef-signature {
-      margin-left: 317px;
-      width: 85px;
-      height: 19px;
+      float: right;
+      width: 131px;
+      height: 28px;
       object-fit: contain;
       object-fit: center;
     }
@@ -150,35 +172,36 @@
 
   .soraya-image {
     margin-top: 124px;
-    width: 392px;
-    height: 392px;
+    width: 663px;
+    height: 663px;
     @include media-breakpoint-up(md) {
-      margin-right: 60px;
+      margin-right: 68px;
     }
   }
 
   .block-yellow {
-    height: 141px;
+    height: 220px;
     background-color: $light-yellow;
     margin-bottom: 64px;
   }
 
   .about_description_section {
-    min-height: 264px;
-    padding: 30px 50px;
+    padding: 49px 80px;
     h2 {
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 35px;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: $raleway;
+      line-height: 45px;
       color: #0D2B27;
     }
 
     p {
       color: #0D2B27;
-      font-size: 15px;
-      line-height: 18px;
+      font-size: 20px;
+      line-height: 23px;
+      font-family: $raleway;
       &.top {
-        margin-bottom: 21px;
+        margin-bottom: 32px;
       }
     }
   }

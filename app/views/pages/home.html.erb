@@ -1,27 +1,30 @@
 <div id="home">
-  <section class="intro">
-    <div class="container d-flex flex-column align-items-center justify-content-center h-100">
-      <div class="title d-flex flex-column align-items-center justify-content-center">
-        <h1 class="mb-0">find</h1>
-        <h1 class="mb-0">your</h1>
-        <h1 class="mb-0 title--red">balance.</h1>
+  <div class="position-relative">
+    <section class="intro">
+      <div class="container d-flex flex-column align-items-center justify-content-center h-100">
+        <div class="title d-flex flex-column align-items-center justify-content-center">
+          <h1 class="mb-0">find</h1>
+          <h1 class="mb-0">your</h1>
+          <h1 class="mb-0 title--red">balance.</h1>
+        </div>
+        <%= image_tag "home-illustration.svg", alt: "illustration", class: 'illustration' %>
       </div>
-    </div>
-  </section>
-  <section class="pink_section">
-    <div class="d-flex flex-column align-items-center justify-content-center h-100">
-      <p class="text-white mb-0">A portal to your favorite deliciously</p>
-      <p class="text-white mb-0">nutritious recipes and the first step </p>
-      <p class="text-white mb-0">towards a balanced mind, body,</p>
-      <p class="text-white mb-0">and soul through holistic health</p>
-      <p class="text-white mb-0">coaching!  </p>
-    </div>
-  </section>
-  <section class="middle__section d-flex flex-column align-items-center justify-content-center position-relative">
-    <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
-    <h3 class="subtitle">A serving of mindfulness and a dash of willpower</h3>
-    <h3 class="subtitle">will help bring out the best in you!</h3>
-  </section>
+    </section>
+    <section class="pink_section">
+      <div class="d-flex flex-column align-items-center justify-content-center h-100">
+        <p class="text-white mb-0">A portal to your favorite deliciously</p>
+        <p class="text-white mb-0">nutritious recipes and the first step </p>
+        <p class="text-white mb-0">towards a balanced mind, body,</p>
+        <p class="text-white mb-0">and soul through holistic health</p>
+        <p class="text-white mb-0">coaching!  </p>
+      </div>
+    </section>
+    <section class="middle__section d-flex flex-column align-items-center justify-content-center position-relative">
+      <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
+      <h3 class="subtitle">A serving of mindfulness and a dash of willpower</h3>
+      <h3 class="subtitle">will help bring out the best in you!</h3>
+    </section>
+  </div>
   <section class="position-relative">
     <div class="grid__image__wrapper w-100 position-absolute d-flex align-items-center justify-content-center">
       <%= image_tag "mushroom.png", alt: "mushroom", class: "grid__mushroom d-none d-md-inline-block" %>
