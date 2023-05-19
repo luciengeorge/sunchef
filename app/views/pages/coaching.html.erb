@@ -16,12 +16,12 @@
   <section class="self-empowerement-section">
     <div class="row m-0 h-100">
       <div class="col-12 col-md-6 m-0 p-0">
-        <div class="tree-container position-relative h-100">
+        <div class="tree-container position-relative">
           <%= image_tag "tree-and-blobs.svg", alt: "tree", class: "tree-img" %>
         </div>
       </div>
       <div class="col-12 col-md-6 m-0 p-0">
-        <div class="text-container h-100 d-flex flex-column align-items-center justify-content-center">
+        <div class="text-container d-flex flex-column align-items-center justify-content-center">
           <div id="carousel-indicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -73,7 +73,10 @@
       <%= link_to "testimonials", testimonials_path %>
     </div>
   </section>
-  <section class="featured-testimonials mb-3">
+  <section class="featured-testimonials mb-3 position-relative">
+    <div class="pen-wrapper">
+      <%= image_tag "pen.svg", alt: "pen", class: "pen" %>
+    </div>
     <div class="row m-0">
       <% @testimonials.each_with_index do |testimonial, index| %>
         <div class="col-12 col-md-6 p-0">
