@@ -27,4 +27,5 @@ Rails.application.routes.draw do
   get :coaching, to: "pages#coaching"
 
   resources :testimonials, only: :index
+  resources :recipes, only: [:index, :show]
 end

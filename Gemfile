@@ -36,6 +36,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "faker"
   gem "rack-mini-profiler"
   gem "rubocop"
   gem "rubocop-shopify"

@@ -23,31 +23,14 @@
   </section>
   <section class="sunchef-cook-section d-flex align-items-center justify-content-center">
     <div class="position-relative">
-      <%= link_to "#", class: 'position-absolute category-link lunch' do %>
-        <%= image_tag "lunch.svg", alt: "lunch" %>
+      <% @categories.each do |category| %>
+        <%= link_to recipes_path(category:), class: "position-absolute category-link #{category}" do %>
+          <%= image_tag "#{category}.svg", alt: category %>
+        <% end %>
       <% end %>
-      <%= link_to "#", class: 'position-absolute category-link dinner' do %>
-        <%= image_tag "dinner.svg", alt: "dinner" %>
+      <%= link_to recipes_path do %>
+        <%= image_tag "cook-sunchef.svg", alt: "Sunchef", class: "sunchef-cook-img" %>
       <% end %>
-      <%= link_to "#", class: 'position-absolute category-link sweets' do %>
-        <%= image_tag "sweets.svg", alt: "sweets" %>
-      <% end %>
-      <%= link_to "#", class: 'position-absolute category-link smoothies' do %>
-        <%= image_tag "smoothies.svg", alt: "smoothies" %>
-      <% end %>
-      <%= link_to "#", class: 'position-absolute category-link drinks' do %>
-        <%= image_tag "drinks.svg", alt: "drinks" %>
-      <% end %>
-      <%= link_to "#", class: 'position-absolute category-link snacks' do %>
-        <%= image_tag "snacks.svg", alt: "snacks" %>
-      <% end %>
-      <%= link_to "#", class: 'position-absolute category-link dressings' do %>
-        <%= image_tag "dressings.svg", alt: "dressings" %>
-      <% end %>
-      <%= link_to "#", class: 'position-absolute category-link breakfast' do %>
-        <%= image_tag "breakfast.svg", alt: "breakfast" %>
-      <% end %>
-      <%= image_tag "cook-sunchef.svg", alt: "Sunchef", class: "sunchef-cook-img" %>
     </div>
   </section>
   <section class="position-relative">

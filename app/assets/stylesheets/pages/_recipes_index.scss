@@ -1,0 +1,23 @@
+#recipes {
+  .prep-time-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 85px;
+    height: 55px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .category-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 82px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
