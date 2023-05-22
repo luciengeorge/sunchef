@@ -10,7 +10,7 @@
                 <p class="mb-0"><%= recipe.prep_time %></p>
               </div>
               <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
-                <%= image_tag "#{recipe.category}.svg", alt: recipe.category %>
+                <p class="mb-0"><%= recipe.category %></p>
               </div>
             </div>
           </div>

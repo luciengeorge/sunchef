@@ -3913,8 +3913,6 @@ class Sprockets::SassCompressor
   # source://sassc-rails/2.1.2/lib/sassc/rails/compressor.rb#17
   def call(*args); end
 
-  # sprockets 2.x
-  #
   # source://sassc-rails/2.1.2/lib/sassc/rails/compressor.rb#17
   def evaluate(*args); end
 
@@ -3937,6 +3935,8 @@ end
 # source://sprockets//lib/sprockets/sass_compressor.rb#20
 Sprockets::SassCompressor::VERSION = T.let(T.unsafe(nil), String)
 
+# Deprecated: Use Sprockets::SassProcessor::Functions instead.
+#
 # source://sprockets//lib/sprockets/sass_processor.rb#312
 Sprockets::SassFunctions = Sprockets::SassProcessor::Functions
 

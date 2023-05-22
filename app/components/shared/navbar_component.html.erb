@@ -4,7 +4,9 @@
       <%= link_to "home", root_path, class: class_names("navbar__link", active: current_page?(root_path)) %>
       <%= link_to "about", about_path, class: class_names("navbar__link", active: current_page?(about_path)) %>
     </div>
-    <%= image_tag "logo.png", alt: "Sunchef Logo", class: "logo" %>
+    <%= link_to root_path do %>
+      <%= image_tag "logo.png", alt: "Sunchef Logo", class: "logo" %>
+    <% end %>
     <div class="navbar__right d-flex justify-content-around align-items-center">
       <%= link_to "cook", cook_path, class: class_names("navbar__link", active: current_page?(cook_path)) %>
       <%= link_to "coaching", coaching_path, class: class_names("navbar__link", active: current_page?(coaching_path)) %>

@@ -1,4 +1,3 @@
-
 puts "Cleaning DB..."
 Testimonial.destroy_all
 Recipe.destroy_all

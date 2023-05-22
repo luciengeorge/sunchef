@@ -61,8 +61,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Goodlife';
+  src: font-url('Goodlife-Sans-Condensed.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 $suisse-intl: 'SuisseIntl', sans-serif;
 $raleway: 'Raleway', sans-serif;
+$goodlife: 'Goodlife', sans-serif;
 $body-font: $suisse-intl;
 $headers-font: $raleway;
 
