@@ -28,4 +28,5 @@ Rails.application.routes.draw do
 
   resources :testimonials, only: :index
   resources :recipes, only: [:index, :show]
+  resources :contacts, only: [:new, :create]
 end
