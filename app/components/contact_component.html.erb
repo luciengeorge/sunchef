@@ -1,0 +1,13 @@
+<%= link_to contact, class: 'text-decoration-none' do %>
+  <div class="card mb-4">
+    <div class="card-header d-flex align-items-center justify-content-between">
+
+      <h5 style="color: <%= color %>"><%= contact.first_name %> <%= contact.last_name %></h5>
+      <h5 style="color: <%= color %>"><%= contact.gender %></h5>
+    </div>
+    <div class="card-body">
+      <p class="text-dark"><%= contact.email %></p>
+      <small class="mb-0 text-dark"><%= contact.birthdate %></small>
+    </div>
+  </div>
+<% end %>

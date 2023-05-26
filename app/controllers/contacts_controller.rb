@@ -1,10 +1,20 @@
 class ContactsController < ApplicationController
-  skip_before_action :authenticate_user!
+  skip_before_action :authenticate_user!, only: [:new, :create]
+
+  def index
+    @contacts = policy_scope(Contact)
+  end
+
+  def show
+    @contact = Contact.find(params[:id])
+    authorize @contact
+  end
 
   def new
     @contact = Contact.new
     authorize @contact
   end
+
   def create
     @contact = Contact.new(contact_params)
     authorize @contact

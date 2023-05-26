@@ -14,6 +14,6 @@ class PagesController < ApplicationController
 
   def coaching
     @testimonials = Testimonial.limit(Testimonial::FEATURED)
-    @colors = ["#FAD685", "#F8CFC5", "#CBD6AB", "#D5EEE9"]
+    @colors = Contact::COLORS
   end
 end

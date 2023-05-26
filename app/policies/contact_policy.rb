@@ -5,6 +5,10 @@ class ContactPolicy < ApplicationPolicy
     end
   end
 
+  def show?
+    user
+  end
+
   def create?
     true
   end
