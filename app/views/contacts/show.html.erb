@@ -1,0 +1,262 @@
+<div class="container my-5" id="contact_show">
+  <div class="row m-o">
+    <div class="col-12 col-md-6 offset-md-3">
+      <div class="row m-0">
+        <%= link_to "Back", contacts_path %>
+        <div class="col-12">
+          <h3><%= @contact.name %></h3>
+          <div class="underline"></div>
+          <h5>PERSONAL INFORMATION</h5>
+          <h6>What is your gender</h6>
+          <p><%= @contact.gender %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>First name</h6>
+          <p><%= @contact.first_name %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Last name</h6>
+          <p><%= @contact.last_name %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Email</h6>
+          <p><%= @contact.email %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Phone number</h6>
+          <p><%= @contact.phone %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Birth date</h6>
+          <p><%= @contact.birthdate %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Place of birth</h6>
+          <p><%= @contact.place_of_birth %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Height</h6>
+          <p><%= @contact.height %> cm</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Current weight</h6>
+          <p><%= @contact.current_weight %> kg</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Weight six months ago</h6>
+          <p><%= @contact.weight_six_month_ago %> kg</p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Weight one year ago</h6>
+          <p><%= @contact.weight_one_year_ago %> kg</p>
+        </div>
+        <div class="col-12">
+          <h6>Would you like your weight to be different?</h6>
+          <p><%= @contact.weight_change %></p>
+        </div>
+        <div class="col-12">
+          <h6>If so, what?</h6>
+          <p><%= @contact.weight_goal %></p>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-12">
+          <h5>SOCIAL INFORMATION</h5>
+          <h6>Where do you currently live?</h6>
+          <p><%= @contact.address %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Occupation</h6>
+          <p><%= @contact.occupation %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Hours of work per week</h6>
+          <p><%= @contact.hours_of_work_per_week %></p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6>Relationship status</h6>
+          <p><%= @contact.relationship_status %></p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6>Children</h6>
+          <p><%= @contact.children %></p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h6>Pets</h6>
+          <p><%= @contact.pets %></p>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-12">
+          <h5>HEALTH INFORMATION</h5>
+          <h6>Please list your main health concerns</h6>
+          <p><%= @contact.health_concerns %></p>
+        </div>
+        <div class="col-12">
+          <h6>Other concerns and/or goals</h6>
+          <p><%= @contact.other_concerns_or_goals %></p>
+        </div>
+        <div class="col-12">
+          <h6>At what point in your life did you feel your best?</h6>
+          <p><%= @contact.best_point_in_life %></p>
+        </div>
+        <div class="col-12">
+          <h6>How is/was the health of your mother?</h6>
+          <p><%= @contact.health_of_mother %></p>
+        </div>
+        <div class="col-12">
+          <h6>How is/was the health of your father?</h6>
+          <p><%= @contact.health_of_father %></p>
+        </div>
+        <div class="col-6">
+          <h6>How is your sleep?</h6>
+          <p><%= @contact.sleep_condition %></p>
+        </div>
+        <div class="col-6">
+          <h6>How many hours?</h6>
+          <p><%= @contact.hours_of_sleep %></p>
+        </div>
+        <div class="col-6">
+          <h6>Do you wake up at night?</h6>
+          <p><%= @contact.wake_up_at_night %></p>
+        </div>
+        <div class="col-6">
+          <h6>Give details...</h6>
+          <p><%= @contact.wake_up_at_night_reason %></p>
+        </div>
+        <div class="col-6">
+          <h6>Any serious illnesses/hospitalizations/injuries</h6>
+          <p><%= @contact.serious_illnesses %></p>
+        </div>
+        <div class="col-6">
+          <h6>Any pain, stiffness or swelling?</h6>
+          <p><%= @contact.pain_stiffness_or_swelling %></p>
+        </div>
+        <div class="col-6">
+          <h6>Constipation/Diarrhea/Gas?</h6>
+          <p><%= @contact.constipation_diarrhea_or_gas %></p>
+        </div>
+        <div class="col-6">
+          <h6>Allergies or sensitivities</h6>
+          <p><%= @contact.allergies_or_sensitivities %></p>
+        </div>
+        <div class="col-12">
+          <h6>Give details...</h6>
+          <p><%= @contact.allergies_or_sensitivities_explanation %></p>
+        </div>
+        <% if @contact.female? %>
+          <div class="col-12 col-md-6">
+            <h5>WOMEN'S HEALTH</h5>
+            <h6>Are your periods regular?</h6>
+            <p><%= @contact.regular_periods %></p>
+          </div>
+          <div class="col-12 col-md-6">
+            <h6>How many days in your flow?</h6>
+            <p><%= @contact.flow_days %></p>
+          </div>
+          <div class="col-12">
+            <h6>How frequent?</h6>
+            <p><%= @contact.frequency %></p>
+          </div>
+          <div class="col-12">
+            <h6>Painful or sumptomatic?</h6>
+            <p><%= @contact.painful_or_symptomatic %></p>
+          </div>
+          <div class="col-12">
+            <h6>Give details...</h6>
+            <p><%= @contact.painful_or_symptomatic_explanation %></p>
+          </div>
+          <div class="col-12">
+            <h6>Reached or approaching menopause?</h6>
+            <p><%= @contact.reached_or_approaching_menopause %></p>
+          </div>
+          <div class="col-12">
+            <h6>Give details...</h6>
+            <p><%= @contact.birth_control_history %></p>
+          </div>
+          <div class="col-12">
+            <h6>Do you experience yeast infections or urinary tract infections?</h6>
+            <p><%= @contact.yeast_infection_or_urinary_tract_infections %></p>
+          </div>
+          <div class="col-12">
+            <h6>Give details...</h6>
+            <p><%= @contact.yeast_infection_or_urinary_tract_infections_explanation %></p>
+          </div>
+        <% end %>
+      </div>
+      <div class="row m-0">
+        <div class="col-12">
+          <h5>MEDICAL INFORMATION</h5>
+          <h6>Do you take any supplements or medications?</h6>
+          <p><%= @contact.supplements_or_medications %></p>
+        </div>
+        <div class="col-12">
+          <h6>Give details...</h6>
+          <p><%= @contact.supplements_or_medications_list %></p>
+        </div>
+        <div class="col-12">
+          <h6>Any healers, helpers, or therapies with which you are involved?</h6>
+          <p><%= @contact.healers_helpers_or_therapies %></p>
+        </div>
+        <div class="col-12">
+          <h6>Give details...</h6>
+          <p><%= @contact.healers_helpers_or_therapies_list %></p>
+        </div>
+        <div class="col-12">
+          <h6>What role do sports and exercise play in your life?</h6>
+          <p><%= @contact.role_of_sports %></p>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-12">
+          <h5>FOOD INFORMATION</h5>
+          <p>What is your food like these days?</p>
+          <h6>Breakfast</h6>
+          <p><%= @contact.breakfast %></p>
+        </div>
+        <div class="col-12">
+          <h6>Lunch</h6>
+          <p><%= @contact.lunch %></p>
+        </div>
+        <div class="col-12">
+          <h6>Dinner</h6>
+          <p><%= @contact.dinner %></p>
+        </div>
+        <div class="col-12">
+          <h6>Snacks</h6>
+          <p><%= @contact.snacks %></p>
+        </div>
+        <div class="col-12">
+          <h6>Liquids</h6>
+          <p><%= @contact.liquids %></p>
+        </div>
+        <div class="col-12">
+          <h6>Will family and/or friends be supportive of your desire to make food and/or lifestyle changes?</h6>
+          <p><%= @contact.support_from_family %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>Do you cook?</h6>
+          <p><%= @contact.cooks %></p>
+        </div>
+        <div class="col-12 col-md-6">
+          <h6>What percentage of your food is home cooked?</h6>
+          <p><%= @contact.home_cooked_percentage %> %</p>
+        </div>
+        <div class="col-12">
+          <h6>Do you crave sugar, coffee, cigarettes, or have any major addictions?</h6>
+          <p><%= @contact.craving_sugar_cigarettes_or_addictions %></p>
+        </div>
+        <div class="col-12">
+          <h6>The most important thing I should do to improve my health is</h6>
+          <p><%= @contact.most_important_improvements %></p>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="col-12">
+          <h5>ADDITIONAL COMMENTS</h5>
+          <p><%= @contact.additional_comment %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

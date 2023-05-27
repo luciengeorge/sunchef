@@ -17,7 +17,6 @@ class Contact < ApplicationRecord
   validates :current_weight, presence: true
   validates :weight_six_month_ago, presence: true
   validates :weight_one_year_ago, presence: true
-  validates :weight_change, presence: true
   validates :weight_goal, presence: true
   validates :address, presence: true
   validates :occupation, presence: true
@@ -56,4 +55,8 @@ class Contact < ApplicationRecord
   validates :supplements_or_medications, presence: true
   validates :healers_helpers_or_therapies, presence: true
   validates :role_of_sports, presence: true
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

@@ -1,11 +1,14 @@
-<%= link_to contact, class: 'text-decoration-none' do %>
-  <div class="card mb-4">
-    <div class="card-header d-flex align-items-center justify-content-between">
-
-      <h5 style="color: <%= color %>"><%= contact.first_name %> <%= contact.last_name %></h5>
-      <h5 style="color: <%= color %>"><%= contact.gender %></h5>
-    </div>
-    <div class="card-body">
+<%= link_to contact, class: 'text-decoration-none d-block h-100 px-2 py-3' do %>
+  <div class="card h-100">
+    <div class="card-body h-100">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5 style="color: <%= color %>"><%= contact.name %></h5>
+        <% if contact.male? %>
+          <i class="bi bi-gender-male" style="color: <%= color %>"></i>
+        <% else %>
+          <i class="bi bi-gender-female" style="color: <%= color %>"></i>
+        <% end %>
+      </div>
       <p class="text-dark"><%= contact.email %></p>
       <small class="mb-0 text-dark"><%= contact.birthdate %></small>
     </div>
