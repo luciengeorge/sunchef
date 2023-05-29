@@ -19,7 +19,9 @@ class RecipeDashboard < Administrate::BaseDashboard
     ingredients: Field::NestedHasMany.with_options(
       skip: :recipe,
     ),
-    category: Field::Enum,
+    category: Field::Select.with_options(searchable: false, collection: ->(field) {
+                                                                          field.resource.class.send(field.attribute.to_s.pluralize).keys.map(&:humanize)
+                                                                        }),
     instructions: Field::NestedHasMany.with_options(
       skip: :recipe,
     ),

@@ -46,4 +46,12 @@
   .bi-list {
     font-size: 30px !important;
   }
+
+  .navbar-collapse {
+    background: white;
+
+    @include media-breakpoint-up(lg) {
+      background: transparent;
+    }
+  }
 }

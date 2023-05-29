@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :ingredients
       resources :instructions
       resources :testimonials
+      resources :contacts
 
       root to: "users#index"
     end
