@@ -11,16 +11,21 @@ class RecipeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    category: Field::BelongsTo,
     images: Field::ActiveStorage.with_options(
       images_admin_recipe_url: proc do |_namespace, _resource, attachment|
         [:images_admin_recipe, { attachment_id: attachment.id }]
       end,
     ),
-    ingredients: Field::HasMany,
-    instructions: Field::HasMany,
+    ingredients: Field::NestedHasMany.with_options(
+      skip: :recipe,
+    ),
+    category: Field::Enum,
+    instructions: Field::NestedHasMany.with_options(
+      skip: :recipe,
+    ),
     name: Field::String,
     servings: Field::Number,
+    prep_time: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -32,20 +37,23 @@ class RecipeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
+    :name,
+    :servings,
     :category,
-    :images,
+    :prep_time,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :name,
+    :servings,
+    :prep_time,
     :category,
     :images,
     :ingredients,
     :instructions,
-    :name,
-    :servings,
     :created_at,
     :updated_at,
   ].freeze
@@ -54,12 +62,13 @@ class RecipeDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :category,
-    :images,
-    :ingredients,
-    :instructions,
     :name,
     :servings,
+    :category,
+    :images,
+    :prep_time,
+    :ingredients,
+    :instructions,
   ].freeze
 
   # COLLECTION_FILTERS
@@ -77,9 +86,10 @@ class RecipeDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how recipes are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(recipe)
-  #   "Recipe ##{recipe.id}"
-  # end
+  def display_resource(recipe)
+    recipe.name
+  end
+
   def permitted_attributes
     super + [images: []]
   end

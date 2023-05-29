@@ -3,21 +3,26 @@
     <%= simple_form_for @contact do |f| %>
       <div class="row m-0">
         <div class="col-12">
+          <p>hello sunshine,</p>
+          <p>please fill the Health History Form below. Once I receive it, I will contact you on the email you provided and we will schedule a FREE 30 minutes weekend to decide how to proceed.</p>
+          <p>Let me know if vou have any questions.</p>
+          <p>Kind regards,</p>
+          <p>Soraya ☀️</p>
+          <%= f.input :gender, as: :select, label: "First, choose your gender to fill out the appropriate form 👇", collection: Contact.genders.keys, label_method: lambda { |gender| gender.humanize }, prompt: "Pick your gender", input_html: { data: { action: "change->contact-form#toggleGender" } } %>
           <h3>HEALTH HISTORY <span data-contact-form-target="word">MEN</span></h3>
           <div class="underline"></div>
           <h5>PERSONAL INFORMATION</h5>
-          <%= f.input :gender, as: :select, label: "What is your gender?", collection: Contact.genders.keys, label_method: lambda { |gender| gender.humanize }, prompt: "Pick your gender", input_html: { data: { action: "change->contact-form#toggleGender" } } %>
         </div>
       </div>
       <div class="row m-0">
         <div class="col-12 col-md-6">
-          <%= f.input :first_name, placeholder: "Jane" %>
+          <%= f.input :first_name, placeholder: "John", input_html: { data: { contact_form_target: "firstName" } } %>
         </div>
         <div class="col-12 col-md-6">
           <%= f.input :last_name, placeholder: "Smith" %>
         </div>
         <div class="col-12 col-md-6">
-          <%= f.input :email, placeholder: "janesmith@gmail.com" %>
+          <%= f.input :email, placeholder: "johnsmith@gmail.com", input_html: { data: { contact_form_target: "email" } } %>
         </div>
         <div class="col-12 col-md-6">
           <%= f.input :phone, placeholder: "+9613456789" %>

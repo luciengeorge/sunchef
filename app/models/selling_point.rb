@@ -1,2 +1,0 @@
-class SellingPoint < ApplicationRecord
-end

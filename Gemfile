@@ -9,6 +9,8 @@ gem "rails", "~> 7.0.4", ">= 7.0.4.2"
 
 gem "administrate"
 gem "administrate-field-active_storage"
+gem "administrate-field-enum"
+gem "administrate-field-nested_has_many"
 gem "aws-sdk-s3", "~> 1"
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2.2"
@@ -37,6 +39,7 @@ end
 
 group :development do
   gem "faker"
+  gem "letter_opener"
   gem "rack-mini-profiler"
   gem "rubocop"
   gem "rubocop-shopify"

@@ -7,11 +7,9 @@ Rails.application.routes.draw do
       resources :recipes do
         delete :images, on: :member, action: :destroy_image
       end
-      resources :categories
       resources :ingredients
       resources :instructions
       resources :testimonials
-      resources :selling_points
 
       root to: "users#index"
     end
