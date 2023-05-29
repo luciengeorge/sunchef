@@ -18,12 +18,15 @@ export default class extends Controller {
   }
 
   submitEnd(event) {
-    console.log();
     if (event.detail.success) {
       this.formTarget.reset();
     } else {
       event.detail.fetchResponse.response.json().then((data) => {
         this.formTarget.outerHTML = data.form;
+      });
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
       });
     }
   }
