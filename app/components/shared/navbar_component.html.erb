@@ -19,6 +19,9 @@
             <li class="nav-item">
               <%= link_to "cook", cook_path, class: class_names("navbar__link nav-link", active: current_page?(cook_path)) %>
             </li>
+            <li class="nav-item">
+              <%= link_to "coaching", coaching_path, class: class_names("navbar__link nav-link", active: current_page?(coaching_path)) %>
+            </li>
           </div>
           <li class="nav-item d-none d-lg-inline-block">
             <%= link_to root_path, class: 'nav-link' do %>
@@ -27,10 +30,10 @@
           </li>
           <div class="navbar__right d-block d-lg-flex justify-content-around align-items-center">
             <li class="nav-item">
-              <%= link_to "coaching", coaching_path, class: class_names("navbar__link nav-link", active: current_page?(coaching_path)) %>
+              <%= link_to "shop", shop_path, class: class_names("navbar__link nav-link", active: current_page?(shop_path)) %>
             </li>
             <li class="nav-item">
-              <%= link_to "shop", shop_path, class: class_names("navbar__link nav-link", active: current_page?(shop_path)) %>
+              <%= link_to "recipes", recipes_path, class: class_names("navbar__link nav-link", active: current_page?(recipes_path)) %>
             </li>
             <li class="nav-item">
               <%= link_to "Book a call", new_contact_path, class: "btn btn-primary nav-link" %>

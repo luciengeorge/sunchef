@@ -30,7 +30,7 @@ class ContactDashboard < Administrate::BaseDashboard
     flow_days: Field::Number,
     frequency: Field::String,
     gender: Field::Select.with_options(searchable: false, collection: ->(field) {
-                                                                        field.resource.class.send(field.attribute.to_s.pluralize).keys.map(&:humanize)
+                                                                        field.resource.class.send(field.attribute.to_s.pluralize).keys # .map(&:humanize)
                                                                       }),
     healers_helpers_or_therapies: Field::Boolean,
     healers_helpers_or_therapies_list: Field::Text,
@@ -56,7 +56,7 @@ class ContactDashboard < Administrate::BaseDashboard
     reached_or_approaching_menopause: Field::Boolean,
     regular_periods: Field::Boolean,
     relationship_status: Field::Select.with_options(searchable: false, collection: ->(field) {
-                                                                                     field.resource.class.send(field.attribute.to_s.pluralize).keys.map(&:humanize)
+                                                                                     field.resource.class.send(field.attribute.to_s.pluralize).keys # .map(&:humanize)
                                                                                    }),
     role_of_sports: Field::Text,
     serious_illnesses: Field::Boolean,

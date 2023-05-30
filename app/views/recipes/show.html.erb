@@ -1,3 +1,41 @@
-<div class="container my-5">
-
+<div id="recipe_show" class="my-5">
+  <section class="top-section position-relative">
+    <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
+    <div class="d-flex flex-column align-items-center justify-content-center w-100 h-100">
+      <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
+      <h3 class="recipe-title"><%= @recipe.name %></h3>
+      <%= image_tag "recipe-under-title.svg", alt: "recipe under title", class: 'recipe-under-title' %>
+    </div>
+  </section>
+  <%= image_tag "food.jpg", alt: "Recipe image", class: 'recipe-img' %>
+  <%#= image_tag @recipe.images.first.url, alt: "Recipe image", class: 'recipe-img' %>
+  <section class="ingredients">
+    <div class="d-flex align-items-center justify-content-between">
+      <div>
+        <h3 class="title">INGREDIENTS</h3>
+        <%= image_tag "sparkle.svg", alt: "sparkle", class: "sparkle" %>
+      </div>
+      <div class="d-flex flex-column align-items-center justify-content-center">
+        <%= image_tag "sparkles.svg", alt: "sparkles", class: "ingredient-recipe-sparkles" %>
+        <h5 class="ingredient-recipe-title"><%= @recipe.name %></h5>
+        <p class="ingredient-recipe-servings">serves <%= @recipe.servings %></p>
+      </div>
+    </div>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <div class="d-flex align-items-center mb-3">
+        <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-3" %>
+        <p class="mb-0"><%= ingredient.description %></p>
+      </div>
+    <% end %>
+  </section>
+  <%= image_tag "breakfast.jpg", alt: "Recipe image", class: 'recipe-img' %>
+  <section class="instructions">
+    <h3 class="title">INSTRUCTIONS</h3>
+    <% @recipe.instructions.each do |instruction| %>
+      <div class="d-flex align-items-center mb-3">
+        <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-3" %>
+        <p class="mb-0"><%= instruction.description %></p>
+      </div>
+    <% end %>
+  </section>
 </div>

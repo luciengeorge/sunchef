@@ -14,4 +14,8 @@ class Recipe < ApplicationRecord
   def to_s
     name
   end
+
+  def to_param
+    "#{name.parameterize}-#{id}"
+  end
 end

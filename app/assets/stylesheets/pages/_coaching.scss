@@ -84,12 +84,12 @@
 
   .self-empowerement-section {
     .tree-container {
-      height: 598px;
+      min-height: 598px;
       background-color: #CBD6AB;
     }
 
     .text-container {
-      height: 598px;
+      min-height: 598px;
       background-color: #D5EEE9;
       p {
         font-family: $raleway;

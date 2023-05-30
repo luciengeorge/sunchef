@@ -1,0 +1,99 @@
+#recipe_show {
+  .top-section {
+    height: 950px;
+
+    .sparkles {
+      width: 121px;
+      height: 112px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .recipe-img {
+      width: 131px;
+      height: 538px;
+      position: absolute;
+      top: 0;
+      left: 71px;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    .recipe-title {
+      color: #E85F5B;
+      font-family: $suisse-intl;
+      font-size: 45px;
+      max-width: 286px;
+      text-align: center;
+    }
+
+    .recipe-under-title {
+      width: 477px;
+      height: 223px;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .recipe-img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .title {
+    color: #0D2B27;
+    font-family: $raleway;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 22px;
+  }
+
+  .ingredient-sparkle {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .ingredients {
+    background-color: #E7E1D5;
+    padding: 47px 78px;
+
+    .sparkle {
+      width: 52px;
+      height: 52px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 42px;
+    }
+
+    .ingredient-recipe-sparkles {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      object-position: center;
+      margin-bottom: 26px;
+    }
+
+    .ingredient-recipe-title {
+      font-family: $suisse-intl;
+      font-size: 23px;
+      color: #E85F5B;
+      max-width: 160px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .ingredient-recipe-servings {
+      color: #E85F5B;
+      font-family: $raleway;
+      font-size: 15px;
+    }
+  }
+
+  .instructions {
+    background-color: #D5EEE9;
+    padding: 47px 78px;
+  }
+}
