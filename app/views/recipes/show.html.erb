@@ -7,8 +7,9 @@
       <%= image_tag "recipe-under-title.svg", alt: "recipe under title", class: 'recipe-under-title' %>
     </div>
   </section>
-  <%= image_tag "food.jpg", alt: "Recipe image", class: 'recipe-img' %>
-  <%#= image_tag @recipe.images.first.url, alt: "Recipe image", class: 'recipe-img' %>
+  <% if @recipe.images.first.present? %>
+    <%= image_tag @recipe.images.first.url, alt: "Recipe image", class: 'recipe-img' %>
+  <% end %>
   <section class="ingredients">
     <div class="d-flex align-items-center justify-content-between">
       <div>
@@ -28,7 +29,9 @@
       </div>
     <% end %>
   </section>
-  <%= image_tag "breakfast.jpg", alt: "Recipe image", class: 'recipe-img' %>
+  <% if @recipe.images.second.present? %>
+    <%= image_tag @recipe.images.second.url, alt: "Recipe image", class: 'recipe-img' %>
+  <% end %>
   <section class="instructions">
     <h3 class="title">INSTRUCTIONS</h3>
     <% @recipe.instructions.each do |instruction| %>
