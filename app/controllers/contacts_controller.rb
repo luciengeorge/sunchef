@@ -1,14 +1,16 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
+  skip_before_action :authenticate_user!, only: [:show, :new, :create]
 
   def index
     @contacts = policy_scope(Contact)
   end
 
   def show
-    @contact = Contact.find(params[:id])
+    @contact = Contact.find_by(token: params[:id])
+    raise ActiveRecord::RecordNotFound, "Could not find the form" if @contact.blank?
+
     authorize(@contact)
   end
 

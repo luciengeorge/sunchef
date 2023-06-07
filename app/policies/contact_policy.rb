@@ -6,7 +6,7 @@ class ContactPolicy < ApplicationPolicy
   end
 
   def show?
-    user
+    true
   end
 
   def create?

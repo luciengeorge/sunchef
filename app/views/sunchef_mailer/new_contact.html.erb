@@ -15,7 +15,7 @@
   .header {
     text-align: center;
     padding: 20px 0;
-    background-color: #FAD685;
+    background-color: #ffb850;
     color: #ffffff;
   }
   .content {
@@ -25,8 +25,8 @@
   }
   .button {
     display: inline-block;
-    background-color: #FAD685;
-    color: #ffffff;
+    background-color: #ffb850;
+    color: #000000;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -35,10 +35,10 @@
     text-align: center;
     padding: 20px;
     background-color: #f4f4f4;
-    color: #666666;
+    color: #ffb850;
   }
   a {
-    color: #FAD685;
+    color: #ffb850;
     text-decoration: none;
   }
 </style>
@@ -48,9 +48,9 @@
   </div>
   <div class="content">
     <p>Hii Soussi 👋</p>
-    <p>Thank you for installing Skyla, the customer support service app powered by OpenAI's API, on your Shopify store! We're excited to help you enhance your customer support experience and streamline your store's operations.</p>
-    <p>Best regards,</p>
-    <p>The Skyla Team</p>
+    <p><%= @contact.name %> just submitted their health form. You can see it here</p>
+    <%= link_to "Open health form", contact_url(@contact.token), class: "button", target: :blank %>
+    <p>Cheers ✌️</p>
   </div>
   <div class="footer">
     <p>&copy; <%= Date.today.year %> Sunchef. All rights reserved.</p>
