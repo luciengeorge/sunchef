@@ -71,5 +71,6 @@ class Contact < ApplicationRecord
 
   def deliver_email
     SunchefMailer.with(contact: self).new_contact.delivery_later
+    ContactMailer.with(contact: self).new_contact.delivery_later
   end
 end
