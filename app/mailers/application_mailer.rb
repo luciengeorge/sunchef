@@ -1,4 +1,6 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "from@example.com"
+  SUNCHEF_EMAIL = "by.sunchef@gmail.com"
+
+  default from: SUNCHEF_EMAIL
   layout "mailer"
 end

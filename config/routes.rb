@@ -27,5 +27,5 @@ Rails.application.routes.draw do
 
   resources :testimonials, only: :index
   resources :recipes, only: [:index, :show]
-  resources :contacts, only: [:index, :show, :new, :create]
+  resources :contacts, only: [:index, :show, :new, :create], path: 'forms'
 end
