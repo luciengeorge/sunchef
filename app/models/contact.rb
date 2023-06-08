@@ -59,7 +59,18 @@ class Contact < ApplicationRecord
   validates :healers_helpers_or_therapies, inclusion: [true, false]
   validates :role_of_sports, presence: true
 
+  has_secure_token :token, length: 36
+
+  after_create :deliver_email
+
   def name
     "#{first_name} #{last_name}"
+  end
+
+  private
+
+  def deliver_email
+    SunchefMailer.with(contact: self).new_contact.delivery_later
+    ContactMailer.with(contact: self).new_contact.delivery_later
   end
 end
