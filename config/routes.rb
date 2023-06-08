@@ -3,16 +3,17 @@
 Rails.application.routes.draw do
   authenticate :user, ->(user) { user.admin? } do
     namespace :admin do
-      resources :users
       resources :recipes do
         delete :images, on: :member, action: :destroy_image
       end
+      resources :users
       resources :ingredients
       resources :instructions
       resources :testimonials
       resources :contacts
+      resources :plans
 
-      root to: "users#index"
+      root to: "recipes#index"
     end
   end
   devise_for :users
@@ -27,6 +28,6 @@ Rails.application.routes.draw do
 
   resources :testimonials, only: :index
   resources :recipes, only: [:index, :show]
-  resources :contacts, only: [:index, :show, :new, :create], path: 'forms'
+  resources :contacts, only: [:index, :show, :new, :create], path: "forms"
   resources :plans, only: :index
 end
