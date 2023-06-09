@@ -25,9 +25,13 @@ Rails.application.routes.draw do
   get :cook, to: "pages#cook"
   get :shop, to: "pages#shop"
   get :coaching, to: "pages#coaching"
+  get :maintenance, to: "pages#maintenance"
 
   resources :testimonials, only: :index
   resources :recipes, only: [:index, :show]
   resources :contacts, only: [:index, :show, :new, :create], path: "forms"
   resources :plans, only: :index
+  resources :users, only: [] do
+    post :lock, on: :collection
+  end
 end

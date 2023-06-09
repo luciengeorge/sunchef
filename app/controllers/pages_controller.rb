@@ -16,4 +16,9 @@ class PagesController < ApplicationController
     @testimonials = Testimonial.limit(Testimonial::FEATURED)
     @colors = Contact::COLORS
   end
+
+  def maintenance
+    admin = User.find_by(admin: true)
+    return redirect_to(root_path) unless admin.locked_website_at.present?
+  end
 end

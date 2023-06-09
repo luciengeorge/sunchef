@@ -9,7 +9,15 @@ class ApplicationController < ActionController::Base
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
+  before_action :under_maintenance
+
   private
+
+  def under_maintenance
+    return unless under_maintenance?
+
+    redirect_to(maintenance_path)
+  end
 
   def user_not_authorized
     flash[:alert] = "You are not authorized to perform this action."
@@ -18,5 +26,12 @@ class ApplicationController < ActionController::Base
 
   def skip_pundit?
     devise_controller? || params[:controller] =~ /(^(rails_)?admin)|(^pages$)/
+  end
+
+  def under_maintenance?
+    admin = User.find_by(admin: true)
+    !((controller_name == "pages" && action_name == "maintenance") ||
+      admin.locked_website_at.blank? ||
+      current_user&.admin?)
   end
 end
