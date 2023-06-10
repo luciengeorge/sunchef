@@ -4,7 +4,7 @@ Hii Soussi 👋
 
 <%= @contact.name %> just submitted their health form. You can see it here:
 
-<%= contact_url(@contact.token) %>
+<%= contact_url(@contact, token: @contact.token) %>
 
 Cheers ✌️
 
