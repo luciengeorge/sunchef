@@ -49,7 +49,7 @@
   <div class="content">
     <p>Hii Soussi 👋</p>
     <p><%= @contact.name %> just submitted their health form. You can see it here</p>
-    <%= link_to "Open health form", contact_url(@contact.token), class: "button", target: :blank %>
+    <%= link_to "Open health form", contact_url(@contact, token: @contact.token), class: "button", target: :blank %>
     <p>Cheers ✌️</p>
   </div>
   <div class="footer">

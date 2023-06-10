@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
   end
 
   def show
-    @contact = Contact.find_by(token: params[:id])
+    @contact = Contact.find_by(id: params[:id], token: params[:token])
     raise ActiveRecord::RecordNotFound, "Could not find the form" if @contact.blank?
 
     authorize(@contact)
