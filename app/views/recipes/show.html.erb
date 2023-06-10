@@ -41,4 +41,7 @@
       </div>
     <% end %>
   </section>
+  <section id="youtube" class="my-5 <%= @recipe.youtube_id.blank? ? 'd-none' : 'd-flex' %> align-items-center justify-content-center">
+    <iframe width="889" height="500" src="https://www.youtube.com/embed/<%= @recipe.youtube_id %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
 </div>
