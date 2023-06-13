@@ -1,6 +1,5 @@
 <div id="home">
   <div class="position-relative">
-    <%= render MushroomComponent.new %>
     <section class="intro">
       <div class="container d-flex flex-column align-items-center justify-content-center h-100">
         <div class="title d-flex flex-column align-items-center justify-content-center">
@@ -28,7 +27,8 @@
   </div>
   <section class="position-relative">
     <div class="grid__image__wrapper w-100 position-absolute d-flex align-items-center justify-content-center">
-      <%= image_tag "mushroom.png", alt: "mushroom", class: "grid__mushroom d-none d-md-inline-block" %>
+      <%#= image_tag "mushroom.png", alt: "mushroom", class: "grid__mushroom d-none d-md-inline-block" %>
+      <%= render MushroomComponent.new %>
     </div>
     <div class="row m-0">
       <div class="col-12 col-md-6 m-0 grid grid__top__left d-flex flex-column align-items-center align-items-md-start justify-content-end">

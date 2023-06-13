@@ -11,8 +11,6 @@ class ApplicationController < ActionController::Base
 
   before_action :under_maintenance
 
-  private
-
   def under_maintenance
     return unless under_maintenance?
 

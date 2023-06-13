@@ -227,14 +227,36 @@
     width: 75%;
     object-fit: contain;
     object-position: center;
+    animation: wiggle 1.75s infinite alternate;
     @include media-breakpoint-up(md) {
       width: 670px;
       height: 726px;
       position: absolute;
       bottom: 37px;
-      left: 116px;
+      left: 15px;
       z-index: 1000;
     }
+  }
+}
 
+@keyframes wiggle {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  5% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  15% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
