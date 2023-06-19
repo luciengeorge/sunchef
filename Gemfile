@@ -14,6 +14,7 @@ gem "administrate-field-nested_has_many"
 gem "aws-sdk-s3", "~> 1"
 gem "bootsnap", require: false
 gem "bootstrap", "~> 5.2.2"
+gem "browser"
 gem "devise"
 gem "image_processing"
 gem "importmap-rails"

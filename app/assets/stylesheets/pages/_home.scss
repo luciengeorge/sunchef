@@ -75,6 +75,7 @@
     height: 50vw;
     color: $white;
     padding: 32px;;
+    position: relative;
     h2 {
       font-family: $suisse-intl;
       font-size: 30px;
@@ -102,6 +103,36 @@
         font-size: 94px;
       }
     }
+    .preview {
+      transition: all 0.2s ease;
+      button {
+        background: transparent;
+        border: none;
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+    .detail {
+      position: absolute;
+      height: 100%;
+      overflow: scroll;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 0.2s ease;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: $white;
+    }
+    &:hover {
+      .preview {
+        opacity: 0;
+      }
+      .detail {
+        opacity: 1;
+      }
+    }
   }
 
   .grid__top__left {
@@ -123,16 +154,15 @@
 
   .grid__bottom__right {
     background-color: $light-blue;
-    h2 {
-      color: #FF7F77;
+    h2, button {
+      color: #FF7F77 !important;
     }
   }
 
   .grid__image__wrapper {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     .grid__mushroom {
       width: 100px;
       height: 160px;
