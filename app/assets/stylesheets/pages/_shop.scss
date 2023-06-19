@@ -3,11 +3,11 @@
     height: 657px;
     background: linear-gradient(to bottom, #CFE1FA 70%, #CBD6AB 30%);
     display: flex;
-    align-items: end;
+    align-items: flex-end;
 
     @include media-breakpoint-down(md) {
       display: flex;
-      align-items: end;
+      align-items: flex-end;
       justify-content: center;
     }
 

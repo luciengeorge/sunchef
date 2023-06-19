@@ -7,41 +7,51 @@
   }
 
   .section--height {
-    min-height: 651px;
+    min-height: 400px;
     padding-top: 50px;
     @include media-breakpoint-up(md) {
+      min-height: 651px;
       padding-top: 0;
     }
   }
 
-  .greeting {
-    font-size: 70px;
-    font-weight: 700;
-    color: $black;
+  .title-img {
+    width: 85%;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 50px;
+    }
+
     @include media-breakpoint-up(md) {
-      line-height: 0.5;
-      font-size: 140px;
-      margin-left: 153px;
-      margin-right: 137px;
+      width: 60%;
     }
-    &--bottom {
-      margin-bottom: 0;
-      @include media-breakpoint-up(md) {
-        margin-bottom: 105px;
-        line-height: 150px;
-      }
+
+    @include media-breakpoint-up(lg) {
+      width: 50%;
     }
+
+    object-fit: contain;
+    object-position: center;
   }
 
   .woman {
-    width: 295px;
-    height: 632px;
+    width: 50%;
+    @include media-breakpoint-up(md) {
+      width: 40%;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 20%;
+    }
     object-fit: contain;
     object-position: center;
   }
 
   .about-container {
-    height: 667px;
+    @include media-breakpoint-up(md) {
+      height: 667px;
+    }
     background-color: #A1BFCD;
     h5 {
       font-size: 30px;
@@ -80,6 +90,13 @@
       object-position: center;
       right: -187px;
       top: 65px;
+    }
+  }
+
+  .founder-of-sunchef {
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 75%;
     }
   }
 
@@ -185,8 +202,7 @@
     margin-bottom: 64px;
   }
 
-  .about_description_section {
-    padding: 49px 80px;
+  .about-description-section {
     h2 {
       font-size: 40px;
       font-weight: bold;

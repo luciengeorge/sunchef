@@ -28,9 +28,9 @@
   </section>
   <section>
     <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
-      <% 10.times do %>
+      <% @images.each do |image| %>
         <div class="carousel-slide">
-          <%= image_tag "risotto.jpg", alt: "carousel" %>
+          <%= image_tag image.url, alt: "carousel" %>
         </div>
       <% end %>
     </div>
