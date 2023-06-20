@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       resources :testimonials
       resources :contacts
       resources :plans
+      resources :carousel_images
 
       root to: "recipes#index"
     end

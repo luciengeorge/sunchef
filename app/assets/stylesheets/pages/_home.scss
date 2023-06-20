@@ -1,151 +1,228 @@
 #home {
   .intro {
-      background-color: #d5eee9;
-      min-height: 400px;
+    background-color: #d5eee9;
+    min-height: 400px;
 
-      .title {
-        margin-top: 48px;
-        @include media-breakpoint-up(md) {
-          margin-top: 117px;
-        }
-        h1 {
-          font-size: 70px;
-          line-height: 0.9;
-          font-weight: bold;
-          font-family: $raleway;
-        }
-      }
-
-      .title--red {
-        color: $red;
-      }
-    }
-
-    .intro__svg {
-      width: 200px;
-    }
-
-
-    .pink_section {
-      background-color: #F8CFC5;
-      height: 270px;
-      p {
-        font-size: 25px;
-        font-family: $raleway;
-        z-index: 1000;
-      }
-    }
-
-
-    .subtitle {
-      color: #ED8D77;;
-      font-size: 20px;
-    }
-
-    .sparkles {
-      width: 115px;
-      height: 93px;
-      object-fit: contain;
-      object-position: center;
-      margin-bottom: 58px;
-    }
-
-    .illustration {
-      height: 870px;
-      width: 319px;
-      object-fit: contain;
-      object-position: center;
-      right: 50px;
+    .title {
+      margin-top: 48px;
       @include media-breakpoint-up(md) {
-        right: 144px;
-        bottom: 99px;
-        position: absolute;
+        margin-top: 117px;
       }
-    }
-
-    .grid {
-      height: 752px;
-      color: $white;
-      padding: 32px;;
-      h2 {
-        font-family: $suisse-intl;
-        font-size: 74px;
-
-        @include media-breakpoint-up(md) {
-          font-size: 96px;
-        }
+      h1 {
+        font-size: 70px;
+        line-height: 0.9;
         font-weight: bold;
+        font-family: $raleway;
       }
     }
 
-    .grid__top__left {
-      background-color: $light-yellow;
+    .title--red {
+      color: $red;
     }
+  }
 
-    .grid__top__right {
-      background-color: $light-pink;
+  .intro__svg {
+    width: 200px;
+  }
+
+
+  .pink_section {
+    background-color: #F8CFC5;
+    min-height: 270px;
+    p {
+      font-size: 14px;
+      @include media-breakpoint-up(md) {
+        font-size: 25px;
+      }
+      font-family: $raleway;
+      z-index: 1000;
+    }
+  }
+
+
+  .subtitle {
+    color: #ED8D77;;
+    font-size: 20px;
+  }
+
+  .sparkles {
+    width: 115px;
+    height: 93px;
+    object-fit: contain;
+    object-position: center;
+    margin-bottom: 58px;
+  }
+
+  .illustration {
+    height: 870px;
+    width: 319px;
+    object-fit: contain;
+    object-position: center;
+    @include media-breakpoint-up(md) {
+      right: -15px;
+      bottom: 99px;
+      position: absolute;
+    }
+    @include media-breakpoint-up(lg) {
+      right: 50px;
+    }
+    @include media-breakpoint-up(xl) {
+      right: 144px;
+    }
+  }
+
+  .grid {
+    height: 50vw;
+    color: $white;
+    padding: 32px;;
+    position: relative;
+    h2 {
+      font-family: $suisse-intl;
+      font-size: 30px;
+
+      font-weight: bold;
+    }
+    @include media-breakpoint-up(sm) {
       h2 {
-        @include media-breakpoint-up(md) {
-          margin-left: 113px;
-        }
+        font-size: 46px;
       }
     }
-
-    .grid__bottom__left {
-      background-color: $kaki;
-    }
-
-    .grid__bottom__right {
-      background-color: $light-blue;
+    @include media-breakpoint-up(md) {
       h2 {
-        color: #FF7F77;
+        font-size: 62px;
       }
     }
-
-    .grid__image__wrapper {
+    @include media-breakpoint-up(lg) {
+      h2 {
+        font-size: 78px;
+      }
+    }
+    @include media-breakpoint-up(xl) {
+      height: 752px;
+      h2 {
+        font-size: 94px;
+      }
+    }
+    .preview {
+      transition: all 0.2s ease;
+      button {
+        background: transparent;
+        border: none;
+        color: $white;
+        text-decoration: underline;
+      }
+    }
+    .detail {
+      position: absolute;
+      height: 100%;
+      overflow: scroll;
       top: 0;
-      bottom: 0;
       left: 0;
+      bottom: 0;
       right: 0;
-      .grid__mushroom {
+      opacity: 0;
+      transition: all 0.2s ease;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: $white;
+    }
+    &:hover {
+      .preview {
+        opacity: 0;
+      }
+      .detail {
+        opacity: 1;
+      }
+    }
+  }
+
+  .grid__top__left {
+    background-color: $light-yellow;
+  }
+
+  .grid__top__right {
+    background-color: $light-pink;
+    h2 {
+      @include media-breakpoint-up(md) {
+        margin-left: 113px;
+      }
+    }
+  }
+
+  .grid__bottom__left {
+    background-color: $kaki;
+  }
+
+  .grid__bottom__right {
+    background-color: $light-blue;
+    h2, button {
+      color: #FF7F77 !important;
+    }
+  }
+
+  .grid__image__wrapper {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .grid__mushroom {
+      width: 100px;
+      height: 160px;
+      @include media-breakpoint-up(sm) {
+        width: 130px;
+        height: 208px;
+      }
+      @include media-breakpoint-up(md) {
+        width: 175px;
+        height: 280x;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 200px;
+        height: 320px;
+      }
+      @include media-breakpoint-up(xl) {
         width: 227px;
         height: 362px;
-        object-fit: contain;
-        object-position: center;
       }
+      object-fit: contain;
+      object-position: center;
     }
+  }
 
-    .middle__section {
-      height: 407px;
-    }
+  .middle__section {
+    height: 407px;
+  }
 
-    .breakfast__section {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), asset-url("breakfast.jpg");
-      background-size: cover;
-      background-position: center;
-      margin-bottom: 51px;
-    }
+  .breakfast__section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), asset-url("breakfast.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 51px;
+  }
 
-    .breakfast__section--title-top {
+  .breakfast__section--title-top {
+    font-size: 20px;
+    @include media-breakpoint-up(md) {
       font-size: 30px;
-      font-weight: bold;
-      margin-left: 32px;
-      line-height: 25px;
     }
+    font-weight: bold;
+    margin-left: 32px;
+    line-height: 25px;
+  }
 
-    .breakfast__section--title-bottom {
+  .breakfast__section--title-bottom {
+    font-size: 70px;
+    @include media-breakpoint-up(md) {
       font-size: 80px;
-      font-weight: bold;
-      line-height: 84px;
     }
+    font-weight: bold;
+    line-height: 84px;
+  }
 
-    .breakfast-btn {
-      background-color: #FF7F77;;
-      border: none;
-      color: #0D2B27;;
-      border-radius: 100px;
-      font-size: 21px;
-      width: 333px;
-      height: 70px;
-    }
+  .breakfast-btn {
+    background-color: #FF7F77;;
+    border: none;
+    color: #0D2B27;;
+    border-radius: 100px;
+    font-size: 21px;
+    padding: 20px 100px;
+  }
 }

@@ -10,7 +10,7 @@
         <%= image_tag "home-illustration.svg", alt: "illustration", class: 'illustration' %>
       </div>
     </section>
-    <section class="pink_section">
+    <section class="pink_section d-flex align-items-center justify-content-center">
       <div class="d-flex flex-column align-items-center justify-content-center h-100">
         <p class="text-white mb-0">A portal to your favorite deliciously</p>
         <p class="text-white mb-0">nutritious recipes and the first step </p>
@@ -21,39 +21,69 @@
     </section>
     <section class="middle__section d-flex flex-column align-items-center justify-content-center position-relative">
       <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
-      <h3 class="subtitle">A serving of mindfulness and a dash of willpower</h3>
-      <h3 class="subtitle">will help bring out the best in you!</h3>
+      <h3 class="subtitle text-center">A serving of mindfulness and a dash of willpower</h3>
+      <h3 class="subtitle text-center">will help bring out the best in you!</h3>
     </section>
   </div>
   <section class="position-relative">
     <div class="grid__image__wrapper w-100 position-absolute d-flex align-items-center justify-content-center">
-      <%= image_tag "mushroom.png", alt: "mushroom", class: "grid__mushroom d-none d-md-inline-block" %>
+      <%= link_to plans_path, class: "text-decoration-none" do %>
+        <%= image_tag "mushroom.png", alt: "mushroom", class: "grid__mushroom d-inline-block" %>
+      <% end %>
     </div>
     <div class="row m-0">
-      <div class="col-12 col-md-6 m-0 grid grid__top__left d-flex flex-column align-items-center align-items-md-start justify-content-end">
-        <div>
+      <div class="col-6 m-0 grid grid__top__left d-flex flex-column align-items-center align-items-md-start justify-content-end">
+        <div class="preview">
           <h2 class="mb-0">show</h2>
           <h2 class="mb-0">up for</h2>
           <h2>yourself*</h2>
+          <% if browser.device.mobile? %>
+            <%= button_tag "see more" %>
+          <% end %>
+        </div>
+        <div class="detail p-3 d-flex align-items-center justify-content-center flex-column text-center">
+          <h3>show up for yourself</h3>
+          <small>Your health is in your hands. Do your best to give it the attention and care it deserves. It's up to you to take control of your wellbeing an d show up for your future self.</small>
         </div>
       </div>
-      <div class="col-12 col-md-6 m-0 grid grid__top__right d-flex flex-column align-items-center align-items-md-start justify-content-end">
-        <div>
+      <div class="col-6 m-0 grid grid__top__right d-flex flex-column align-items-center align-items-md-start justify-content-end">
+        <div class="preview">
           <h2 class="mb-0">live &</h2>
           <h2>let live*</h2>
+          <% if browser.device.mobile? %>
+            <%= button_tag "see more" %>
+          <% end %>
+        </div>
+        <div class="detail p-3 d-flex align-items-center justify-content-center flex-column text-center">
+          <h3>live & let live</h3>
+          <small>We each have our unique path. Focusing on yours will make space for self-love, awareness, and empowerment. Honor your journey and respect those of others. Focus on what you can control rather than on what you can't.</small>
         </div>
       </div>
-      <div class="col-12 col-md-6 m-0 grid grid__bottom__left d-flex flex-column align-items-center align-items-md-start justify-content-end">
-        <div>
+      <div class="col-6 m-0 grid grid__bottom__left d-flex flex-column align-items-center align-items-md-start justify-content-end">
+        <div class="preview">
           <h2 class="mb-0">get</h2>
           <h2 class="mb-0">uncomfort-</h2>
           <h2>able*</h2>
+          <% if browser.device.mobile? %>
+            <%= button_tag "see more" %>
+          <% end %>
+        </div>
+        <div class="detail p-3 d-flex align-items-center justify-content-center flex-column text-center">
+          <h3>get uncomfortable</h3>
+          <small>It is important to step out of your comfort zone in order to activate growth. Be open to new experiences that can help you know yourself more deeply and tap into your hidden powers. You can really surprise yourself when you are challenged!</small>
         </div>
       </div>
-      <div class="col-12 col-md-6 m-0 grid grid__bottom__right d-flex flex-column align-items-center align-items-md-start justify-content-end">
-        <div>
+      <div class="col-6 m-0 grid grid__bottom__right d-flex flex-column align-items-center align-items-md-start justify-content-end">
+        <div class="preview">
           <h2 class="mb-0">find your</h2>
           <h2>balance*</h2>
+          <% if browser.device.mobile? %>
+            <%= button_tag "see more" %>
+          <% end %>
+        </div>
+        <div class="detail p-3 d-flex align-items-center justify-content-center flex-column text-center">
+          <h3>find your balance</h3>
+          <small>Establishing and maintaining balance helps us stay healthy while navigating life's ups and downs. Finding your balance doesn't happen once. It is an evolving process that requires regular revisiting.</small>
         </div>
       </div>
     </div>
@@ -65,7 +95,7 @@
         <h2 class="breakfast__section--title-top mb-n3">latest</h2>
         <h2 class="breakfast__section--title-bottom ">breakfast</h2>
       </div>
-      <%= button_tag "Click here", class: "breakfast-btn" %>
+      <%= link_to "Click here", recipes_path(category: "breakfast"), class: "breakfast-btn d-flex align-items-center justify-content-center text-decoration-none text-center" %>
       </div>
     </div>
   </section>

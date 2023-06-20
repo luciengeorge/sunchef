@@ -10,7 +10,9 @@ class PagesController < ApplicationController
     @categories = Recipe.categories.keys
   end
 
-  def shop; end
+  def shop
+    @images = policy_scope(CarouselImage).joins(:image_attachment)
+  end
 
   def coaching
     @testimonials = Testimonial.limit(Testimonial::FEATURED)
