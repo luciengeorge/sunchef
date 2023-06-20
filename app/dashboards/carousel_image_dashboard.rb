@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "administrate/base_dashboard"
 
 class CarouselImageDashboard < Administrate::BaseDashboard
@@ -9,8 +11,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
-    image_attachment: Field::HasOne,
-    image_blob: Field::HasOne,
+    image: Field::ActiveStorage,
     published: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -21,31 +22,28 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
-  COLLECTION_ATTRIBUTES = %i[
-    id
-    image_attachment
-    image_blob
-    published
+  COLLECTION_ATTRIBUTES = [
+    :id,
+    :image,
+    :published,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = %i[
-    id
-    image_attachment
-    image_blob
-    published
-    created_at
-    updated_at
+  SHOW_PAGE_ATTRIBUTES = [
+    :id,
+    :image,
+    :published,
+    :created_at,
+    :updated_at,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = %i[
-    image_attachment
-    image_blob
-    published
+  FORM_ATTRIBUTES = [
+    :image,
+    :published,
   ].freeze
 
   # COLLECTION_FILTERS

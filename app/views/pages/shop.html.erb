@@ -27,12 +27,20 @@
     <p class="mb-0 locations">Chi Tabi3i | Akiki Frere | eir el Oumara</p>
   </section>
   <section>
-    <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
-      <% @images.each do |image| %>
-        <div class="carousel-slide">
-          <%= image_tag image.url, alt: "carousel" %>
-        </div>
-      <% end %>
-    </div>
+    <% if @images.size > 3 %>
+      <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
+        <% @images.each do |image| %>
+          <div class="carousel-slide">
+            <%= image_tag image.image.url, alt: "carousel" %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="d-flex align-items-center justify-content-around">
+        <% @images.each do |image| %>
+          <%= image_tag image.image.url, alt: "carousel", class: 'image' %>
+        <% end %>
+      </div>
+    <% end %>
   </section>
 </div>

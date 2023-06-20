@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def shop
-    @images = policy_scope(CarouselImage)
+    @images = policy_scope(CarouselImage).joins(:image_attachment)
   end
 
   def coaching
