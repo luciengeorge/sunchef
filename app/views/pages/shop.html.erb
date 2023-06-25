@@ -14,7 +14,7 @@
       </div>
       <div class="col-12 col-md-6 belly-height belly-right">
         <p>In 2020 I had some friends over for brunch and decided to whip up a meal made entirely from scratch - from the sweet potato fatbread to the almond butter. I spent an entire morning preparing.</p>
-        <p>My almond butter was a hit! After some prompting and motivation from loved ones, I started making and selling almond butter while studying for my Health Coaching certifcate. What started as a side project eventually evolved into a small business with a limited product range of almond butter, peanut butter, and granolas. The ingredients I use are pure, vegan, and without preservatives.  (& many satisfed customers!) can guarantee delicious taste and great quality yummies jam-packed with nutrients.  </p>
+        <p>My almond butter was a hit! After some prompting and motivation from loved ones, I started making and selling almond butter while studying for my Health Coaching certifcate. What started as a side project eventually evolved into a small business with a limited product range of almond butter, peanut butter, and granolas. The ingredients I use are pure, vegan, and without preservatives.  (& many satisfied customers!) can guarantee delicious taste and great quality yummies jam-packed with nutrients.  </p>
       </div>
     </div>
   </section>
@@ -31,14 +31,28 @@
       <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
         <% @images.each do |image| %>
           <div class="carousel-slide">
+            <div class="position-relative w-100 h-100">
             <%= image_tag image.image.url, alt: "carousel" %>
+            <% if image.description.present? %>
+              <div class="carousel-image-description p-3 text-white">
+                <p><%= image.description %></p>
+              </div>
+            <% end %>
+          </div>
           </div>
         <% end %>
       </div>
     <% else %>
       <div class="d-flex align-items-center justify-content-around">
         <% @images.each do |image| %>
-          <%= image_tag image.image.url, alt: "carousel", class: 'image' %>
+          <div class="position-relative">
+            <%= image_tag image.image.url, alt: "carousel", class: 'image' %>
+            <% if image.description.present? %>
+              <div class="carousel-image-description p-3 text-white">
+                <p><%= image.description %></p>
+              </div>
+            <% end %>
+          </div>
         <% end %>
       </div>
     <% end %>

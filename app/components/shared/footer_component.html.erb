@@ -12,8 +12,27 @@
             </h3>
             <p class="footer--paragraph mb-0">If you're curious and hungry for more, reach out! Take that first step.</p>
             <p class="footer--paragraph">Let's connect!</p>
-            <%= link_to "sunchef my life asap", "https://www.instagram.com/_sunchef/", class: "footer-btn", target: :blank %>
+            <%= button_tag "sunchef my life asap", class: "footer-btn", data: { bs_toggle: "modal", bs_target: "#contactModal" } %>
             <p class="footer--notice"><abbr><strong>*</strong></abbr> but try your luck anyway</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="contactModal" class="modal fade" tabindex="-1" aria-labelledby="contactModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="d-flex align-items-center justify-content-center flex-column">
+            <%= image_tag "logo.png", alt: "logo", width: 100, class: 'pb-5' %>
+            <h4>Contact me via email</h4>
+            <%= link_to "mailto:by.sunchef@gmail.com", target: :blank do %>
+              <h2><i class="bi bi-envelope-at"></i></h2>
+            <% end %>
+            <h4>Or directly on instagram</h4>
+            <%= link_to "https://www.instagram.com/_sunchef/", target: :blank do %>
+              <h2><i class="bi bi-instagram"></i></h2>
+            <% end %>
           </div>
         </div>
       </div>

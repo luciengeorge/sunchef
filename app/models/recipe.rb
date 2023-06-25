@@ -6,7 +6,7 @@ class Recipe < ApplicationRecord
 
   validates :name, presence: true
   has_many_attached :images
-  enum category: [:lunch, :dinner, :sweets, :smoothies, :drinks, :snacks, :dressings, :breakfast]
+  enum category: [:lunch_dinner, :sweets, :smoothies, :drinks, :snacks, :dressings, :breakfast]
 
   accepts_nested_attributes_for(:ingredients)
   accepts_nested_attributes_for(:instructions)

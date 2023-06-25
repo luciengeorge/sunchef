@@ -12,6 +12,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     image: Field::ActiveStorage,
+    description: Field::Text,
     published: Field::Boolean,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -34,6 +35,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
     :id,
     :image,
     :published,
+    :description,
     :created_at,
     :updated_at,
   ].freeze
@@ -44,6 +46,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :image,
     :published,
+    :description,
   ].freeze
 
   # COLLECTION_FILTERS

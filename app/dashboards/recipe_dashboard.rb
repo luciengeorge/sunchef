@@ -28,6 +28,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     name: Field::String,
     servings: Field::Number,
     prep_time: Field::String,
+    youtube_id: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
   }.freeze
@@ -43,6 +44,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :servings,
     :category,
     :prep_time,
+    :youtube_id,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -56,6 +58,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :images,
     :ingredients,
     :instructions,
+    :youtube_id,
     :created_at,
     :updated_at,
   ].freeze
@@ -69,6 +72,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :category,
     :images,
     :prep_time,
+    :youtube_id,
     :ingredients,
     :instructions,
   ].freeze
