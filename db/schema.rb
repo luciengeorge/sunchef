@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_18_171948) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_25_112424) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,6 +46,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_171948) do
     t.boolean "published", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "description"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -113,6 +114,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_171948) do
     t.index ["token"], name: "index_contacts_on_token", unique: true
   end
 
+  create_table "features", force: :cascade do |t|
+    t.bigint "plan_id", null: false
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plan_id"], name: "index_features_on_plan_id"
+  end
+
   create_table "ingredients", force: :cascade do |t|
     t.bigint "recipe_id", null: false
     t.text "description"
@@ -170,6 +179,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_18_171948) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "features", "plans"
   add_foreign_key "ingredients", "recipes"
   add_foreign_key "instructions", "recipes"
 end

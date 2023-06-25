@@ -67,4 +67,10 @@
     z-index: 1000;
     position: relative;
   }
+
+  #contactModal {
+    .modal-content {
+      background: radial-gradient(circle at top left, #ffb850, #ffffff 70%);
+    }
+  }
 }

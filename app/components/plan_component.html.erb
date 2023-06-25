@@ -1,6 +1,9 @@
 <div class="plan d-flex flex-column align-items-center justify-content-center" style="background-color: <%= background_color %>">
   <h3><%= plan.name %></h3>
   <h5><%= pluralize(plan.session_count, "Session") %></h5>
+  <% plan.features.each do |feature| %>
+    <p class="feature">- <%= feature.description %></p>
+  <% end %>
   <h4 style="color: <%= text_color %>"><%= plan.price %>$</h4>
   <p style="color: <%= text_color %>">per month</p>
 </div>
