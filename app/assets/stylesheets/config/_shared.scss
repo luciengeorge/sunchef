@@ -18,3 +18,25 @@ abbr {
 .btn-primary {
   color: black !important;
 }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  5% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(10deg);
+  }
+
+  15% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

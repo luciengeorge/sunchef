@@ -194,7 +194,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 100;
     .grid__mushroom {
+      animation: wiggle 1.75s infinite alternate;
       width: 100px;
       height: 160px;
       @include media-breakpoint-up(sm) {

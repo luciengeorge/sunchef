@@ -269,12 +269,13 @@
     width: 75%;
     object-fit: contain;
     object-position: center;
+    animation: wiggle 1.75s infinite alternate;
     @include media-breakpoint-up(md) {
       width: 670px;
       height: 726px;
       position: absolute;
       bottom: 37px;
-      left: 116px;
+      left: 15px;
       z-index: 1000;
     }
 
