@@ -124,6 +124,37 @@
       transition: all 0.2s ease;
       background-color: rgba(0, 0, 0, 0.7);
       color: $white;
+      p {
+        @include media-breakpoint-up(sm) {
+          font-size: 20px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 24px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 28px;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 32px;
+        }
+      }
+      h3 {
+        font-family: $suisse-intl;
+        font-size: 24px;
+        font-weight: bold;
+        @include media-breakpoint-up(sm) {
+          font-size: 40px;
+        }
+        @include media-breakpoint-up(md) {
+          font-size: 56px;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 72px;
+        }
+        @include media-breakpoint-up(xl) {
+          font-size: 88px;
+        }
+      }
     }
     &:hover {
       .preview {
