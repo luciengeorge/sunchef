@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  require "sidekiq/web"
   authenticate :user, ->(user) { user.admin? } do
+    mount Sidekiq::Web => "/sidekiq"
     namespace :admin do
       resources :recipes do
         delete :images, on: :member, action: :destroy_image
