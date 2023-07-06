@@ -70,7 +70,7 @@ class Contact < ApplicationRecord
   private
 
   def deliver_email
-    SunchefMailer.with(contact: self).new_contact.delivery_later
-    ContactMailer.with(contact: self).new_contact.delivery_later
+    SunchefMailer.with(contact: self).new_contact.deliver_later
+    ContactMailer.with(contact: self).new_contact.deliver_later
   end
 end
