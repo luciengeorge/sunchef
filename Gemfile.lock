@@ -208,6 +208,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.14.2-arm64-darwin)
       racc (~> 1.4)
+    nokogiri (1.14.2-x86_64-linux)
+      racc (~> 1.4)
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.2.1.1)
@@ -323,6 +325,7 @@ GEM
       sorbet-static (= 0.5.10687)
     sorbet-runtime (0.5.10687)
     sorbet-static (0.5.10687-universal-darwin-21)
+    sorbet-static (0.5.10687-x86_64-linux)
     sorbet-static-and-runtime (0.5.10687)
       sorbet (= 0.5.10687)
       sorbet-runtime (= 0.5.10687)
@@ -392,6 +395,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   administrate
