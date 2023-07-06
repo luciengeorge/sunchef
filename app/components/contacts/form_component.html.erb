@@ -3,7 +3,7 @@
         <div class="col-12">
           <p>hello sunshine,</p>
           <p>please fill the Health History Form below. Once I receive it, I will contact you on the email you provided and we will schedule a FREE 30 minutes call to decide how to proceed.</p>
-          <p>Let me know if vou have any questions.</p>
+          <p>Let me know if you have any questions.</p>
           <p>Kind regards,</p>
           <p>Soraya ☀️</p>
           <%= f.input :gender, as: :select, label: "First, choose your gender to fill out the appropriate form 👇", collection: Contact.genders.keys, label_method: lambda { |gender| gender.humanize }, prompt: "Pick your gender", input_html: { data: { action: "change->contact-form#toggleGender" } } %>
