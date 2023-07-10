@@ -27,9 +27,16 @@
     background-repeat: no-repeat;
 
     p {
-        font-family: $goodlife;
-        font-size: 26px;
-        color: #0D2B27;
-      }
+      font-family: $goodlife;
+      font-size: 26px;
+      color: #0D2B27;
+    }
+  }
+
+  .recipe__img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
   }
 }
