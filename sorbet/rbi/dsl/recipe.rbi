@@ -7,6 +7,7 @@
 class Recipe
   include GeneratedAssociationMethods
   include GeneratedAttributeMethods
+  include EnumMethodsModule
   extend CommonRelationMethods
   extend GeneratedRelationMethods
 
@@ -20,6 +21,11 @@ class Recipe
 
   sig { returns(NilClass) }
   def to_ary; end
+
+  class << self
+    sig { returns(T::Hash[T.any(String, Symbol), Integer]) }
+    def categories; end
+  end
 
   module CommonRelationMethods
     sig { params(block: T.nilable(T.proc.params(record: ::Recipe).returns(T.untyped))).returns(T::Boolean) }
@@ -224,22 +230,51 @@ class Recipe
     def third_to_last!; end
   end
 
+  module EnumMethodsModule
+    sig { void }
+    def breakfast!; end
+
+    sig { returns(T::Boolean) }
+    def breakfast?; end
+
+    sig { void }
+    def dressings!; end
+
+    sig { returns(T::Boolean) }
+    def dressings?; end
+
+    sig { void }
+    def drinks!; end
+
+    sig { returns(T::Boolean) }
+    def drinks?; end
+
+    sig { void }
+    def lunch_dinner!; end
+
+    sig { returns(T::Boolean) }
+    def lunch_dinner?; end
+
+    sig { void }
+    def smoothies!; end
+
+    sig { returns(T::Boolean) }
+    def smoothies?; end
+
+    sig { void }
+    def snacks!; end
+
+    sig { returns(T::Boolean) }
+    def snacks?; end
+
+    sig { void }
+    def sweets!; end
+
+    sig { returns(T::Boolean) }
+    def sweets?; end
+  end
+
   module GeneratedAssociationMethods
-    sig { params(args: T.untyped, blk: T.untyped).returns(::Category) }
-    def build_category(*args, &blk); end
-
-    sig { returns(T.nilable(::Category)) }
-    def category; end
-
-    sig { params(value: T.nilable(::Category)).void }
-    def category=(value); end
-
-    sig { params(args: T.untyped, blk: T.untyped).returns(::Category) }
-    def create_category(*args, &blk); end
-
-    sig { params(args: T.untyped, blk: T.untyped).returns(::Category) }
-    def create_category!(*args, &blk); end
-
     sig { returns(T::Array[T.untyped]) }
     def images_attachment_ids; end
 
@@ -282,6 +317,9 @@ class Recipe
     sig { params(value: T::Enumerable[::Ingredient]).void }
     def ingredients=(value); end
 
+    sig { params(attributes: T.untyped).returns(T.untyped) }
+    def ingredients_attributes=(attributes); end
+
     sig { returns(T::Array[T.untyped]) }
     def instruction_ids; end
 
@@ -296,8 +334,8 @@ class Recipe
     sig { params(value: T::Enumerable[::Instruction]).void }
     def instructions=(value); end
 
-    sig { returns(T.nilable(::Category)) }
-    def reload_category; end
+    sig { params(attributes: T.untyped).returns(T.untyped) }
+    def instructions_attributes=(attributes); end
   end
 
   module GeneratedAssociationRelationMethods
@@ -311,10 +349,19 @@ class Recipe
     def annotate(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def breakfast(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def create_with(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def distinct(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def dressings(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def drinks(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def eager_load(*args, &blk); end
@@ -399,10 +446,34 @@ class Recipe
     def lock(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def lunch_dinner(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def merge(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def none(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_breakfast(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_dressings(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_drinks(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_lunch_dinner(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_smoothies(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_snacks(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def not_sweets(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def offset(*args, &blk); end
@@ -444,10 +515,19 @@ class Recipe
     def select(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def smoothies(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def snacks(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def strict_loading(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def structurally_compatible?(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
+    def sweets(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateAssociationRelation) }
     def uniq!(*args, &blk); end
@@ -484,50 +564,50 @@ class Recipe
   end
 
   module GeneratedAttributeMethods
-    sig { returns(::Integer) }
-    def category_id; end
+    sig { returns(::String) }
+    def category; end
 
-    sig { params(value: ::Integer).returns(::Integer) }
-    def category_id=(value); end
+    sig { params(value: T.any(::String, ::Symbol, ::Integer)).returns(T.any(::String, ::Symbol, ::Integer)) }
+    def category=(value); end
 
     sig { returns(T::Boolean) }
-    def category_id?; end
+    def category?; end
 
-    sig { returns(T.nilable(::Integer)) }
-    def category_id_before_last_save; end
+    sig { returns(T.nilable(::String)) }
+    def category_before_last_save; end
 
     sig { returns(T.untyped) }
-    def category_id_before_type_cast; end
+    def category_before_type_cast; end
 
     sig { returns(T::Boolean) }
-    def category_id_came_from_user?; end
+    def category_came_from_user?; end
 
-    sig { returns(T.nilable([::Integer, ::Integer])) }
-    def category_id_change; end
+    sig { returns(T.nilable([::String, ::String])) }
+    def category_change; end
 
-    sig { returns(T.nilable([::Integer, ::Integer])) }
-    def category_id_change_to_be_saved; end
-
-    sig { returns(T::Boolean) }
-    def category_id_changed?; end
-
-    sig { returns(T.nilable(::Integer)) }
-    def category_id_in_database; end
-
-    sig { returns(T.nilable([::Integer, ::Integer])) }
-    def category_id_previous_change; end
+    sig { returns(T.nilable([::String, ::String])) }
+    def category_change_to_be_saved; end
 
     sig { returns(T::Boolean) }
-    def category_id_previously_changed?; end
+    def category_changed?; end
 
-    sig { returns(T.nilable(::Integer)) }
-    def category_id_previously_was; end
+    sig { returns(T.nilable(::String)) }
+    def category_in_database; end
 
-    sig { returns(T.nilable(::Integer)) }
-    def category_id_was; end
+    sig { returns(T.nilable([::String, ::String])) }
+    def category_previous_change; end
+
+    sig { returns(T::Boolean) }
+    def category_previously_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def category_previously_was; end
+
+    sig { returns(T.nilable(::String)) }
+    def category_was; end
 
     sig { void }
-    def category_id_will_change!; end
+    def category_will_change!; end
 
     sig { returns(T.nilable(::ActiveSupport::TimeWithZone)) }
     def created_at; end
@@ -664,8 +744,53 @@ class Recipe
     sig { void }
     def name_will_change!; end
 
+    sig { returns(T.nilable(::String)) }
+    def prep_time; end
+
+    sig { params(value: T.nilable(::String)).returns(T.nilable(::String)) }
+    def prep_time=(value); end
+
+    sig { returns(T::Boolean) }
+    def prep_time?; end
+
+    sig { returns(T.nilable(::String)) }
+    def prep_time_before_last_save; end
+
+    sig { returns(T.untyped) }
+    def prep_time_before_type_cast; end
+
+    sig { returns(T::Boolean) }
+    def prep_time_came_from_user?; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def prep_time_change; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def prep_time_change_to_be_saved; end
+
+    sig { returns(T::Boolean) }
+    def prep_time_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def prep_time_in_database; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def prep_time_previous_change; end
+
+    sig { returns(T::Boolean) }
+    def prep_time_previously_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def prep_time_previously_was; end
+
+    sig { returns(T.nilable(::String)) }
+    def prep_time_was; end
+
     sig { void }
-    def restore_category_id!; end
+    def prep_time_will_change!; end
+
+    sig { void }
+    def restore_category!; end
 
     sig { void }
     def restore_created_at!; end
@@ -677,16 +802,22 @@ class Recipe
     def restore_name!; end
 
     sig { void }
+    def restore_prep_time!; end
+
+    sig { void }
     def restore_servings!; end
 
     sig { void }
     def restore_updated_at!; end
 
-    sig { returns(T.nilable([::Integer, ::Integer])) }
-    def saved_change_to_category_id; end
+    sig { void }
+    def restore_youtube_id!; end
+
+    sig { returns(T.nilable([::String, ::String])) }
+    def saved_change_to_category; end
 
     sig { returns(T::Boolean) }
-    def saved_change_to_category_id?; end
+    def saved_change_to_category?; end
 
     sig { returns(T.nilable([T.nilable(::ActiveSupport::TimeWithZone), T.nilable(::ActiveSupport::TimeWithZone)])) }
     def saved_change_to_created_at; end
@@ -706,6 +837,12 @@ class Recipe
     sig { returns(T::Boolean) }
     def saved_change_to_name?; end
 
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def saved_change_to_prep_time; end
+
+    sig { returns(T::Boolean) }
+    def saved_change_to_prep_time?; end
+
     sig { returns(T.nilable([T.nilable(::Integer), T.nilable(::Integer)])) }
     def saved_change_to_servings; end
 
@@ -717,6 +854,12 @@ class Recipe
 
     sig { returns(T::Boolean) }
     def saved_change_to_updated_at?; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def saved_change_to_youtube_id; end
+
+    sig { returns(T::Boolean) }
+    def saved_change_to_youtube_id?; end
 
     sig { returns(T.nilable(::Integer)) }
     def servings; end
@@ -809,7 +952,7 @@ class Recipe
     def updated_at_will_change!; end
 
     sig { returns(T::Boolean) }
-    def will_save_change_to_category_id?; end
+    def will_save_change_to_category?; end
 
     sig { returns(T::Boolean) }
     def will_save_change_to_created_at?; end
@@ -821,10 +964,61 @@ class Recipe
     def will_save_change_to_name?; end
 
     sig { returns(T::Boolean) }
+    def will_save_change_to_prep_time?; end
+
+    sig { returns(T::Boolean) }
     def will_save_change_to_servings?; end
 
     sig { returns(T::Boolean) }
     def will_save_change_to_updated_at?; end
+
+    sig { returns(T::Boolean) }
+    def will_save_change_to_youtube_id?; end
+
+    sig { returns(T.nilable(::String)) }
+    def youtube_id; end
+
+    sig { params(value: T.nilable(::String)).returns(T.nilable(::String)) }
+    def youtube_id=(value); end
+
+    sig { returns(T::Boolean) }
+    def youtube_id?; end
+
+    sig { returns(T.nilable(::String)) }
+    def youtube_id_before_last_save; end
+
+    sig { returns(T.untyped) }
+    def youtube_id_before_type_cast; end
+
+    sig { returns(T::Boolean) }
+    def youtube_id_came_from_user?; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def youtube_id_change; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def youtube_id_change_to_be_saved; end
+
+    sig { returns(T::Boolean) }
+    def youtube_id_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def youtube_id_in_database; end
+
+    sig { returns(T.nilable([T.nilable(::String), T.nilable(::String)])) }
+    def youtube_id_previous_change; end
+
+    sig { returns(T::Boolean) }
+    def youtube_id_previously_changed?; end
+
+    sig { returns(T.nilable(::String)) }
+    def youtube_id_previously_was; end
+
+    sig { returns(T.nilable(::String)) }
+    def youtube_id_was; end
+
+    sig { void }
+    def youtube_id_will_change!; end
   end
 
   module GeneratedRelationMethods
@@ -838,10 +1032,19 @@ class Recipe
     def annotate(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def breakfast(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def create_with(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def distinct(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def dressings(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def drinks(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def eager_load(*args, &blk); end
@@ -892,10 +1095,34 @@ class Recipe
     def lock(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def lunch_dinner(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def merge(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def none(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_breakfast(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_dressings(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_drinks(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_lunch_dinner(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_smoothies(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_snacks(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def not_sweets(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def offset(*args, &blk); end
@@ -937,10 +1164,19 @@ class Recipe
     def select(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def smoothies(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def snacks(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def strict_loading(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def structurally_compatible?(*args, &blk); end
+
+    sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
+    def sweets(*args, &blk); end
 
     sig { params(args: T.untyped, blk: T.untyped).returns(PrivateRelation) }
     def uniq!(*args, &blk); end
