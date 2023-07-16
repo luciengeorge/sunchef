@@ -1,5 +1,5 @@
 <div class="container">
-  <section class="m-5 plans-wrapper d-flex align-items-center justify-content-around">
+  <section class="m-lg-5 mb-5 plans-wrapper d-flex flex-column flex-md-row align-items-center justify-content-around">
     <% @plans.each_with_index do |plan, index| %>
       <%= render PlanComponent.new(plan: plan, color: @colors[index % @colors.size]) %>
     <% end %>
