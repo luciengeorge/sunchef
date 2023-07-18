@@ -151,7 +151,15 @@
 
     .lunch {
       top: -11.94px;
-      left: 141.37px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 187px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      &:hover {
+        transform: translateX(-50%) scale(1.1);
+      }
     }
 
     .dinner {

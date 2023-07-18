@@ -64,10 +64,8 @@
       <% @categories.each do |category| %>
         <% if category.to_sym == :lunch_dinner %>
           <%= link_to recipes_path(category: :lunch_dinner), class: "position-absolute category-link lunch" do %>
-            <%= image_tag "lunch.svg", alt: category %>
-          <% end %>
-          <%= link_to recipes_path(category: :lunch_dinner), class: "position-absolute category-link dinner" do %>
-            <%= image_tag "dinner.svg", alt: category %>
+            <%= image_tag "lunch.svg", alt: category, class: "d-inline-block" %>
+            <%= image_tag "dinner.svg", alt: category, class: "d-inline-block" %>
           <% end %>
         <% else %>
           <%= link_to recipes_path(category:), class: "position-absolute category-link #{category}" do %>
@@ -115,20 +113,4 @@
       </div>
     </div>
   </section>
-</div>
-<div id="readMoreModal" class="modal fade" tabindex="-1" aria-labelledby="readMoreModal" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-body p-4">
-        <h4>So my story goes...</h4>
-        <p>I've always found such joy in eating.. Choosing my breakfast, lunch or dinner has forever been an important part of my day. In fact, when I was younger, my father used to ask me every night what I wanted for breakfast the next day because he knew that this was the only way that would get me to go to sleep - I had something delicious to look forward to!</p>
-        <p>So it was only natural that I took it upon myself to learn how to cook. It started when I moved to London at 18 years old. Living alone was the first opportunity I got to care for myself, and I didn't want to live off of food deliveries.</p>
-        <p>I equipped my college dorm kitchenette with the basic necessary tools and stepped into a regular cooking routine. Not gonna lie, at the beginning, a lot of my meals were questionable in terms of healthy options.</p>
-        <p>But in 2019, I was diagnosed with acute Candida - a yeast infection in the gut. The symptoms included feeling constantly bloated and tired. To battle the condition and reduce its effects, I decided to take on a 3-month intensive cleanse - this included cutting out Wheat, Yeast, Dairy, Corn and Sugar. The positive results were evident, and I managed to considerably decrease its levels.</p>
-        <p>The cleanse also instantly made a difference in my mood, energy levels and the way I felt after meals. This newfound realization that I could take control of my health made me feel empowered and motivated. I did not want these efforts to go to waste once I reintegrated the foods I usually ate. I knew I had to listen more carefully to my body. This is when I understood the strong correlation between "good food, good mood".</p>
-        <p>This is when I started to challenge my cooking and explore a variety of whole foods I had never given attention to before. This is also where I discovered the joys and benefits of plant-based meals, and began my exciting relationship with seeking health and happiness through balance!</p>
-        <p>Eventually, I found cooking to be a therapeutic activity, a source of self care through which I can nourish my mind as much as my body. I encourage you to find your balance in cooking and I am here to inspire you to do so with easy, tasty and healthy recipes!</p>
-      </div>
-    </div>
-  </div>
 </div>
