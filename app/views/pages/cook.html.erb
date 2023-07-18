@@ -14,9 +14,47 @@
       <div class="col-12 col-md-6 p-0 min-height">
         <div class="story h-100">
           <strong class="story-heading">So my story goes...</strong>
-          <p class="paragraph">I've always found such joy in eating.. Choosing my breakfast, lunch or dinner has forever been an important part of my day. In fact, when I was younger, my father used to ask me every night what I wanted for breakfast the next day because he knew that this was the only way that would get me to go to sleep - I had something delicious to look forward to!</p>
-          <p class="paragraph">So it was only natural that I took it upon myself to learn how to cook. It started when I moved to London at 18 years old. Living alone was the frst opportunity I got to care of myself, and I didn't want to live of of food deliveries. </p>
-          <%= button_tag "Read more", class: "read-more-link", data: { bs_toggle: "modal", bs_target: "#readMoreModal" } %>
+          <div id="carousel-indicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="carousel-item-inner">
+                  <p class="paragraph">I've always found such joy in eating.. Choosing my breakfast, lunch or dinner has forever been an important part of my day. In fact, when I was younger, my father used to ask me every night what I wanted for breakfast the next day because he knew that this was the only way that would get me to go to sleep - I had something delicious to look forward to!</p>
+                  <p class="paragraph">So it was only natural that I took it upon myself to learn how to cook. It started when I moved to London at 18 years old. Living alone was the frst opportunity I got to care of myself, and I didn't want to live of of food deliveries. </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-item-inner">
+                  <p class="paragraph">I equipped my college dorm kitchenette with the basic necessary tools and stepped into a regular cooking routine. Not gonna lie, at the beginning, a lot of my meals were questionable in terms of healthy options.</p>
+                  <p class="paragraph">But in 2019, I was diagnosed with acute Candida - a yeast infection in the gut. The symptoms included feeling constantly bloated and tired. To battle the condition and reduce its effects, I decided to take on a 3-month intensive cleanse - this included cutting out Wheat, Yeast, Dairy, Corn and Sugar. The positive results were evident, and I managed to considerably decrease its levels.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-item-inner">
+                  <p class="paragraph">The cleanse also instantly made a difference in my mood, energy levels and the way I felt after meals. This newfound realization that I could take control of my health made me feel empowered and motivated. I did not want these efforts to go to waste once I reintegrated the foods I usually ate. I knew I had to listen more carefully to my body. This is when I understood the strong correlation between "good food, good mood".</p>
+                  <p class="paragraph">This is when I started to challenge my cooking and explore a variety of whole foods I had never given attention to before. This is also where I discovered the joys and benefits of plant-based meals, and began my exciting relationship with seeking health and happiness through balance!</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="carousel-item-inner">
+                  <p class="paragraph">Eventually, I found cooking to be a therapeutic activity, a source of self care through which I can nourish my mind as much as my body. I encourage you to find your balance in cooking and I am here to inspire you to do so with easy, tasty and healthy recipes!</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-indicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-indicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

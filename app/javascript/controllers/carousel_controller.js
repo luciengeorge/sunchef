@@ -5,7 +5,7 @@ import slick from 'slick-carousel'
 export default class extends Controller {
   static classes = ['element']
   connect() {
-    $(`.${this.elementClass}`).slick({
+    $(this.element).slick({
       infinite: true,
       mobileFirst: true,
       slidesToShow: 1,

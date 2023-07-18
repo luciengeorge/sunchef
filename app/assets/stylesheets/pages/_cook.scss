@@ -278,6 +278,10 @@
       left: 15px;
       z-index: 1000;
     }
+  }
 
+  .carousel-item-inner {
+    min-height: 525px;
+    padding: 50px 100px;
   }
 }

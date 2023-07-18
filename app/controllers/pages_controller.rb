@@ -3,7 +3,10 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
-  def home; end
+  def home
+    @recipes = Recipe.where(id: Recipe.group(:category).maximum(:id).values).order(category: :asc)
+  end
+
   def about; end
 
   def cook
