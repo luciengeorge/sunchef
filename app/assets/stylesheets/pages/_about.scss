@@ -98,6 +98,15 @@
     @include media-breakpoint-up(md) {
       width: 75%;
     }
+    h5 {
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 30px;
+
+      &.bottom {
+        margin-bottom: 28px;
+      }
+    }
   }
 
 

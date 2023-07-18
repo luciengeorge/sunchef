@@ -260,9 +260,9 @@
 
     .tips-text {
       font-family: $suisse-intl;
-      font-size: 14px;
+      font-size: 16px;
       @include media-breakpoint-up(md) {
-        font-size: 18px;
+        font-size: 20px;
       }
     }
   }
