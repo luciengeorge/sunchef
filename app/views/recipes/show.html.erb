@@ -1,4 +1,4 @@
-<div id="recipe_show" class="my-5">
+<div id="recipe_show" class="mt-5">
   <section class="top-section position-relative">
     <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
     <div class="d-flex flex-column align-items-center justify-content-center w-100 h-100">
@@ -41,7 +41,13 @@
       </div>
     <% end %>
   </section>
-  <section id="youtube" class="my-5 <%= @recipe.youtube_id.blank? ? 'd-none' : 'd-flex' %> align-items-center justify-content-center">
-    <iframe width="889" height="500" src="https://www.youtube.com/embed/<%= @recipe.youtube_id %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="d-flex align-items-center justify-content-center p-3">
+    <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-2" %>
+    <p class="mb-0 from-my-belly-to-yours">From my belly to yours</p>
+    <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle ms-2" %>
+  </div>
+
+  <section id="youtube" class="my-5 <%= @recipe.instagram_embed.blank? ? 'd-none' : 'd-flex' %> align-items-center justify-content-center">
+    <%= @recipe.instagram_embed&.html_safe %>
   </section>
 </div>

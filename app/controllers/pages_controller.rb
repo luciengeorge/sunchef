@@ -3,7 +3,10 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
 
-  def home; end
+  def home
+    @recipes = Recipe.where(id: Recipe.group(:category).maximum(:id).values).order(category: :asc)
+  end
+
   def about; end
 
   def cook
@@ -17,6 +20,20 @@ class PagesController < ApplicationController
   def coaching
     @testimonials = Testimonial.limit(Testimonial::FEATURED)
     @colors = Contact::COLORS
+    @testimonial_colors = [
+      {
+        background: "#A1BFCD",
+        text: "#024261",
+      },
+      {
+        background: "#D8C3DD",
+        text: "#8D29A5",
+      },
+      {
+        background: "#CBD6AB",
+        text: "#5F751F",
+      },
+    ]
   end
 
   def maintenance

@@ -73,19 +73,14 @@
       <%= link_to "testimonials", testimonials_path %>
     </div>
   </section>
-  <section class="featured-testimonials mb-3 position-relative">
-    <div class="pen-wrapper">
-      <%= image_tag "pen.svg", alt: "pen", class: "pen" %>
-    </div>
-    <div class="row m-0">
-      <% @testimonials.each_with_index do |testimonial, index| %>
-        <div class="col-12 col-md-6 p-0">
-          <div class="testimonial" style="background-color: <%= @colors[index] %>">
-            <%= image_tag "testimonial-img.svg", alt: "testimonial" %>
-            <h3><%= testimonial.name %></h3>
-          </div>
+  <section class="m-5 plans-wrapper carousel d-flex align-items-center justify-content-around" data-controller="<%= 'carousel' if @testimonials.size > 3 %>" data-carousel-element-class="carousel">
+    <% @testimonials.each_with_index do |testimonial, index| %>
+      <div>
+        <div class="testimonial d-flex flex-column align-items-center justify-content-center mx-2" style="background-color: <%= @testimonial_colors[index % @testimonial_colors.size][:background] %>">
+          <h3><%= testimonial.name %></h3>
+          <p class="body" style="color: <%= @testimonial_colors[index % @testimonial_colors.size][:text] %>"><%= testimonial.body %></p>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </section>
 </div>

@@ -63,7 +63,7 @@
     }
     .paragraph {
       font-family: $raleway;
-      font-size: 25px;
+      font-size: 20px;
       font-weight: 500;
       line-height: 25px;
     }
@@ -189,6 +189,7 @@
     margin-top: 124px;
     width: 663px;
     height: 663px;
+    object-fit: contain;
     @include media-breakpoint-up(md) {
       margin-right: 68px;
     }

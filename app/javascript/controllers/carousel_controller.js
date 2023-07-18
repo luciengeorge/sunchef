@@ -1,17 +1,17 @@
-import { Controller } from '@hotwired/stimulus';
-import $ from 'jquery';
-import slick from 'slick-carousel';
+import {Controller} from '@hotwired/stimulus'
+import $ from 'jquery'
+import slick from 'slick-carousel'
 
 export default class extends Controller {
-  static classes = ['element'];
+  static classes = ['element']
   connect() {
-    $(`.${this.elementClass}`).slick({
+    $(this.element).slick({
       infinite: true,
       mobileFirst: true,
       slidesToShow: 1,
       slidesToScroll: 1,
       adaptiveHeight: true,
-      autoplay: true,
+      autoplay: false,
       lazyLoad: 'ondemand',
       prevArrow: '<i class="bi bi-chevron-left"></i>',
       nextArrow: '<i class="bi bi-chevron-right"></i>',
@@ -35,6 +35,6 @@ export default class extends Controller {
           },
         },
       ],
-    });
+    })
   }
 }
