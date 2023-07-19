@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def coaching
-    @testimonials = Testimonial.limit(Testimonial::FEATURED)
+    @testimonials = Testimonial.all
     @colors = Contact::COLORS
     @testimonial_colors = [
       {
