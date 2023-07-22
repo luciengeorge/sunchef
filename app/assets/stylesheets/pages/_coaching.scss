@@ -136,40 +136,21 @@
   }
 
   .testimonial {
-    padding: 76px 46px;
     border-radius: 94px;
-    min-height: 385px;
+    height: 350px;
+    overflow-y: scroll;
+    margin-bottom: 16px;
 
     h3 {
-      font-size: 30px;
+      font-size: 16px;
       font-family: $goodlife;
       margin-bottom: 0 !important;
       color: #0d2b27;
       text-align: center;
     }
 
-    h5 {
-      font-size: 24px;
-      font-family: $goodlife;
-      color: #0d2b27;
-    }
-
-    h4 {
-      font-size: 48px;
-      font-weight: bold;
-      font-family: $raleway;
-      margin-bottom: 0 !important;
-    }
-
-    p {
-      font-size: 15px;
-      font-weight: bold;
-      font-family: $raleway;
-    }
-
     .body {
-      font-family: $goodlife;
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 }

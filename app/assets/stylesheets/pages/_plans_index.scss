@@ -1,9 +1,6 @@
 .plans-wrapper {
   background: #ffe0db;
   border-radius: 131px;
-  @include media-breakpoint-up(md) {
-    padding: 114px;
-  }
 }
 
 .plan {
