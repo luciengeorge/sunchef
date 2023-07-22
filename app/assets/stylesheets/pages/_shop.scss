@@ -1,37 +1,6 @@
 #shop {
-  .intro {
-    height: 657px;
-    background: linear-gradient(to bottom, #CFE1FA 70%, #CBD6AB 30%);
-    display: flex;
-    align-items: flex-end;
-
-    @include media-breakpoint-down(md) {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
-
-    @include media-breakpoint-up(md) {
-      padding-left: 110px;
-    }
-
-    padding-bottom: 73px;
-
-    .shop-title {
-      width: 75%;
-      @include media-breakpoint-up(md) {
-        width: 500px;
-      }
-      @include media-breakpoint-up(lg) {
-        width: 600px;
-      }
-      @include media-breakpoint-up(xl) {
-        width: 872px;
-      }
-      height: 247px;
-      object-fit: contain;
-      object-position: center;
-    }
+  .intro-shop {
+    background: linear-gradient(to bottom, #cfe1fa 70%, #cbd6ab 30%);
   }
 
   .belly {
@@ -40,13 +9,13 @@
     }
 
     .belly-left {
-      background-color: #D8C3DD;
+      background-color: #d8c3dd;
       padding: 123px 100px;
       .blue {
-          color: #6269B2;
-        }
+        color: #6269b2;
+      }
       h2 {
-        color: #FFFFFF;
+        color: #ffffff;
         font-size: 82px;
         font-weight: bold;
         line-height: 81px;
@@ -63,7 +32,7 @@
     }
 
     .belly-right {
-      background-color: #E7E1D5;
+      background-color: #e7e1d5;
       padding: 102px;
       font-family: $raleway;
       font-weight: medium;
@@ -78,7 +47,7 @@
     .support-text {
       font-weight: bold;
       font-size: 40px;
-      color: #0D2B27;
+      color: #0d2b27;
     }
 
     .support-subtext {
@@ -86,7 +55,7 @@
       font-weight: light;
       font-style: italic;
       font-size: 25px;
-      color: #0D2B27;
+      color: #0d2b27;
     }
 
     .locations {
@@ -127,7 +96,7 @@
   .image {
     height: 310px;
     padding: 8px;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
     &:hover {
       .carousel-image-description {
@@ -149,5 +118,11 @@
     transition: all 0.2s ease;
     background-color: rgba(0, 0, 0, 0.4);
     color: $white;
+  }
+
+  .image-size {
+    width: 30%;
+    object-fit: cover;
+    object-position: center;
   }
 }

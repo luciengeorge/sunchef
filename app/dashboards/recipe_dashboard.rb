@@ -12,7 +12,7 @@ class RecipeDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     images: Field::ActiveStorage.with_options(
-      images_admin_recipe_url: proc do |_namespace, _resource, attachment|
+      destroy_url: proc do |_namespace, _resource, attachment|
         [:images_admin_recipe, { attachment_id: attachment.id }]
       end,
     ),

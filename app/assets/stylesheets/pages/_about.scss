@@ -1,48 +1,15 @@
 #about {
-  .section--purple--yellow {
-    background-image: linear-gradient(to bottom, #D8C3DD 70%, #FAD685 30%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  .section--height {
-    min-height: 400px;
-    padding-top: 50px;
-    @include media-breakpoint-up(md) {
-      min-height: 651px;
-      padding-top: 0;
-    }
-  }
-
-  .title-img {
-    width: 85%;
-    margin-bottom: 32px;
-
-    @include media-breakpoint-up(sm) {
-      margin-bottom: 50px;
-    }
-
-    @include media-breakpoint-up(md) {
-      width: 60%;
-    }
-
-    @include media-breakpoint-up(lg) {
-      width: 50%;
-    }
-
-    object-fit: contain;
-    object-position: center;
+  .intro-about {
+    background-image: linear-gradient(to bottom, #d8c3dd 70%, #fad685 30%);
   }
 
   .woman {
-    width: 50%;
+    height: 400px;
     @include media-breakpoint-up(md) {
-      width: 40%;
+      height: 450px;
     }
-
     @include media-breakpoint-up(lg) {
-      width: 20%;
+      height: 743px;
     }
     object-fit: contain;
     object-position: center;
@@ -52,7 +19,7 @@
     @include media-breakpoint-up(md) {
       height: 667px;
     }
-    background-color: #A1BFCD;
+    background-color: #a1bfcd;
     h5 {
       font-size: 30px;
       font-weight: 500;
@@ -70,32 +37,68 @@
   }
 
   .flower-container {
-    background-color: #E7E1D5;
+    background-color: #e7e1d5;
     height: 667px;
     overflow: hidden;
 
     .blobs-image {
       left: -125px;
-      width: 456px;
+      width: 350px;
       height: 476px;
       top: 58px;
       object-fit: contain;
       object-position: center;
+      @include media-breakpoint-up(md) {
+        left: -125px;
+        width: 300px;
+        height: 476px;
+        top: 58px;
+      }
+      @include media-breakpoint-up(lg) {
+        left: -125px;
+        width: 325px;
+        height: 476px;
+        top: 58px;
+      }
+      @include media-breakpoint-up(xl) {
+        left: -125px;
+        width: 456px;
+        height: 476px;
+        top: 58px;
+      }
     }
 
     .blobs-about {
-      width: 555px;
+      width: 400px;
       height: 490px;
-      object-fit: contain;
-      object-position: center;
       right: -187px;
       top: 65px;
+      object-fit: contain;
+      object-position: center;
+      @include media-breakpoint-up(md) {
+        width: 430px;
+        height: 490px;
+        right: -187px;
+        top: 65px;
+      }
+      @include media-breakpoint-up(lg) {
+        width: 475px;
+        height: 490px;
+        right: -187px;
+        top: 65px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 500px;
+        height: 490px;
+        right: -187px;
+        top: 65px;
+      }
     }
   }
 
   .founder-of-sunchef {
     width: 100%;
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       width: 75%;
     }
     h5 {
@@ -109,24 +112,21 @@
     }
   }
 
-
   .section--green {
     background-color: $light-green;
-    padding-bottom: 98px;
     min-height: 882px;
+    gap: 32px;
   }
 
   .yellow-pepper {
-    width: 449px;
-    height: 569px;
-    margin-top: 153px;
+    width: 100%;
     object-fit: contain;
     object-position: center;
   }
 
   .green-quote {
-    font-size: 70px;
-    color: #52B267;
+    font-size: 60px;
+    color: #52b267;
     line-height: 80px;
     margin-top: 15.12px;
     font-family: $raleway;
@@ -138,7 +138,7 @@
   }
 
   .small-green-quote {
-    color: #52B267;
+    color: #52b267;
     font-size: 40px;
     line-height: 45px;
     margin-top: 25px;
@@ -156,7 +156,7 @@
   }
 
   .mission-green {
-    color: #52B267;
+    color: #52b267;
   }
 
   .soraya-section {
@@ -166,21 +166,31 @@
     @include media-breakpoint-up(md) {
       height: 714px;
     }
+    gap: 32px;
 
     .heading {
-      color: #EEBF00;
-      font-size: 90px;
+      color: #eebf00;
       font-family: $raleway;
       margin-bottom: 50px;
       margin-top: 50px;
+      font-size: 50px;
       @include media-breakpoint-up(md) {
         margin-top: 173px;
+      }
+      @include media-breakpoint-up(lg) {
+        font-size: 70px;
+      }
+      @include media-breakpoint-up(xl) {
+        font-size: 90px;
       }
       font-weight: 700;
     }
 
     .paragraph {
-      font-size: 25px;
+      font-size: 20px;
+      @include media-breakpoint-up(xl) {
+        font-size: 25px;
+      }
       font-style: italic;
       font-weight: 400;
       font-family: $raleway;
@@ -196,12 +206,11 @@
 
   .soraya-image {
     margin-top: 124px;
-    width: 663px;
-    height: 663px;
-    object-fit: contain;
+    height: 500px;
     @include media-breakpoint-up(md) {
-      margin-right: 68px;
+      height: 663px;
     }
+    object-fit: contain;
   }
 
   .block-yellow {
@@ -216,11 +225,11 @@
       font-weight: bold;
       font-family: $raleway;
       line-height: 45px;
-      color: #0D2B27;
+      color: #0d2b27;
     }
 
     p {
-      color: #0D2B27;
+      color: #0d2b27;
       font-size: 20px;
       line-height: 23px;
       font-family: $raleway;

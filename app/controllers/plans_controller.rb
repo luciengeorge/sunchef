@@ -4,7 +4,7 @@ class PlansController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @plans = policy_scope(Plan).includes(:features)
+    @plans = policy_scope(Plan).includes(:features).order(:created_at)
     @colors = [
       {
         background: "#A1BFCD",

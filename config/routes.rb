@@ -15,6 +15,7 @@ Rails.application.routes.draw do
       resources :contacts
       resources :plans
       resources :carousel_images
+      resources :selling_points
 
       root to: "recipes#index"
     end
@@ -33,7 +34,7 @@ Rails.application.routes.draw do
   resources :testimonials, only: :index
   resources :recipes, only: [:index, :show]
   resources :contacts, only: [:index, :show, :new, :create], path: "forms"
-  resources :plans, only: :index
+  resources :plans, only: :index, path: "packages"
   resources :users, only: [] do
     post :lock, on: :collection
   end

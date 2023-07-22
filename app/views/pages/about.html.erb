@@ -1,7 +1,10 @@
 <div id="about">
-  <section class="section--height section--purple--yellow">
-    <div class="d-flex flex-column flex-md-row align-items-center align-items-md-end justify-content-center justify-content-md-around">
-      <%= image_tag "hello-sunshine.svg", alt: "Sunchef", class: "title-img" %>
+  <section class="intro intro-about">
+    <div class="d-flex container flex-column flex-md-row align-items-center align-items-md-end justify-content-center justify-content-md-between h-100">
+      <div class="title-wrapper">
+        <h1 class="mb-0">Hello</h1>
+        <h1 class="mb-0">Sunshine</h1>
+      </div>
       <%= image_tag 'illustration-about.svg', class: "woman" %>
     </div>
   </section>
@@ -31,46 +34,36 @@ Nutrition began.</p>
     <p class="mb-0">What stuck with me most is the fact that it all starts with what goes into your body. In other words - food.
 How you eat is essential to creating balance in your life - it has the ability to nurture or hinder your experience. </p>
   </section>
-  <section class="section--green">
-    <div class="row m-0">
-      <div class="col-12 col-md-5 d-flex align-items-end justify-content-center">
-        <%= image_tag "pepper-yellow.svg", alt: "yellow pepper", class: "yellow-pepper" %>
-      </div>
-      <div class="col-12 col-md-7">
-        <div class="d-flex flex-column align-items-center justify-content-center h-100">
-          <div>
-            <p class="green-quote">-</p>
-            <p class="green-quote small-line-height">Health and</p>
-            <p class="green-quote small-line-height">happiness are</p>
-            <p class="green-quote small-line-height">always just around</p>
-            <p class="green-quote small-line-height">the corner.</p>
-            <p class="small-green-quote">Only if you're ready :)</p>
-            <p class="mission">Sunchef's mission is to help you <span class="mission-green">become an expert on you!</span></p>
-            <p class="mission">Together, we can design a personalised path towards the best</p>
-            <p class="mission">version of yourself, and inspire you to find pleasure in cooking.</p>
-            <p class="mission bottom">Remember: healthy food doesn't have to compromise on taste!</p>
-          </div>
-        </div>
+  <section class="section--green d-flex flex-column flex-md-row align-items-center justify-content-around m-0 py-5">
+    <div class="d-flex align-items-center justify-content-center me-md-4">
+      <%= image_tag "pepper-yellow.svg", alt: "yellow pepper", class: "yellow-pepper" %>
+    </div>
+    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+      <div>
+        <p class="green-quote">-</p>
+        <p class="green-quote small-line-height">Health and</p>
+        <p class="green-quote small-line-height">happiness are</p>
+        <p class="green-quote small-line-height">always just around</p>
+        <p class="green-quote small-line-height">the corner.</p>
+        <p class="small-green-quote">Only if you're ready :)</p>
+        <p class="mission">Sunchef's mission is to help you <span class="mission-green">become an expert on you!</span></p>
+        <p class="mission">Together, we can design a personalised path towards the best</p>
+        <p class="mission">version of yourself, and inspire you to find pleasure in cooking.</p>
+        <p class="mission bottom">Remember: healthy food doesn't have to compromise on taste!</p>
       </div>
     </div>
   </section>
-  <section class="soraya-section">
-    <div class="row h-100 m-0">
-      <div class="col-12 col-md-6 p-0">
-        <div class="d-flex align-items-end justify-content-center justify-content-md-end">
-          <%= image_tag "soraya.png", alt: "Soraya", class: "soraya-image" %>
-        </div>
-      </div>
-      <div class="col-12 col-md-6 p-0 d-flex align-items-center justify-content-center">
-        <div>
-          <h2 class="heading">Walk the Talk</h2>
-          <p class="paragraph">“I consider myself to be my first client. </p>
-          <p class="paragraph">It is important to honor my journey and continually </p>
-          <p class="paragraph">evolve as a person in order to guide and help you</p>
-          <p class="paragraph">to the best of my abilities.”</p>
-          <p class="sunchef-signature">-SORAYA AKA SUNCHEF</p>
-        </div>
-      </div>
+  <section class="soraya-section container d-flex flex-column flex-md-row align-items-center justify-content-around">
+    <div class="d-flex align-items-end justify-content-center">
+      <%= image_tag "soraya.png", alt: "Soraya", class: "soraya-image" %>
+    </div>
+    <div>
+      <h2 class="heading">Walk the Talk</h2>
+      <p class="paragraph">“I consider myself to be my first client. </p>
+      <p class="paragraph">It is important to honor my journey and continually </p>
+      <p class="paragraph">evolve as a person in order to guide and help you</p>
+      <p class="paragraph">to the best of my abilities.”</p>
+      <p class="sunchef-signature">-SORAYA AKA SUNCHEF</p>
     </div>
   </section>
   <div class="block-yellow"></div>

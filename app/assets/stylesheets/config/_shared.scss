@@ -6,7 +6,6 @@ abbr {
   object-fit: cover;
 }
 
-
 .min-body-height {
   min-height: calc(100vh - 349.2px);
 }
@@ -39,4 +38,72 @@ abbr {
   100% {
     transform: rotate(0deg);
   }
+}
+
+h1 {
+  font-size: 80px;
+  @include media-breakpoint-up(sm) {
+    font-size: 100px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: 120px;
+  }
+  font-weight: bold;
+  line-height: 1;
+  &.smaller {
+    font-size: 50px;
+    @include media-breakpoint-up(sm) {
+      font-size: 70px;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 90px;
+    }
+  }
+}
+
+p {
+  @include media-breakpoint-up(md) {
+    font-size: 25px;
+  }
+  font-family: $raleway;
+}
+
+.title-wrapper {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 85px;
+  }
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 60px;
+  }
+
+  &.smaller {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 85px;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 100px;
+    }
+  }
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 25px;
+  height: 651px;
+  @include media-breakpoint-up(md) {
+    padding-top: 0;
+  }
+}
+
+.recipe-img {
+  width: 131px;
+  height: 538px;
+  position: absolute;
+  top: 0;
+  left: 71px;
+  z-index: 100000;
+  object-fit: contain;
+  object-position: center;
 }

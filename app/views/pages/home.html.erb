@@ -42,7 +42,7 @@
           <% end %>
         </div>
         <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75">
+          <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
             <h3>show up for yourself</h3>
             <p>Your health is in your hands. Do your best to give it the attention and care it deserves. It's up to you to take control of your wellbeing an d show up for your future self.</p>
           </div>
@@ -57,7 +57,7 @@
           <% end %>
         </div>
         <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75">
+          <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
             <h3>live & let live</h3>
             <p>We each have our unique path. Focusing on yours will make space for self-love, awareness, and empowerment. Honor your journey and respect those of others. Focus on what you can control rather than on what you can't.</p>
           </div>
@@ -88,24 +88,24 @@
           <% end %>
         </div>
         <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75">
+          <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
             <h3>find your balance</h3>
             <p>Establishing and maintaining balance helps us stay healthy while navigating life's ups and downs. Finding your balance doesn't happen once. It is an evolving process that requires regular revisiting.</p>
           </div>
         </div>
       </div>
     </div>
-
   </section>
   <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
+      <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
       <% @recipes.each_with_index do |recipe, index| %>
         <div class="carousel-item vh-100 <%= 'active' if index.zero? %>">
           <section class="vh-100 position-relative breakfast__section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<%= recipe.images.first.url %>);">
             <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center flex-column text-white">
               <div class="d-flex align-items-start flex-column">
                 <h2 class="breakfast__section--title-top mb-n3">latest</h2>
-                <h2 class="breakfast__section--title-bottom "><%= recipe.category.humanize %></h2>
+                <h2 class="breakfast__section--title-bottom "><%= recipe.category.humanize.downcase %></h2>
               </div>
               <%= link_to "Click here", recipes_path(category: recipe.category), class: "breakfast-btn d-flex align-items-center justify-content-center text-decoration-none text-center" %>
             </div>

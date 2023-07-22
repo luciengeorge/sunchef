@@ -21,28 +21,13 @@
     }
   }
 
-  .intro__svg {
-    width: 200px;
-  }
-
-
   .pink_section {
-    background-color: #F8CFC5;
+    background-color: #f8cfc5;
     min-height: 270px;
-    p {
-      font-size: 14px;
-      @include media-breakpoint-up(md) {
-        font-size: 25px;
-      }
-      font-family: $raleway;
-      z-index: 1000;
-    }
   }
-
 
   .subtitle {
-    color: #ED8D77;;
-    font-size: 20px;
+    color: #ed8d77;
   }
 
   .sparkles {
@@ -54,27 +39,25 @@
   }
 
   .illustration {
-    height: 870px;
-    width: 319px;
+    height: 400px;
     object-fit: contain;
     object-position: center;
-    @include media-breakpoint-up(md) {
-      right: -15px;
-      bottom: 99px;
-      position: absolute;
-    }
     @include media-breakpoint-up(lg) {
       right: 50px;
+      bottom: 200px;
+      height: 600px;
+      position: absolute;
     }
     @include media-breakpoint-up(xl) {
       right: 144px;
+      height: 800px;
     }
   }
 
   .grid {
     height: 50vw;
     color: $white;
-    padding: 32px;;
+    padding: 32px;
     position: relative;
     h2 {
       font-family: $suisse-intl;
@@ -121,6 +104,7 @@
       bottom: 0;
       right: 0;
       opacity: 0;
+      z-index: 100;
       transition: all 0.2s ease;
       background-color: rgba(0, 0, 0, 0.7);
       color: $white;
@@ -185,8 +169,9 @@
 
   .grid__bottom__right {
     background-color: $light-blue;
-    h2, button {
-      color: #FF7F77 !important;
+    h2,
+    button {
+      color: #ff7f77 !important;
     }
   }
 
@@ -250,9 +235,9 @@
   }
 
   .breakfast-btn {
-    background-color: #FF7F77;;
+    background-color: #ff7f77;
     border: none;
-    color: #0D2B27;;
+    color: #0d2b27;
     border-radius: 100px;
     font-size: 21px;
     padding: 20px 100px;

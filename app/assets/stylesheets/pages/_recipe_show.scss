@@ -9,18 +9,8 @@
       object-position: center;
     }
 
-    .recipe-img {
-      width: 131px;
-      height: 538px;
-      position: absolute;
-      top: 0;
-      left: 71px;
-      object-fit: contain;
-      object-position: center;
-    }
-
     .recipe-title {
-      color: #E85F5B;
+      color: #e85f5b;
       font-family: $suisse-intl;
       font-size: 45px;
       max-width: 286px;
@@ -42,7 +32,7 @@
   }
 
   .title {
-    color: #0D2B27;
+    color: #0d2b27;
     font-family: $raleway;
     font-size: 30px;
     font-weight: bold;
@@ -57,7 +47,7 @@
   }
 
   .ingredients {
-    background-color: #E7E1D5;
+    background-color: #e7e1d5;
     padding: 47px 78px;
 
     .sparkle {
@@ -79,21 +69,21 @@
     .ingredient-recipe-title {
       font-family: $suisse-intl;
       font-size: 23px;
-      color: #E85F5B;
+      color: #e85f5b;
       max-width: 160px;
       text-align: center;
       font-weight: bold;
     }
 
     .ingredient-recipe-servings {
-      color: #E85F5B;
+      color: #e85f5b;
       font-family: $raleway;
       font-size: 15px;
     }
   }
 
   .instructions {
-    background-color: #D5EEE9;
+    background-color: #d5eee9;
     padding: 47px 78px;
   }
 

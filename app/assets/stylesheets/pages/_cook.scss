@@ -1,28 +1,6 @@
 #cook {
-  .intro {
-    height: 658px;
-    background: linear-gradient(to bottom, #FAD685 70%, #FF7F77 30%);
-    display: flex;
-    align-items: flex-end;
-    @include media-breakpoint-down(md) {
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-    }
-    @include media-breakpoint-up(md) {
-      padding-left: 86px;
-    }
-    padding-bottom: 32px;
-
-    .cooking-title {
-      width: 80%;
-      @include media-breakpoint-up(md) {
-        width: 621px;
-      }
-      height: 272px;
-      object-fit: contain;
-      object-position: center;
-    }
+  .intro-cook {
+    background: linear-gradient(to bottom, #fad685 70%, #ff7f77 30%);
   }
 
   .story-section {
@@ -33,7 +11,7 @@
       }
     }
     .pan {
-      background-color: #D4E6DA;
+      background-color: #d4e6da;
     }
 
     .pot {
@@ -93,7 +71,7 @@
     }
 
     .story {
-      background-color: #F8CFC5;
+      background-color: #f8cfc5;
       padding: 50px 40px;
       @include media-breakpoint-up(lg) {
         padding: 65px 54px;
@@ -132,7 +110,7 @@
       @include media-breakpoint-up(lg) {
         font-size: 18px;
       }
-      color: #0D2B27;
+      color: #0d2b27;
       text-decoration: none;
       text-align: center;
       border-radius: 10px;
@@ -143,7 +121,7 @@
     min-height: 687px;
 
     .category-link {
-      transition: all .3s;
+      transition: all 0.3s;
       &:hover {
         transform: scale(1.1);
       }
@@ -174,7 +152,7 @@
 
     .smoothies {
       bottom: 34.69px;
-      left: 336.1px
+      left: 336.1px;
     }
 
     .drinks {
@@ -208,7 +186,7 @@
   .shake-blend-section {
     overflow: hidden;
     min-height: 877px;
-    background-color: #D9E4DD;
+    background-color: #d9e4dd;
     padding: 0 30px;
     position: relative;
     @include media-breakpoint-up(md) {
@@ -223,7 +201,7 @@
     }
 
     .shake-bake-title {
-      color: #FF7F77;
+      color: #ff7f77;
       font-size: 72px;
       font-family: $raleway;
       font-weight: bold;
@@ -251,7 +229,7 @@
   }
 
   .tips-section {
-    background-color: #FEF49C;
+    background-color: #fef49c;
     min-height: 331px;
 
     .tips-text-wrapper {

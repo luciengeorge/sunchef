@@ -1,7 +1,7 @@
 #coaching {
   .intro {
     min-height: 668px;
-    background: linear-gradient(to bottom, #E7B6A2 70%, #FAD685 30%);
+    background: linear-gradient(to bottom, #e7b6a2 70%, #fad685 30%);
     display: flex;
     align-items: flex-end;
 
@@ -16,38 +16,17 @@
       padding-left: 40px;
     }
 
-    .coaching-title {
-      width: 75%;
+    .yoga-img {
+      height: 300px;
       @include media-breakpoint-up(md) {
-        width: 500px;
+        height: 200px;
+        margin-bottom: 85px;
       }
       @include media-breakpoint-up(lg) {
-        width: 600px;
+        height: 300px;
       }
-      @include media-breakpoint-up(xl) {
-        width: 947px;
-      }
-      height: 224px;
       object-fit: contain;
       object-position: center;
-      margin-bottom: 100px;
-    }
-
-    .yoga-img {
-      width: 75%;
-      @include media-breakpoint-up(md) {
-        width: 200px;
-      }
-      @include media-breakpoint-up(lg) {
-        width: 300px;
-      }
-      @include media-breakpoint-up(xl) {
-        width: 400px;
-      }
-      @include media-breakpoint-up(md) {
-        margin-right: 65px;
-      }
-      margin-bottom: 165px;
     }
   }
 
@@ -63,7 +42,7 @@
     }
 
     h2 {
-      color: #E85F5B;
+      color: #e85f5b;
       font-size: 40px;
       font-weight: bold;
       font-family: $suisse-intl;
@@ -73,8 +52,8 @@
     .book-call-btn {
       text-decoration: none;
       display: inline-block;
-      color: #FFFFFF;
-      background-color: #E85F5B;
+      color: #ffffff;
+      background-color: #e85f5b;
       padding: 10px 20px;
       border-radius: 5px;
       margin-top: 34px;
@@ -85,12 +64,12 @@
   .self-empowerement-section {
     .tree-container {
       min-height: 598px;
-      background-color: #CBD6AB;
+      background-color: #cbd6ab;
     }
 
     .text-container {
       min-height: 598px;
-      background-color: #D5EEE9;
+      background-color: #d5eee9;
       p {
         font-family: $raleway;
         font-weight: medium;
@@ -128,7 +107,7 @@
       font-family: $suisse-intl;
       font-weight: bold;
       font-size: 30px;
-      color: #E85F5B;
+      color: #e85f5b;
       &.last {
         margin-bottom: 43px;
       }
@@ -139,17 +118,17 @@
       font-weight: medium;
       font-size: 16px;
       margin-bottom: 11px;
-      color: #0D2B27;
+      color: #0d2b27;
     }
 
     a {
       text-decoration: none;
-      color: #0D2B27;
+      color: #0d2b27;
       font-family: $suisse-intl;
       font-size: 30px;
-      transition: all .3s;
+      transition: all 0.3s;
       display: inline-block;
-      border-bottom: 1px solid #0D2B27;
+      border-bottom: 1px solid #0d2b27;
       &:hover {
         transform: scale(1.05);
       }
@@ -165,14 +144,14 @@
       font-size: 30px;
       font-family: $goodlife;
       margin-bottom: 0 !important;
-      color: #0D2B27;
+      color: #0d2b27;
       text-align: center;
     }
 
     h5 {
       font-size: 24px;
       font-family: $goodlife;
-      color: #0D2B27;
+      color: #0d2b27;
     }
 
     h4 {
