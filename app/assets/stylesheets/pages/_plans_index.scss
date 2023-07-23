@@ -1,35 +1,41 @@
-.plans-wrapper {
-  background: #ffe0db;
-  border-radius: 131px;
-}
-
-.plan {
-  border-radius: 94px;
-  width: 100%;
-  min-height: 385px;
-  h3 {
-    font-size: 30px;
-    font-family: $goodlife;
-    margin-bottom: 0 !important;
-    color: #0d2b27;
-    text-align: center;
-  }
-  h5 {
-    font-size: 24px;
-    font-family: $goodlife;
-    color: #0d2b27;
+#plans {
+  .plans-wrapper {
+    background: #ffe0db;
+    border-radius: 131px;
   }
 
-  h4 {
-    font-size: 48px;
-    font-weight: bold;
-    font-family: $goodlife;
-    margin-bottom: 0 !important;
+  .plan {
+    border-radius: 94px;
+    width: 100%;
+    min-height: 385px;
+    h3 {
+      font-size: 30px;
+      font-family: $goodlife;
+      margin-bottom: 0 !important;
+      color: #0d2b27;
+      text-align: center;
+    }
+    h5 {
+      font-size: 24px;
+      font-family: $goodlife;
+      color: #0d2b27;
+    }
+
+    h4 {
+      font-size: 48px;
+      font-weight: bold;
+      font-family: $goodlife;
+      margin-bottom: 0 !important;
+    }
+
+    .feature {
+      font-family: $raleway;
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
   }
 
-  .feature {
-    font-family: $raleway;
-    font-size: 20px;
-    margin-bottom: 2px;
+  .subtitle {
+    font-family: $goodlife;
   }
 }

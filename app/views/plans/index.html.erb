@@ -1,5 +1,14 @@
-<div class="container-fluid">
-  <section class="m-lg-5 mb-5 plans-wrapper p-5 d-flex flex-column flex-md-row align-items-center justify-content-around">
+<div id="plans" class="container-fluid">
+  <div class="m-lg-5">
+    <h1 class="smaller">SHOP SO YOU</h1>
+    <h1 class="smaller">DONT DROP</h1>
+    <h3 class="subtitle">Pure, vegan, and homemade goodies.</h3>
+    <strong>From my happy belly to yours,</strong>
+    <p class="default">In 2020 I had some friends over for brunch and decided to whip up a meal made entirely from scratch - from the sweet potato flatbread to the almond butter. I spent an entire morning preparing.</p>
+    <p class="default">My almond butter was a hit! After some prompting and motivation from loved ones, I started making and selling almond butter while studying for my Health Coaching certificate. What started as a side project eventually evolved into a small business with a limited product range of almond butter, peanut butter, and granolas. The ingredients I use are pure, vegan, and without preservatives.  I (& many satisfied customers!) can guarantee delicious taste and great quality yummies jam-packed with nutrients.</p>
+    <strong>If you want to support Sunchef’s food products and make your belly happy, here is where you can find me: (In Lebanon only... for now!)</strong>
+  </div>
+  <section class="m-lg-5 mb-5 mt-5 plans-wrapper p-5 d-flex flex-column flex-md-row align-items-center justify-content-around">
     <% @plans.each_with_index do |plan, index| %>
       <%= render PlanComponent.new(plan: plan, color: @colors[index % @colors.size]) %>
     <% end %>
