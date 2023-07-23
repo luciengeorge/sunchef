@@ -102,10 +102,14 @@ p {
 
 .recipe-img {
   width: 131px;
-  height: 538px;
+  height: 350px;
+  left: 0px;
+  @include media-breakpoint-up(md) {
+    height: 538px;
+    left: 71px;
+  }
+  top: 10px;
   position: absolute;
-  top: 0;
-  left: 71px;
   z-index: 100000;
   object-fit: contain;
   object-position: center;

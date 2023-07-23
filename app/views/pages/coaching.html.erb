@@ -80,7 +80,7 @@
     <% @testimonials.each_with_index do |testimonial, index| %>
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <div class="testimonial py-5 px-4 d-flex flex-column align-items-center justify-content-center mx-2" style="background-color: <%= @testimonial_colors[index % @testimonial_colors.size][:background] %>">
-          <p class="body text-justify" style="color: <%= @testimonial_colors[index % @testimonial_colors.size][:text] %>"><%= testimonial.body %></p>
+          <p class="body text-justify h-100" style="color: <%= @testimonial_colors[index % @testimonial_colors.size][:text] %>"><%= testimonial.body %></p>
           <div class="f-flex justify-content-end w-100">
             <h3 class="text-end"><%= testimonial.name %></h3>
           </div>
