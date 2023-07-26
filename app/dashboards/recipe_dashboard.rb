@@ -28,6 +28,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     name: Field::String,
     servings: Field::Number,
     prep_time: Field::String,
+    cooking_tme: Field::String,
     instagram_embed: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
@@ -44,6 +45,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :servings,
     :category,
     :prep_time,
+    :cooking_time,
     :instagram_embed,
   ].freeze
 
@@ -54,6 +56,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :name,
     :servings,
     :prep_time,
+    :cooking_time,
     :category,
     :images,
     :ingredients,
@@ -72,6 +75,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     :category,
     :images,
     :prep_time,
+    :cooking_time,
     :instagram_embed,
     :ingredients,
     :instructions,

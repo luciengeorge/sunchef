@@ -7,8 +7,11 @@
             <div class="recipe mb-5">
               <%= image_tag recipe.images.first&.url || "https://placehold.co/400", alt: recipe.name, class: "recipe__img mb-3" %>
               <div class="d-flex align-items-center justify-content-end">
+                 <div class="position-relative prep-time-wrapper me-3" style="background-image: url('<%= image_url "prep-time-img-#{index % 8}.svg" %>');">
+                  <p class="mb-0">🍳 <%= recipe.cooking_time %></p>
+                </div>
                 <div class="position-relative prep-time-wrapper me-3" style="background-image: url('<%= image_url "prep-time-img-#{index % 8}.svg" %>');">
-                  <p class="mb-0"><%= recipe.prep_time %></p>
+                  <p class="mb-0">🧑‍🍳 <%= recipe.prep_time %></p>
                 </div>
                 <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
                   <p class="mb-0"><%= recipe.category.humanize.upcase %></p>
