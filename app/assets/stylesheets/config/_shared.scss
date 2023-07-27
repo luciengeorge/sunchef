@@ -101,8 +101,12 @@ p {
 }
 
 .recipe-img {
-  height: 350px;
-  left: 0px;
+  height: 300px;
+  left: 10px;
+  @include media-breakpoint-up(sm) {
+    height: 400px;
+    left: 10px;
+  }
   @include media-breakpoint-up(md) {
     height: 538px;
     left: 71px;
