@@ -62,8 +62,10 @@
 
   .ingredients {
     background-color: #e7e1d5;
-    padding: 47px 78px;
-
+    padding: 8px 16px;
+    @include media-breakpoint-up(md) {
+      padding: 47px 78px;
+    }
     .sparkle {
       width: 52px;
       height: 52px;
@@ -98,10 +100,14 @@
 
   .instructions {
     background-color: #d5eee9;
-    padding: 47px 78px;
+    padding: 8px 16px;
+    @include media-breakpoint-up(md) {
+      padding: 47px 78px;
+    }
   }
 
   .from-my-belly-to-yours {
     font-family: $goodlife;
+    font-size: 30px;
   }
 }

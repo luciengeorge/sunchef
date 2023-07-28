@@ -78,7 +78,10 @@
 
       .carousel-item-inner {
         min-height: 320px;
-        padding: 50px 100px;
+        padding: 50px 50px;
+        @include media-breakpoint-up(md) {
+          padding: 50px 100px;
+        }
       }
     }
 

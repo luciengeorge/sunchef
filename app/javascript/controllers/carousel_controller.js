@@ -15,6 +15,7 @@ export default class extends Controller {
       lazyLoad: 'ondemand',
       prevArrow: '<i class="bi bi-chevron-left"></i>',
       nextArrow: '<i class="bi bi-chevron-right"></i>',
+      mobileFirst: true,
       responsive: [
         {
           breakpoint: 768,

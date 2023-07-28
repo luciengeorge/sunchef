@@ -223,14 +223,20 @@
     }
 
     .casserol-and-blobs {
-      width: 585px;
-      height: 600px;
+      width: 500px;
+      height: 500px;
       @include media-breakpoint-up(md) {
         right: -151px;
         top: 14.13px;
         position: absolute;
-        width: 906px;
         height: 805px;
+        width: 630px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 800px;
+      }
+      @include media-breakpoint-up(xl) {
+        width: 906px;
       }
     }
   }
