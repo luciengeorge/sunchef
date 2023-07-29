@@ -1,3 +1,5 @@
+<% content_for :meta_title, "Sunchef | Coaching" %>
+
 <div id="coaching">
   <section class="intro intro-about">
     <div class="d-flex w-100 flex-column flex-md-row align-items-center align-items-md-end justify-content-center justify-content-md-between h-100">
@@ -71,21 +73,20 @@
     <div class="d-flex align-items-center justify-content-center flex-column h-100">
       <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
       <h2 class="testimonial-text mb-0">Are you ready to</h2>
-      <h2 class="testimonial-text last">be an expert on yourself?</h2>
-      <p>Don't take my word for it - here's what they have to say:</p>
-      <%= link_to "testimonials", testimonials_path %>
+      <h2 class="testimonial-text mb-5">be an expert on yourself?</h2>
     </div>
-  </section>
-  <section class="m-md-5 plans-wrapper p-md-5 px-2 carousel d-flex align-items-center justify-content-around" data-controller="<%= 'carousel' if @testimonials.size > 3 %>" data-carousel-element-class="carousel">
-    <% @testimonials.each_with_index do |testimonial, index| %>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
-        <div class="testimonial py-5 px-4 d-flex flex-column align-items-center justify-content-center mx-2" style="background-color: <%= @testimonial_colors[index % @testimonial_colors.size][:background] %>">
-          <p class="body text-justify h-100 overflow-scroll" style="color: <%= @testimonial_colors[index % @testimonial_colors.size][:text] %>"><%= testimonial.body %></p>
-          <div class="f-flex justify-content-end w-100">
-            <h3 class="text-end"><%= testimonial.name %></h3>
+    <h2 class="testimonial-text text-center mb-0">Don't take my word for it - here's what they have to say</h2>
+    <div class="m-md-5 plans-wrapper p-md-5 px-2 carousel d-flex align-items-center justify-content-around" data-controller="<%= 'carousel' if @testimonials.size > 3 %>" data-carousel-element-class="carousel">
+      <% @testimonials.each_with_index do |testimonial, index| %>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="testimonial py-5 px-4 d-flex flex-column align-items-center justify-content-center mx-2" style="background-color: <%= @testimonial_colors[index % @testimonial_colors.size][:background] %>">
+            <p class="body text-justify h-100 overflow-scroll" style="color: <%= @testimonial_colors[index % @testimonial_colors.size][:text] %>"><%= testimonial.body %></p>
+            <div class="f-flex justify-content-end w-100">
+              <h3 class="text-end"><%= testimonial.name %></h3>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </section>
 </div>
