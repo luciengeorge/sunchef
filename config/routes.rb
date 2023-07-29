@@ -31,7 +31,6 @@ Rails.application.routes.draw do
   get :coaching, to: "pages#coaching"
   get :maintenance, to: "pages#maintenance"
 
-  resources :testimonials, only: :index
   resources :recipes, only: [:index, :show]
   resources :contacts, only: [:index, :show, :new, :create], path: "forms"
   resources :plans, only: :index, path: "packages"

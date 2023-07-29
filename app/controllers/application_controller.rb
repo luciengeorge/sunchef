@@ -11,6 +11,10 @@ class ApplicationController < ActionController::Base
 
   before_action :under_maintenance
 
+  def default_url_options
+    { host: ENV["DOMAIN"] || "localhost:3000" }
+  end
+
   private
 
   def under_maintenance
