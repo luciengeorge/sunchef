@@ -223,8 +223,7 @@
     }
 
     .casserol-and-blobs {
-      width: 500px;
-      height: 500px;
+      width: 100%;
       @include media-breakpoint-up(md) {
         right: -151px;
         top: 14.13px;
@@ -238,6 +237,8 @@
       @include media-breakpoint-up(xl) {
         width: 906px;
       }
+      object-fit: contain;
+      object-position: center;
     }
   }
 
