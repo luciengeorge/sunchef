@@ -28,7 +28,7 @@ class RecipeDashboard < Administrate::BaseDashboard
     name: Field::String,
     servings: Field::Number,
     prep_time: Field::String,
-    cooking_tme: Field::String,
+    cooking_time: Field::String,
     instagram_embed: Field::Text,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
