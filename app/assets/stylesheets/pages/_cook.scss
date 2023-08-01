@@ -271,6 +271,10 @@
   .carousel-item-inner {
     min-height: 525px;
     padding: 50px 50px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
     @include media-breakpoint-up(md) {
       padding: 50px 100px;
     }
