@@ -61,13 +61,13 @@
         <div class="col-12 col-md-6">
           <%= f.input :hours_of_work_per_week, placeholder: "40" %>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12">
           <%= f.input :relationship_status, as: :select, collection: Contact.relationship_statuses.keys, label_method: lambda { |status| status.humanize }, prompt: "Pick one" %>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
           <%= f.input :children, placeholder: "4" %>
         </div>
-        <div class="col-12 col-md-4">
+        <div class="col-12 col-md-6">
           <%= f.input :pets, placeholder: "1" %>
         </div>
       </div>
@@ -94,22 +94,22 @@
         <div class="col-6">
           <%= f.input :hours_of_sleep, label: "How many hours?", placeholder: "7" %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <%= f.input :wake_up_at_night, as: :radio_buttons, label: "Do you wake you at night?" %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <%= f.input :wake_up_at_night_reason, label: "Why?", placeholder: "Give details..." %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <%= f.input :serious_illnesses, as: :radio_buttons, label: "Any serious illnesses/hospitalizations/injuries?" %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <%= f.input :pain_stiffness_or_swelling, as: :radio_buttons, label: "Any pain, stiffness or swelling?" %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <%= f.input :constipation_diarrhea_or_gas, as: :radio_buttons, label: "Constipation/Diarrhea/Gas?" %>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-lg-6">
           <%= f.input :allergies_or_sensitivities, as: :radio_buttons, label: "Allergies or sensitivities?" %>
         </div>
         <div class="col-12">
