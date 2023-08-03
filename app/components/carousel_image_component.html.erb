@@ -1,4 +1,4 @@
-<%= image_tag image.image.url, alt: "carousel image", class: "#{!carousel && 'image'}" %>
+<%= image_tag image.image.variant(:carousel), alt: image.description, class: "#{!carousel && 'image'}" %>
 <% if image.description.present? %>
   <div class="carousel-image-description p-3 text-white">
     <p><%= image.description %></p>
