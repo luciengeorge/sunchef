@@ -10,7 +10,7 @@
     </div>
   </section>
   <% if @recipe.images.first.present? %>
-    <%= image_tag @recipe.images.first.url, alt: "Recipe image", class: 'recipe-show-img' %>
+    <%= image_tag @recipe.images.first.variant(:show), alt: "Recipe image", class: 'recipe-show-img' %>
   <% end %>
   <section class="ingredients">
     <div class="d-flex align-items-center justify-content-between">
@@ -32,7 +32,7 @@
     <% end %>
   </section>
   <% if @recipe.images.second.present? %>
-    <%= image_tag @recipe.images.second.url, alt: "Recipe image", class: 'recipe-show-img' %>
+    <%= image_tag @recipe.images.second.variant(:show), alt: "Recipe image", class: 'recipe-show-img' %>
   <% end %>
   <section class="instructions">
     <h3 class="title">INSTRUCTIONS</h3>

@@ -14,6 +14,7 @@ module Sunchef
     config.load_defaults(7.0)
     config.active_storage.replace_on_assign_to_many = false
     config.active_job.queue_adapter = :sidekiq
+    Rails.application.config.active_storage.variant_processor = :mini_magick
 
     # Configuration for the application, engines, and railties goes here.
     #
