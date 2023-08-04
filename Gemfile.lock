@@ -434,6 +434,7 @@ DEPENDENCIES
   redis (~> 4.0)
   rubocop
   rubocop-shopify
+  ruby-vips
   sass-rails
   selenium-webdriver
   sidekiq (~> 6)

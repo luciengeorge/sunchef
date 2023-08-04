@@ -7,10 +7,10 @@
         <%= link_to recipe, class: "text-decoration-none w-100" do %>
           <div class="d-flex align-items-center justify-content-center w-100">
             <div class="recipe mb-5 w-100">
-              <div class="position-relative" data-controller="lazy-loader">
-                <%= image_tag "placeholder.svg", alt: recipe.name, class: "recipe__img mb-3", data: { lazy_loader_target: "image", src: recipe.images.first&.variant(:index).url || recipe.images.first&.url } %>
+              <div class="position-relative image-wrapper" data-controller="lazy-loader">
+                <%= image_tag "spinner.svg", alt: recipe.name, class: "recipe__img", data: { lazy_loader_target: "image", src: recipe.images.first&.variant(:index).url || recipe.images.first&.url } %>
               </div>
-              <div class="d-flex align-items-center justify-content-between recipe-footer">
+              <div class="d-flex align-items-center justify-content-between recipe-footer mt-3">
                 <div class="d-flex flex-column align-items-start justify-content-start">
                   <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
                   <small class="mb-0">🧑‍🍳 <%= recipe.prep_time %></small>

@@ -41,6 +41,9 @@
 
   .recipe-show-img {
     width: 100%;
+    @include media-breakpoint-up(md) {
+      width: 75%;
+    }
     object-fit: cover;
     object-position: center;
   }

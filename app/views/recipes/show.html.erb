@@ -9,12 +9,12 @@
       <%= image_tag "recipe-under-title.svg", alt: "recipe under title", class: 'recipe-under-title' %>
     </div>
   </section>
-  <% if @recipe.images.first.present? %>
-    <div data-controller="lazy-loader">
-      <%= image_tag 'placeholder.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.first.variant(:show).url || @recipe.images.first.url, lazy_loader_target: "image" } %>
-    </div>
-  <% end %>
   <section class="ingredients">
+    <% if @recipe.images.first.present? %>
+      <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mb-5">
+        <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.first.variant(:show).url || @recipe.images.first.url, lazy_loader_target: "image" } %>
+      </div>
+    <% end %>
     <div class="d-flex align-items-center justify-content-between">
       <div>
         <h3 class="title">INGREDIENTS</h3>
@@ -32,12 +32,12 @@
         <p class="mb-0"><%= ingredient.description %></p>
       </div>
     <% end %>
+    <% if @recipe.images.second.present? %>
+      <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mt-5">
+        <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.second.variant(:show).url || @recipe.images.second.url, lazy_loader_target: "image" } %>
+      </div>
+    <% end %>
   </section>
-  <% if @recipe.images.second.present? %>
-    <div data-controller="lazy-loader">
-      <%= image_tag 'placeholder.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.second.variant(:show).url || @recipe.images.second.url, lazy_loader_target: "image" } %>
-    </div>
-  <% end %>
   <section class="instructions">
     <h3 class="title">INSTRUCTIONS</h3>
     <% @recipe.instructions.each do |instruction| %>

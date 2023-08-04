@@ -8,6 +8,7 @@ export default class extends Controller {
   }
 
   connect() {
+    console.log('here')
     const observer = new IntersectionObserver(
       (entries, observer) => {
         entries.forEach((entry) => {
