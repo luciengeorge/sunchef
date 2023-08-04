@@ -10,7 +10,9 @@
     </div>
   </section>
   <% if @recipe.images.first.present? %>
-    <%= image_tag @recipe.images.first.variant(:show), alt: "Recipe image", class: 'recipe-show-img' %>
+    <div data-controller="lazy-loader">
+      <%= image_tag 'placeholder.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.first.variant(:show).url, lazy_loader_target: "image" } %>
+    </div>
   <% end %>
   <section class="ingredients">
     <div class="d-flex align-items-center justify-content-between">
@@ -32,7 +34,9 @@
     <% end %>
   </section>
   <% if @recipe.images.second.present? %>
-    <%= image_tag @recipe.images.second.variant(:show), alt: "Recipe image", class: 'recipe-show-img' %>
+    <div data-controller="lazy-loader">
+      <%= image_tag 'placeholder.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.second.variant(:show).url, lazy_loader_target: "image" } %>
+    </div>
   <% end %>
   <section class="instructions">
     <h3 class="title">INSTRUCTIONS</h3>
