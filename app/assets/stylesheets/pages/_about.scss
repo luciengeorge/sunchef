@@ -94,6 +94,11 @@
         top: 65px;
       }
     }
+
+    .flower-img {
+      z-index: 10;
+      transform: translateY(30px);
+    }
   }
 
   .founder-of-sunchef {

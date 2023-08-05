@@ -38,30 +38,38 @@
           <h2 class="mb-0">up for</h2>
           <h2>yourself*</h2>
           <% if browser.device.mobile? %>
-            <%= button_tag "see more" %>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#showUpForYourSelf" class="position-relative modal-btn">
+              see more
+            </button>
           <% end %>
         </div>
-        <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
-            <h3>show up for yourself</h3>
-            <p class="h-75">Your health is in your hands. Do your best to give it the attention and care it deserves. It's up to you to take control of your wellbeing an d show up for your future self.</p>
+        <% unless browser.device.mobile? %>
+          <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
+            <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
+              <h3>show up for yourself</h3>
+              <p class="h-75">Your health is in your hands. Do your best to give it the attention and care it deserves. It's up to you to take control of your wellbeing an d show up for your future self.</p>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <div class="col-6 m-0 grid grid__top__right d-flex flex-column align-items-center align-items-md-start justify-content-end">
         <div class="preview">
           <h2 class="mb-0">live &</h2>
           <h2>let live*</h2>
           <% if browser.device.mobile? %>
-            <%= button_tag "see more" %>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#liveLetLive" class="position-relative modal-btn">
+              see more
+            </button>
           <% end %>
         </div>
-        <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
-            <h3>live & let live</h3>
-            <p class="h-75">We each have our unique path. Focusing on yours will make space for self-love, awareness, and empowerment. Honor your journey and respect those of others. Focus on what you can control rather than on what you can't.</p>
+        <% unless browser.device.mobile? %>
+          <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
+            <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
+              <h3>live & let live</h3>
+              <p class="h-75">We each have our unique path. Focusing on yours will make space for self-love, awareness, and empowerment. Honor your journey and respect those of others. Focus on what you can control rather than on what you can't.</p>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <div class="col-6 m-0 grid grid__bottom__left d-flex flex-column align-items-center align-items-md-start justify-content-end">
         <div class="preview">
@@ -69,30 +77,38 @@
           <h2 class="mb-0">uncomfort-</h2>
           <h2>able*</h2>
           <% if browser.device.mobile? %>
-            <%= button_tag "see more" %>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#getUncomfortable" class="position-relative modal-btn">
+              see more
+            </button>
           <% end %>
         </div>
-        <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75">
-            <h3>get uncomfortable</h3>
-            <p class="h-75">It is important to step out of your comfort zone in order to activate growth. Be open to new experiences that can help you know yourself more deeply and tap into your hidden powers. You can really surprise yourself when you are challenged!</p>
+        <% unless browser.device.mobile? %>
+          <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
+            <div class="h-75">
+              <h3>get uncomfortable</h3>
+              <p class="h-75">It is important to step out of your comfort zone in order to activate growth. Be open to new experiences that can help you know yourself more deeply and tap into your hidden powers. You can really surprise yourself when you are challenged!</p>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
       <div class="col-6 m-0 grid grid__bottom__right d-flex flex-column align-items-center align-items-md-start justify-content-end">
         <div class="preview">
           <h2 class="mb-0">find your</h2>
           <h2>balance*</h2>
           <% if browser.device.mobile? %>
-            <%= button_tag "see more" %>
+            <button type="button" data-bs-toggle="modal" data-bs-target="#findYourBalance" class="position-relative modal-btn">
+              see more
+            </button>
           <% end %>
         </div>
-        <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
-          <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
-            <h3>find your balance</h3>
-            <p class="h-75">Establishing and maintaining balance helps us stay healthy while navigating life's ups and downs. Finding your balance doesn't happen once. It is an evolving process that requires regular revisiting.</p>
+        <% unless browser.device.mobile? %>
+          <div class="detail px-3 d-flex align-items-center justify-content-center flex-column text-center">
+            <div class="h-75 d-flex align-items-center justify-content-center flex-column text-center">
+              <h3>find your balance</h3>
+              <p class="h-75">Establishing and maintaining balance helps us stay healthy while navigating life's ups and downs. Finding your balance doesn't happen once. It is an evolving process that requires regular revisiting.</p>
+            </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </section>
@@ -121,5 +137,58 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="showUpForYourSelf" tabindex="-1" aria-labelledby="showUpForYourSelfLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-black" id="showUpForYourSelfLabel">show up for yourself*</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-black">
+        Your health is in your hands. Do your best to give it the attention and care it deserves. It's up to you to take control of your wellbeing an d show up for your future self.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="liveLetLive" tabindex="-1" aria-labelledby="liveLetLiveLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-black" id="liveLetLiveLabel">live & let live</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-black">
+        We each have our unique path. Focusing on yours will make space for self-love, awareness, and empowerment. Honor your journey and respect those of others. Focus on what you can control rather than on what you can't.
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="getUncomfortable" tabindex="-1" aria-labelledby="getUncomfortableLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-black" id="getUncomfortableLabel">get uncomfortable</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-black">
+        It is important to step out of your comfort zone in order to activate growth. Be open to new experiences that can help you know yourself more deeply and tap into your hidden powers. You can really surprise yourself when you are challenged!
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="findYourBalance" tabindex="-1" aria-labelledby="findYourBalanceLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 text-black" id="findYourBalanceLabel">find your balance*</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-black">
+        Establishing and maintaining balance helps us stay healthy while navigating life's ups and downs. Finding your balance doesn't happen once. It is an evolving process that requires regular revisiting.
+      </div>
+    </div>
   </div>
 </div>

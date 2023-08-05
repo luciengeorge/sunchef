@@ -8,12 +8,15 @@
           <div class="d-flex align-items-center justify-content-center w-100">
             <div class="recipe mb-5 w-100">
               <div class="position-relative image-wrapper" data-controller="lazy-loader">
+                <div class="image-title-wrapper position-absolute p-3 d-flex align-items-end">
+                  <h3 class="text-white"><%= recipe.name %></h3>
+                </div>
                 <%= image_tag "spinner.svg", alt: recipe.name, class: "recipe__img", data: { lazy_loader_target: "image", src: recipe.images.first&.variant(:index).url || recipe.images.first&.url } %>
               </div>
               <div class="d-flex align-items-center justify-content-between recipe-footer mt-3">
                 <div class="d-flex flex-column align-items-start justify-content-start">
-                  <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
                   <small class="mb-0">🧑‍🍳 <%= recipe.prep_time %></small>
+                  <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
                 </div>
                 <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
                   <p class="mb-0"><%= recipe.category.humanize.upcase %></p>
