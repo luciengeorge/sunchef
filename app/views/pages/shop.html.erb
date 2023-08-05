@@ -2,12 +2,15 @@
 
 <div id="shop">
   <section class="intro intro-shop">
-    <div class="d-flex container flex-column flex-md-row align-items-center align-items-md-end justify-content-center justify-content-md-between h-100">
+    <div class="d-flex container flex-column flex-md-row align-items-center align-items-md-end justify-content-end justify-content-md-between h-100">
       <div class="title-wrapper">
         <h1 class="mb-0">shop so</h1>
         <h1 class="mb-0">you don't drop</h1>
       </div>
-      <div></div>
+      <div class="position-relative">
+        <%= image_tag "bag.png", alt: "bag", class: "bag" %>
+        <div class="position-absolute bag-hider"></div>
+      </div>
     </div>
   </section>
   <section class="belly">

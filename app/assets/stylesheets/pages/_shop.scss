@@ -3,6 +3,18 @@
     background: linear-gradient(to bottom, #cfe1fa 70%, #cbd6ab 30%);
   }
 
+  .bag-hider {
+    background: #cbd6ab;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 196px;
+  }
+
+  .bag {
+    width: 300px;
+  }
+
   .belly {
     .belly-height {
       min-height: 649px;
