@@ -12,6 +12,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     image: Field::ActiveStorage,
+    title: Field::String,
     description: Field::Text,
     published: Field::Boolean,
     created_at: Field::DateTime,
@@ -25,6 +26,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :id,
+    :title,
     :image,
     :published,
   ].freeze
@@ -35,6 +37,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
     :id,
     :image,
     :published,
+    :title,
     :description,
     :created_at,
     :updated_at,
@@ -46,6 +49,7 @@ class CarouselImageDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :image,
     :published,
+    :title,
     :description,
   ].freeze
 
