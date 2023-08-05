@@ -32,12 +32,14 @@
     <p class="support-subtext">(In Lebanon only… for now!)</p>
     <p class="mb-0 locations">
       <% @selling_points.each_with_index do |selling_point, index| %>
-        <% if selling_point.link.present? %>
-          <%= link_to selling_point.name, selling_point.link, target: :blank %>
-        <% else %>
-          <%= selling_point.name %>
-        <% end %>
-        <%= " | " unless index == @selling_points.size - 1 %>
+        <span data-bs-toggle="tooltip" data-placement="top" title="<%= selling_point.location %>">
+          <% if selling_point.link.present? %>
+            <%= link_to selling_point.name, selling_point.link, target: :blank %>
+          <% else %>
+            <%= selling_point.name %>
+          <% end %>
+          <%= " | " unless index == @selling_points.size - 1 %>
+        </span>
       <% end %>
     </p>
   </section>
