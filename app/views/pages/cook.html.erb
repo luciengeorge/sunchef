@@ -21,7 +21,7 @@
       </div>
       <div class="col-12 col-md-6 p-0 min-height">
         <div class="story h-100">
-          <strong class="story-heading">So my story goes...</strong>
+          <strong class="story-heading px-4">So my story goes...</strong>
           <div id="carousel-indicators" class="carousel carousel-dark slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carousel-indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -67,25 +67,27 @@
       </div>
     </div>
   </section>
-  <section class="sunchef-cook-section d-flex align-items-center justify-content-center">
-    <div class="position-relative">
-      <% @categories.each do |category| %>
-        <% if category.to_sym == :lunch_dinner %>
-          <%= link_to recipes_path(category: :lunch_dinner), class: "position-absolute category-link lunch" do %>
-            <%= image_tag "lunch.svg", alt: category, class: "d-inline-block" %>
-            <%= image_tag "dinner.svg", alt: category, class: "d-inline-block" %>
-          <% end %>
-        <% else %>
-          <%= link_to recipes_path(category:), class: "position-absolute category-link #{category}" do %>
-            <%= image_tag "#{category}.svg", alt: category %>
+  <div class="d-flex align-items-center justify-content-center">
+    <section class="sunchef-cook-section d-flex align-items-center justify-content-center">
+      <div class="position-relative">
+        <% @categories.each do |category| %>
+          <% if category.to_sym == :lunch_dinner %>
+            <%= link_to recipes_path(category: :lunch_dinner), class: "position-absolute category-link lunch" do %>
+              <%= image_tag "lunch.svg", alt: category, class: "d-inline-block" %>
+              <%= image_tag "dinner.svg", alt: category, class: "d-inline-block" %>
+            <% end %>
+          <% else %>
+            <%= link_to recipes_path(category:), class: "position-absolute category-link #{category}" do %>
+              <%= image_tag "#{category}.svg", alt: category %>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
-      <%= link_to recipes_path do %>
-        <%= image_tag "cook-sunchef.svg", alt: "Sunchef", class: "sunchef-cook-img" %>
-      <% end %>
-    </div>
-  </section>
+        <%= link_to recipes_path do %>
+          <%= image_tag "cook-sunchef.svg", alt: "Sunchef", class: "sunchef-cook-img" %>
+        <% end %>
+      </div>
+    </section>
+  </div>
   <section class="position-relative">
     <div class="shake-blend-section">
       <%= image_tag "casserol-and-blobs.svg", alt: "casserol and blobs", class: "casserol-and-blobs my-4" %>

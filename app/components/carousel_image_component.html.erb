@@ -1,6 +1,7 @@
 <%= image_tag image.image.variant(:carousel), alt: image.description, class: "#{!carousel && 'image'}" %>
 <% if image.description.present? %>
   <div class="carousel-image-description p-3 text-white">
+    <p><strong><%= image.title %></strong></p>
     <p><%= image.description %></p>
   </div>
 <% end %>
