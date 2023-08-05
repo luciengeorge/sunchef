@@ -1,6 +1,23 @@
 #cook {
   .intro-cook {
     background: linear-gradient(to bottom, #fad685 70%, #ff7f77 30%);
+    @include media-breakpoint-down(md) {
+      padding-top: 0 !important;
+    }
+  }
+
+  .cook-illustration-wrapper {
+    height: 60%;
+    @include media-breakpoint-up(md) {
+      height: 100%;
+    }
+  }
+
+  .cook-illustration {
+    height: 100%;
+    @include media-breakpoint-up(md) {
+      height: 90%;
+    }
   }
 
   .story-section {

@@ -4,6 +4,7 @@
   }
 
   .woman {
+    z-index: 10000;
     height: 400px;
     @include media-breakpoint-up(md) {
       height: 450px;

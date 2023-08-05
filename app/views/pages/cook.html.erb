@@ -2,12 +2,14 @@
 
 <div id="cook">
   <section class="intro intro-cook">
-    <div class="d-flex container flex-column flex-md-row align-items-center align-items-md-end justify-content-center justify-content-md-between h-100">
-      <div class="title-wrapper">
+    <div class="d-flex container flex-column flex-md-row align-items-center align-items-md-end justify-content-start justify-content-md-between h-100 position-relative">
+      <div class="title-wrapper order-2 order-md-1">
         <h1 class="mb-0">let's get</h1>
         <h1 class="mb-0">cooking!</h1>
       </div>
-      <div></div>
+      <div class="order-1 order-md-2 cook-illustration-wrapper d-flex align-items-start justify-content-center">
+        <%= image_tag 'cook-illustration.png', alt: "cook illustration", class: "cook-illustration" %>
+      </div>
     </div>
   </section>
   <section class="story-section">
