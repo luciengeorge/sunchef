@@ -139,7 +139,7 @@
 
   .sunchef-cook-section {
     min-height: 687px;
-    width: 80%;
+    width: 65%;
 
     .category-link {
       transition: all 0.3s;
@@ -168,16 +168,16 @@
 
     .sweets {
       top: 29.95px;
-      left: 336.1px;
+      left: 238.1px;
     }
 
     .smoothies {
       bottom: 34.69px;
-      left: 336.1px;
+      left: 238.1px;
     }
 
     .drinks {
-      right: 106.76px;
+      right: 79.76px;
       bottom: 0;
     }
 
@@ -187,21 +187,18 @@
     }
 
     .dressings {
-      right: 330.65px;
+      right: 236.65px;
       bottom: 34.69px;
     }
 
     .breakfast {
-      right: 326.17px;
+      right: 236.65px;
       top: 29.95px;
     }
 
     .sunchef-cook-img {
-      width: 100%;
-      @include media-breakpoint-up(md) {
-        width: 390px;
-        height: 402px;
-      }
+      width: 300px;
+      height: 330px;
       object-fit: contain;
       object-position: center;
     }
