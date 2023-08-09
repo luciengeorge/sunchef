@@ -15,7 +15,7 @@
   </section>
   <section class="belly">
     <div class="row m-0">
-      <div class="col-12 col-md-6 belly-height belly-left">
+      <div class="col-12 col-md-6 order-1 belly-height belly-left">
         <div class="belly-text">
           <h2 class="mb-0">from my</h2>
           <h2 class="mb-0">happy <span class="blue">belly</span></h2>
@@ -23,28 +23,28 @@
           <p class="blue pure-text mb-0">Pure, vegan, and homemade goodies.</p>
         </div>
       </div>
-      <div class="col-12 col-md-6 belly-height belly-right">
+      <div class="col-12 col-md-6 order-3 order-md-2 belly-height belly-right">
         <p>In 2020 I had some friends over for brunch and decided to whip up a meal made entirely from scratch - from the sweet potato fatbread to the almond butter. I spent an entire morning preparing.</p>
         <p>My almond butter was a hit! After some prompting and motivation from loved ones, I started making and selling almond butter while studying for my Health Coaching certifcate. What started as a side project eventually evolved into a small business with a limited product range of almond butter, peanut butter, and granolas. The ingredients I use are pure, vegan, and without preservatives.  (& many satisfied customers!) can guarantee delicious taste and great quality yummies jam-packed with nutrients.  </p>
       </div>
-    </div>
-  </section>
-  <section class="support-section">
-    <h2 class="mb-0 support-text">If you want to support Sunchef's food products </h2>
-    <h2 class="support-text">and make your belly happy, here is where you can fnd me: </h2>
-    <p class="support-subtext">(In Lebanon only… for now!)</p>
-    <p class="mb-0 locations">
-      <% @selling_points.each_with_index do |selling_point, index| %>
-        <span data-bs-toggle="tooltip" data-placement="top" title="<%= selling_point.location %>">
-          <% if selling_point.link.present? %>
-            <%= link_to selling_point.name, selling_point.link, target: :blank %>
-          <% else %>
-            <%= selling_point.name %>
+      <div class="support-section col-12 order-2 order-md-3">
+        <h2 class="mb-0 support-text">If you want to support Sunchef's food products </h2>
+        <h2 class="support-text">and make your belly happy, here is where you can fnd me: </h2>
+        <p class="support-subtext">(In Lebanon only… for now!)</p>
+        <p class="mb-0 locations">
+          <% @selling_points.each_with_index do |selling_point, index| %>
+            <span data-bs-toggle="tooltip" data-placement="top" title="<%= selling_point.location %>">
+              <% if selling_point.link.present? %>
+                <%= link_to selling_point.name, selling_point.link, target: :blank %>
+              <% else %>
+                <%= selling_point.name %>
+              <% end %>
+              <%= " | " unless index == @selling_points.size - 1 %>
+            </span>
           <% end %>
-          <%= " | " unless index == @selling_points.size - 1 %>
-        </span>
-      <% end %>
-    </p>
+        </p>
+      </div>
+    </div>
   </section>
   <section class="m-md-5 p-md-5 px-2">
     <% if @images.size > 3 %>
