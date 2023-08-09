@@ -16,7 +16,10 @@
     <div class="row m-0 h-100">
       <div class="col-12 col-md-6 p-0 min-height">
         <div class="pan position-relative h-100 d-flex align-items-center justify-content-center">
-          <%= image_tag "pot.png", alt: "pot", class: "pot" %>
+          <div class="d-flex flex-column align-items-center justify-content-center pot-wrapper">
+            <%= image_tag "casserol-cover.png", alt: "pot", class: "pot-cover" %>
+            <%= image_tag "casserol-bottom.png", alt: "pot", class: "pot-bottom" %>
+          </div>
           <%= image_tag "blobs-cook.svg", alt: "blobs", class: "blobs-cook" %>
           <%= image_tag "blobs-cook-2.svg", alt: "blobs", class: "blobs-cook-2" %>
         </div>

@@ -29,14 +29,19 @@
     }
     .pan {
       background-color: #d4e6da;
+      min-height: 300px;
     }
 
-    .pot {
+    .pot-cover {
+      width: 219px;
+      animation: flying-pot 1.75s infinite alternate;
+      z-index: 10000000000;
+    }
+    .pot-bottom {
+      z-index: 10000000000;
       width: 250px;
-      height: 276px;
       @include media-breakpoint-up(md) {
         with: 350px;
-        height: 387px;
       }
       object-fit: contain;
       object-position: center;
@@ -298,5 +303,14 @@
   .carousel-control-prev,
   .carousel-control-next {
     width: 7%;
+  }
+
+  @keyframes flying-pot {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-30px);
+    }
   }
 }

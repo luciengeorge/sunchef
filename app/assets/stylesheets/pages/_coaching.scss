@@ -16,15 +16,6 @@
       animation: appear 1s linear 1 normal forwards,
         flying 1s ease-in-out infinite alternate;
     }
-
-    @keyframes flying {
-      from {
-        transform: translateY(0);
-      }
-      to {
-        transform: translateY(-15px);
-      }
-    }
   }
 
   .health-coaching {
