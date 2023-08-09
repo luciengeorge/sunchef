@@ -28,6 +28,16 @@
 
   .subtitle {
     color: #ed8d77;
+    max-width: 80%;
+    @include media-breakpoint-up(md) {
+      max-width: 50%;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 40%;
+    }
+    @include media-breakpoint-up(xl) {
+      max-width: 30%;
+    }
   }
 
   .sparkles {
@@ -185,7 +195,7 @@
     .grid__mushroom {
       animation: wiggle 1.75s infinite alternate;
       width: 100px;
-      height: 160px;
+      height: 100px;
       @include media-breakpoint-up(sm) {
         width: 130px;
         height: 208px;
