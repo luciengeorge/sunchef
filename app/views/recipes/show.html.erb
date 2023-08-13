@@ -1,59 +1,61 @@
 <% content_for :meta_title, "Sunchef | #{@recipe.name}" %>
 
-<div id="recipe_show" class="mt-5">
-  <section class="top-section position-relative">
-    <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
-    <div class="d-flex flex-column align-items-center justify-content-center w-100 h-100">
-      <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
-      <h3 class="recipe-title"><%= @recipe.name %></h3>
-      <%= image_tag "recipe-under-title.svg", alt: "recipe under title", class: 'recipe-under-title' %>
+<% cache @recipe do %>
+  <div id="recipe_show" class="mt-5">
+    <section class="top-section position-relative">
+      <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
+      <div class="d-flex flex-column align-items-center justify-content-center w-100 h-100">
+        <%= image_tag "sparkles.svg", alt: "sparkles", class: "sparkles" %>
+        <h3 class="recipe-title"><%= @recipe.name %></h3>
+        <%= image_tag "recipe-under-title.svg", alt: "recipe under title", class: 'recipe-under-title' %>
+      </div>
+    </section>
+    <section class="ingredients">
+      <% if @recipe.images.first.present? %>
+        <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mb-5">
+          <%= image_tag '', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.first.variant(:show).url || @recipe.images.first.url, lazy_loader_target: "image", controller: "async", async_url_value: @recipe.images.first.variant(:show).url || @recipe.images.first.url } %>
+        </div>
+      <% end %>
+      <div class="d-flex align-items-center justify-content-between">
+        <div>
+          <h3 class="title">INGREDIENTS</h3>
+          <%= image_tag "sparkle.svg", alt: "sparkle", class: "sparkle" %>
+        </div>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+          <%= image_tag "sparkles.svg", alt: "sparkles", class: "ingredient-recipe-sparkles" %>
+          <h5 class="ingredient-recipe-title"><%= @recipe.name %></h5>
+          <p class="ingredient-recipe-servings">serves <%= @recipe.servings %></p>
+        </div>
+      </div>
+      <% @recipe.ingredients.each do |ingredient| %>
+        <div class="d-flex align-items-center mb-3">
+          <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-3" %>
+          <p class="mb-0"><%= ingredient.description %></p>
+        </div>
+      <% end %>
+      <% if @recipe.images.second.present? %>
+        <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mt-5">
+          <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.second.variant(:show).url || @recipe.images.second.url, lazy_loader_target: "image" } %>
+        </div>
+      <% end %>
+    </section>
+    <section class="instructions">
+      <h3 class="title">INSTRUCTIONS</h3>
+      <% @recipe.instructions.each do |instruction| %>
+        <div class="d-flex align-items-center mb-3">
+          <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-3" %>
+          <p class="mb-0"><%= instruction.description %></p>
+        </div>
+      <% end %>
+    </section>
+    <div class="d-flex align-items-center justify-content-center p-3">
+      <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-2" %>
+      <p class="mb-0 from-my-belly-to-yours">From my belly to yours</p>
+      <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle ms-2" %>
     </div>
-  </section>
-  <section class="ingredients">
-    <% if @recipe.images.first.present? %>
-      <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mb-5">
-        <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.first.variant(:show).url || @recipe.images.first.url, lazy_loader_target: "image" } %>
-      </div>
-    <% end %>
-    <div class="d-flex align-items-center justify-content-between">
-      <div>
-        <h3 class="title">INGREDIENTS</h3>
-        <%= image_tag "sparkle.svg", alt: "sparkle", class: "sparkle" %>
-      </div>
-      <div class="d-flex flex-column align-items-center justify-content-center">
-        <%= image_tag "sparkles.svg", alt: "sparkles", class: "ingredient-recipe-sparkles" %>
-        <h5 class="ingredient-recipe-title"><%= @recipe.name %></h5>
-        <p class="ingredient-recipe-servings">serves <%= @recipe.servings %></p>
-      </div>
-    </div>
-    <% @recipe.ingredients.each do |ingredient| %>
-      <div class="d-flex align-items-center mb-3">
-        <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-3" %>
-        <p class="mb-0"><%= ingredient.description %></p>
-      </div>
-    <% end %>
-    <% if @recipe.images.second.present? %>
-      <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mt-5">
-        <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.second.variant(:show).url || @recipe.images.second.url, lazy_loader_target: "image" } %>
-      </div>
-    <% end %>
-  </section>
-  <section class="instructions">
-    <h3 class="title">INSTRUCTIONS</h3>
-    <% @recipe.instructions.each do |instruction| %>
-      <div class="d-flex align-items-center mb-3">
-        <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-3" %>
-        <p class="mb-0"><%= instruction.description %></p>
-      </div>
-    <% end %>
-  </section>
-  <div class="d-flex align-items-center justify-content-center p-3">
-    <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle me-2" %>
-    <p class="mb-0 from-my-belly-to-yours">From my belly to yours</p>
-    <%= image_tag "sparkle.svg", alt: "sparkle", class: "ingredient-sparkle ms-2" %>
-  </div>
 
-  <section id="youtube" class="my-5 <%= @recipe.instagram_embed.blank? ? 'd-none' : 'd-flex' %> align-items-center justify-content-center">
-    <%= @recipe.instagram_embed&.html_safe %>
-  </section>
-</div>
+    <section id="youtube" class="my-5 <%= @recipe.instagram_embed.blank? ? 'd-none' : 'd-flex' %> align-items-center justify-content-center">
+      <%= @recipe.instagram_embed&.html_safe %>
+    </section>
+  </div>
+<% end %>

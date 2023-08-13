@@ -53,6 +53,10 @@
     object-fit: cover;
     object-position: center;
     border-radius: 3px;
+    background-image: asset-url('spinner.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
   .recipe-footer {

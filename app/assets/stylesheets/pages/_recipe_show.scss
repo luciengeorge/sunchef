@@ -46,6 +46,10 @@
     }
     object-fit: cover;
     object-position: center;
+    background-image: asset-url('spinner.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
   .title {
