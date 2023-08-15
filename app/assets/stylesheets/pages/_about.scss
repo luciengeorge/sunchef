@@ -100,6 +100,22 @@
       z-index: 10;
       transform: translateY(30px);
     }
+
+    .clouds-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 10000000;
+      left: 0;
+      top: 0;
+      transform: translateX(-100%);
+      animation: animation1 2s ease forwards;
+      &.active {
+        animation: animation2 2s ease infinite alternate;
+      }
+    }
   }
 
   .founder-of-sunchef {
@@ -250,5 +266,23 @@
         margin-bottom: 32px;
       }
     }
+  }
+}
+
+@keyframes animation1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes animation2 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-30px);
   }
 }
