@@ -1,6 +1,6 @@
 #navbar {
-  z-index: 100;
-  background: white;
+  z-index: 10000000;
+  background: transparent;
   height: 100px;
   .logo {
     width: 145px;
@@ -10,6 +10,11 @@
     position: relative;
     top: 30px;
     z-index: 1000;
+  }
+
+  .nav-item {
+    z-index: 100000;
+    position: relative;
   }
 
   .navbar__left {

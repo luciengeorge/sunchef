@@ -29,17 +29,17 @@
     }
     .pan {
       background-color: #d4e6da;
-      min-height: 300px;
+      min-height: 370px;
     }
 
     .pot-cover {
-      width: 219px;
+      width: 271px;
       animation: flying-pot 1.75s infinite alternate;
       z-index: 10000000000;
     }
     .pot-bottom {
       z-index: 10000000000;
-      width: 250px;
+      width: 312px;
       @include media-breakpoint-up(md) {
         with: 350px;
       }
@@ -50,9 +50,9 @@
 
     .blobs-cook {
       position: absolute;
-      top: 15px;
+      top: 55px;
       left: -115px;
-      width: 300px;
+      width: 400px;
       height: 245px;
       @include media-breakpoint-up(md) {
         top: 100px;
@@ -72,9 +72,9 @@
 
     .blobs-cook-2 {
       position: absolute;
-      top: 15px;
+      top: 55px;
       right: -228px;
-      width: 460px;
+      width: 515px;
       height: 250px;
       @include media-breakpoint-up(md) {
         top: 45px;
@@ -83,8 +83,8 @@
         height: 509px;
       }
       @include media-breakpoint-up(lg) {
-        top: 45px;
-        right: -310px;
+        top: 100px;
+        right: -226px;
         width: 519px;
         height: 509px;
       }
