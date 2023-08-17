@@ -8,8 +8,10 @@
 
   .cook-illustration-wrapper {
     height: 60%;
+    width: 207.7px;
     @include media-breakpoint-up(md) {
       height: 100%;
+      width: 311.533px;
     }
   }
 
