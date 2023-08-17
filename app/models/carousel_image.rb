@@ -7,4 +7,19 @@ class CarouselImage < ApplicationRecord
   end
 
   validates :image, presence: true
+
+  after_commit :process_image, if: -> { image.attached? }
+
+  def image_variant_url
+    image.representation(resize_to_limit: [700, 300], format: :webp).url
+  end
+
+  private
+
+  def process_image
+    return unless image.representable?
+
+    variant = image.representation(resize_to_limit: [700, 300], format: :webp)
+    variant.processed
+  end
 end
