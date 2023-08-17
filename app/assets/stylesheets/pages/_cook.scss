@@ -15,8 +15,83 @@
 
   .cook-illustration {
     height: 100%;
+    z-index: 0;
     @include media-breakpoint-up(md) {
       height: 90%;
+    }
+  }
+
+  .hand {
+    bottom: -4px;
+    width: 65px;
+    right: -4px;
+    z-index: 2;
+    @include media-breakpoint-up(md) {
+      bottom: 61px;
+      width: 93px;
+      right: -2px;
+    }
+  }
+
+  .spoon {
+    z-index: 1;
+    bottom: -38px;
+    width: 114px;
+    right: -12px;
+    @include media-breakpoint-up(md) {
+      bottom: 21px;
+      width: 132px;
+      right: 5px;
+    }
+    animation: wiggle-spoon 500ms infinite alternate;
+  }
+
+  .spoon-sparkles {
+    bottom: -73px;
+    right: 52px;
+    width: 100px;
+    z-index: 100000;
+    animation: sparkles-move-sm 1s infinite forwards;
+    @include media-breakpoint-up(md) {
+      right: 95px;
+      bottom: -19px;
+      animation: sparkles-move 1s infinite forwards;
+    }
+  }
+
+  @keyframes wiggle-spoon {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes sparkles-move-sm {
+    from {
+      bottom: -73px;
+      right: 52px;
+    }
+    to {
+      bottom: -100px;
+      right: 87px;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes sparkles-move {
+    from {
+      bottom: -19px;
+      right: 95px;
+    }
+    to {
+      bottom: -46px;
+      right: 133px;
+      transform: scale(1.2);
     }
   }
 
