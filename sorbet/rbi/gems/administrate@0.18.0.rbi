@@ -7,19 +7,19 @@
 # source://administrate//lib/administrate/namespace/resource.rb#1
 module Administrate
   class << self
-    # source://railties/7.0.4.2/lib/rails/engine.rb#405
+    # source://railties/7.0.6/lib/rails/engine.rb#405
     def railtie_helpers_paths; end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#394
+    # source://railties/7.0.6/lib/rails/engine.rb#394
     def railtie_namespace; end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#409
+    # source://railties/7.0.6/lib/rails/engine.rb#409
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#397
+    # source://railties/7.0.6/lib/rails/engine.rb#397
     def table_name_prefix; end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#401
+    # source://railties/7.0.6/lib/rails/engine.rb#401
     def use_relative_model_naming?; end
 
     # source://administrate//lib/administrate.rb#34
@@ -51,7 +51,7 @@ class Administrate::ApplicationController < ::ActionController::Base
 
   private
 
-  # source://actionview/7.0.4.2/lib/action_view/layouts.rb#328
+  # source://actionview/7.0.6/lib/action_view/layouts.rb#328
   def _layout(lookup_context, formats); end
 
   def _layout_from_proc; end
@@ -89,13 +89,13 @@ class Administrate::ApplicationController < ::ActionController::Base
   def valid_action?(action_name, resource = T.unsafe(nil)); end
 
   class << self
-    # source://activesupport/7.0.4.2/lib/active_support/callbacks.rb#68
+    # source://activesupport/7.0.6/lib/active_support/callbacks.rb#68
     def __callbacks; end
 
-    # source://actionpack/7.0.4.2/lib/abstract_controller/helpers.rb#11
+    # source://actionpack/7.0.6/lib/abstract_controller/helpers.rb#11
     def _helper_methods; end
 
-    # source://actionpack/7.0.4.2/lib/action_controller/metal.rb#210
+    # source://actionpack/7.0.6/lib/action_controller/metal.rb#210
     def middleware_stack; end
   end
 end
@@ -150,7 +150,7 @@ Administrate::ApplicationHelper::SINGULAR_COUNT = T.let(T.unsafe(nil), Integer)
 # source://administrate//lib/administrate/engine.rb#19
 class Administrate::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.0.4.2/lib/active_support/callbacks.rb#68
+    # source://activesupport/7.0.6/lib/active_support/callbacks.rb#68
     def __callbacks; end
 
     # source://administrate//lib/administrate/engine.rb#32
@@ -169,6 +169,51 @@ end
 
 # source://administrate//lib/administrate/field/deferred.rb#4
 module Administrate::Field; end
+
+# source://administrate//lib/administrate/field/associative.rb#5
+class Administrate::Field::Associative < ::Administrate::Field::Base
+  # source://administrate//lib/administrate/field/associative.rb#26
+  def associated_class; end
+
+  # source://administrate//lib/administrate/field/associative.rb#34
+  def associated_class_name; end
+
+  # source://administrate//lib/administrate/field/associative.rb#22
+  def display_associated_resource; end
+
+  private
+
+  # source://administrate//lib/administrate/field/associative.rb#47
+  def associated_dashboard; end
+
+  # source://administrate//lib/administrate/field/associative.rb#71
+  def deprecated_option(name); end
+
+  # source://administrate//lib/administrate/field/associative.rb#59
+  def foreign_key; end
+
+  # @return [Boolean]
+  #
+  # source://administrate//lib/administrate/field/associative.rb#67
+  def option_given?(name); end
+
+  # source://administrate//lib/administrate/field/associative.rb#51
+  def primary_key; end
+
+  class << self
+    # source://administrate//lib/administrate/field/associative.rb#10
+    def associated_class(resource_class, attr); end
+
+    # source://administrate//lib/administrate/field/associative.rb#14
+    def associated_class_name(resource_class, attr); end
+
+    # source://administrate//lib/administrate/field/associative.rb#6
+    def foreign_key_for(resource_class, attr); end
+
+    # source://administrate//lib/administrate/field/associative.rb#18
+    def reflection(resource_class, attr); end
+  end
+end
 
 # source://administrate//lib/administrate/field/base.rb#6
 class Administrate::Field::Base
@@ -296,6 +341,69 @@ class Administrate::Field::Deferred
   # source://administrate//lib/administrate/field/deferred.rb#43
   def searchable_fields; end
 end
+
+# source://administrate//lib/administrate/field/has_many.rb#7
+class Administrate::Field::HasMany < ::Administrate::Field::Associative
+  # source://administrate//lib/administrate/field/has_many.rb#24
+  def associated_collection(order = T.unsafe(nil)); end
+
+  # source://administrate//lib/administrate/field/has_many.rb#32
+  def associated_resource_options; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#28
+  def attribute_key; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#64
+  def data; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#44
+  def limit; end
+
+  # @return [Boolean]
+  #
+  # source://administrate//lib/administrate/field/has_many.rb#60
+  def more_than_limit?; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#75
+  def order; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#68
+  def order_from_params(params); end
+
+  # source://administrate//lib/administrate/field/has_many.rb#48
+  def permitted_attribute; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#55
+  def resources(page = T.unsafe(nil), order = T.unsafe(nil)); end
+
+  # source://administrate//lib/administrate/field/has_many.rb#38
+  def selected_options; end
+
+  private
+
+  # source://administrate//lib/administrate/field/has_many.rb#85
+  def candidate_resources; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#102
+  def direction; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#94
+  def display_candidate_resource(resource); end
+
+  # source://administrate//lib/administrate/field/has_many.rb#81
+  def includes; end
+
+  # source://administrate//lib/administrate/field/has_many.rb#98
+  def sort_by; end
+
+  class << self
+    # source://administrate//lib/administrate/field/has_many.rb#10
+    def permitted_attribute(attr, _options = T.unsafe(nil)); end
+  end
+end
+
+# source://administrate//lib/administrate/field/has_many.rb#8
+Administrate::Field::HasMany::DEFAULT_LIMIT = T.let(T.unsafe(nil), Integer)
 
 # source://administrate//lib/administrate/namespace/resource.rb#2
 class Administrate::Namespace
@@ -722,3 +830,6 @@ class Administrate::Search::Query
   # source://administrate//lib/administrate/search.rb#37
   def parse_query(query); end
 end
+
+# source://administrate//lib/administrate/version.rb#2
+Administrate::VERSION = T.let(T.unsafe(nil), String)

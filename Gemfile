@@ -21,6 +21,7 @@ gem "image_processing"
 gem "importmap-rails"
 gem "jbuilder"
 gem "jquery-rails"
+gem "pagy", "~> 6.0"
 gem "pg", "~> 1.1"
 
 gem "jquery-ui-rails"

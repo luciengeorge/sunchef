@@ -13,7 +13,7 @@
     <section class="ingredients">
       <% if @recipe.images.first.present? %>
         <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mb-5">
-          <%= image_tag '', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.first.variant(:show).url || @recipe.images.first.url, lazy_loader_target: "image", controller: "async", async_url_value: @recipe.images.first.variant(:show).url || @recipe.images.first.url } %>
+          <%= image_tag '', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.show_first_image_url, lazy_loader_target: "image", controller: "async", async_url_value: @recipe.show_first_image_url } %>
         </div>
       <% end %>
       <div class="d-flex align-items-center justify-content-between">
@@ -35,7 +35,7 @@
       <% end %>
       <% if @recipe.images.second.present? %>
         <div data-controller="lazy-loader" class="d-flex align-items-center justify-content-center mt-5">
-          <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.images.second.variant(:show).url || @recipe.images.second.url, lazy_loader_target: "image" } %>
+          <%= image_tag 'spinner.svg', alt: @recipe.name, class: 'recipe-show-img', data: { src: @recipe.show_second_image_url, lazy_loader_target: "image", controller: "async", async_url_value: @recipe.show_second_image_url } %>
         </div>
       <% end %>
     </section>
