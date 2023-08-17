@@ -4,8 +4,10 @@ class RecipesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @recipes = policy_scope(Recipe)
-    @recipes = @recipes.where(category: params[:category]) if params[:category].present?
+    @pagy, @recipes = pagy(policy_scope(Recipe))
+    @pagy, @recipes = pagy(@recipes.where(category: params[:category])) if params[:category].present?
+  rescue Pagy::OverflowError
+    redirect_to(recipes_path(page: 1))
   end
 
   def show

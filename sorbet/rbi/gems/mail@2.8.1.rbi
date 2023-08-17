@@ -127,7 +127,7 @@ module Mail
     # source://mail//lib/mail/mail.rb#151
     def first(*args, &block); end
 
-    # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/from_source.rb#4
+    # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/from_source.rb#4
     def from_source(source); end
 
     # source://mail//lib/mail/mail.rb#233
@@ -276,7 +276,7 @@ class Mail::Address
   # source://mail//lib/mail/elements/address.rb#25
   def initialize(value = T.unsafe(nil)); end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/address_equality.rb#5
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/address_equality.rb#5
   def ==(other_address); end
 
   # Returns the address that is in the address itself.  That is, the
@@ -425,7 +425,7 @@ class Mail::Address
   def strip_domain_comments(value); end
 
   class << self
-    # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/address_wrapping.rb#5
+    # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/address_wrapping.rb#5
     def wrap(address); end
   end
 end
@@ -3543,7 +3543,7 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#512
   def bcc=(val); end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/addresses.rb#21
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#21
   def bcc_addresses; end
 
   # Returns an array of addresses (the encoded value) in the Bcc field,
@@ -3601,6 +3601,12 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#1268
   def body_encoding=(value); end
 
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#129
+  def body_html; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#137
+  def body_text; end
+
   # @return [Boolean]
   #
   # source://mail//lib/mail/message.rb#1554
@@ -3652,7 +3658,7 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#553
   def cc=(val); end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/addresses.rb#17
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#17
   def cc_addresses; end
 
   # Returns an array of addresses (the encoded value) in the Cc field,
@@ -3763,6 +3769,15 @@ class Mail::Message
   #
   # source://mail//lib/mail/message.rb#267
   def deliver!; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#4
+  def delivered; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#4
+  def delivered=(_arg0); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#6
+  def delivered?; end
 
   # If you assign a delivery handler, mail will call :deliver_mail on the
   # object you assign to delivery_handler, it will pass itself as the
@@ -3919,6 +3934,12 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#471
   def errors; end
 
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#147
+  def export_attachments; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#151
+  def export_headers; end
+
   # Returns the filename of the attachment
   #
   # source://mail//lib/mail/message.rb#1923
@@ -3971,7 +3992,7 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#670
   def from=(val); end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/addresses.rb#5
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#5
   def from_address; end
 
   # Returns an array of addresses (the encoded value) in the From field,
@@ -4059,6 +4080,9 @@ class Mail::Message
   #
   # source://mail//lib/mail/message.rb#448
   def headers(hash = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#125
+  def html?; end
 
   # Accessor for html_part
   #
@@ -4149,6 +4173,18 @@ class Mail::Message
   #
   # source://mail//lib/mail/message.rb#712
   def message_id=(val); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#75
+  def message_stream(val = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#80
+  def message_stream=(val); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#36
+  def metadata(val = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#44
+  def metadata=(val); end
 
   # Method Missing in this implementation allows you to set any of the
   # standard fields directly as you would the "to", "subject" etc.
@@ -4312,6 +4348,21 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#223
   def perform_deliveries=(_arg0); end
 
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#55
+  def postmark_attachments; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#48
+  def postmark_attachments=(value); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#4
+  def postmark_response; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#4
+  def postmark_response=(_arg0); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#88
+  def prerender; end
+
   # If set to false, mail will silently catch and ignore any exceptions
   # raised through attempting to deliver an email.
   #
@@ -4364,10 +4415,10 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#751
   def received=(val); end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/recipients.rb#5
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/recipients.rb#5
   def recipients; end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/addresses.rb#9
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#9
   def recipients_addresses; end
 
   # source://mail//lib/mail/message.rb#755
@@ -4780,9 +4831,27 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#1152
   def subject=(val); end
 
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#10
+  def tag(val = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#14
+  def tag=(val); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#64
+  def template_alias(val = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#70
+  def template_model(model = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#69
+  def template_model=(_arg0); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#84
+  def templated?; end
+
   # @return [Boolean]
   #
-  # source://mail//lib/mail/message.rb#1964
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#117
   def text?; end
 
   # Accessor for text_part
@@ -4838,7 +4907,7 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#1193
   def to=(val); end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/addresses.rb#13
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#13
   def to_addresses; end
 
   # Returns an array of addresses (the encoded value) in the To field,
@@ -4847,11 +4916,26 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#1294
   def to_addrs; end
 
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#161
+  def to_postmark_hash; end
+
   # source://mail//lib/mail/message.rb#1869
   def to_s; end
 
   # source://mail//lib/mail/message.rb#1823
   def to_yaml(opts = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#18
+  def track_links(val = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#23
+  def track_links=(val); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#27
+  def track_opens(val = T.unsafe(nil)); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#32
+  def track_opens=(val); end
 
   # source://mail//lib/mail/message.rb#621
   def transport_encoding(val = T.unsafe(nil)); end
@@ -4862,8 +4946,19 @@ class Mail::Message
   # source://mail//lib/mail/message.rb#1811
   def without_attachments!; end
 
-  # source://actionmailbox/7.0.4.2/lib/action_mailbox/mail_ext/addresses.rb#25
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#25
   def x_original_to_addresses; end
+
+  protected
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#172
+  def export_native_attachments; end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#168
+  def pack_attachment_data(data); end
+
+  # source://postmark/1.24.0/lib/postmark/message_extensions/mail.rb#183
+  def reserved_headers; end
 
   private
 
@@ -4884,6 +4979,9 @@ class Mail::Message
 
   # source://mail//lib/mail/message.rb#2056
   def add_required_message_fields; end
+
+  # source://actionmailbox/7.0.6/lib/action_mailbox/mail_ext/addresses.rb#30
+  def address_list(obj); end
 
   # source://mail//lib/mail/message.rb#2025
   def allowed_encodings; end

@@ -7,19 +7,19 @@
 # source://administrate-field-active_storage//lib/administrate/field/active_storage.rb#4
 module Administrate
   class << self
-    # source://railties/7.0.4.2/lib/rails/engine.rb#405
+    # source://railties/7.0.6/lib/rails/engine.rb#405
     def railtie_helpers_paths; end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#394
+    # source://railties/7.0.6/lib/rails/engine.rb#394
     def railtie_namespace; end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#409
+    # source://railties/7.0.6/lib/rails/engine.rb#409
     def railtie_routes_url_helpers(include_path_helpers = T.unsafe(nil)); end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#397
+    # source://railties/7.0.6/lib/rails/engine.rb#397
     def table_name_prefix; end
 
-    # source://railties/7.0.4.2/lib/rails/engine.rb#401
+    # source://railties/7.0.6/lib/rails/engine.rb#401
     def use_relative_model_naming?; end
 
     # source://administrate/0.18.0/lib/administrate.rb#34
@@ -113,7 +113,7 @@ end
 # source://administrate-field-active_storage//lib/administrate/field/active_storage.rb#7
 class Administrate::Field::ActiveStorage::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.0.4.2/lib/active_support/callbacks.rb#68
+    # source://activesupport/7.0.6/lib/active_support/callbacks.rb#68
     def __callbacks; end
   end
 end

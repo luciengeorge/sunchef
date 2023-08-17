@@ -65,7 +65,7 @@ module Bootstrap::Rails; end
 # source://bootstrap//lib/bootstrap/engine.rb#8
 class Bootstrap::Rails::Engine < ::Rails::Engine
   class << self
-    # source://activesupport/7.0.4.2/lib/active_support/callbacks.rb#68
+    # source://activesupport/7.0.6/lib/active_support/callbacks.rb#68
     def __callbacks; end
   end
 end

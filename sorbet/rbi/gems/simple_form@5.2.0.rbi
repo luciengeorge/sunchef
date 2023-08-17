@@ -19,7 +19,7 @@ module ActionView::Helpers
   mixes_in_class_methods ::ActionView::Helpers::SanitizeHelper::ClassMethods
 
   class << self
-    # source://actionview/7.0.4.2/lib/action_view/helpers.rb#34
+    # source://actionview/7.0.6/lib/action_view/helpers.rb#34
     def eager_load!; end
   end
 end
@@ -28,210 +28,210 @@ end
 class ActionView::Helpers::FormBuilder
   include ::SimpleForm::ActionViewExtensions::Builder
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1700
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1700
   def initialize(object_name, object, template, options); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2614
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2614
   def button(value = T.unsafe(nil), options = T.unsafe(nil), &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2438
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2438
   def check_box(method, options = T.unsafe(nil), checked_value = T.unsafe(nil), unchecked_value = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#905
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#907
   def collection_check_boxes(method, collection, value_method, text_method, options = T.unsafe(nil), html_options = T.unsafe(nil), &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#917
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#919
   def collection_radio_buttons(method, collection, value_method, text_method, options = T.unsafe(nil), html_options = T.unsafe(nil), &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#857
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#859
   def collection_select(method, collection, value_method, text_method, options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def color_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def date_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/date_helper.rb#1229
+  # source://actionview/7.0.6/lib/action_view/helpers/date_helper.rb#1239
   def date_select(method, options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def datetime_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def datetime_local_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/date_helper.rb#1253
+  # source://actionview/7.0.6/lib/action_view/helpers/date_helper.rb#1263
   def datetime_select(method, options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def email_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2635
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2635
   def emitted_hidden_id?; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1665
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1665
   def field_helpers; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1665
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1665
   def field_helpers=(_arg0); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1665
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1665
   def field_helpers?; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1757
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1757
   def field_id(method, *suffixes, namespace: T.unsafe(nil), index: T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1777
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1777
   def field_name(method, *methods, multiple: T.unsafe(nil), index: T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2294
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2294
   def fields(scope = T.unsafe(nil), model: T.unsafe(nil), **options, &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2257
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2257
   def fields_for(record_name, record_object = T.unsafe(nil), fields_options = T.unsafe(nil), &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2521
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2521
   def file_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#869
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#871
   def grouped_collection_select(method, collection, group_method, group_label_method, option_key_method, option_value_method, options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2482
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2482
   def hidden_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1737
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1737
   def id; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1677
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1677
   def index; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2369
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2369
   def label(method, text = T.unsafe(nil), options = T.unsafe(nil), &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def month_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1677
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1677
   def multipart; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1680
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1680
   def multipart=(multipart); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1677
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1677
   def multipart?; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def number_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1675
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1675
   def object; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1675
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1675
   def object=(_arg0); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1675
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1675
   def object_name; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1675
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1675
   def object_name=(_arg0); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1675
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1675
   def options; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1675
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1675
   def options=(_arg0); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def password_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def phone_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2460
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2460
   def radio_button(method, tag_value, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def range_field(method, options = T.unsafe(nil)); end
 
   def rich_text_area(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def search_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#845
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#847
   def select(method, choices = T.unsafe(nil), options = T.unsafe(nil), html_options = T.unsafe(nil), &block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2553
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2553
   def submit(value = T.unsafe(nil), options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def telephone_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def text_area(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def text_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def time_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/date_helper.rb#1241
+  # source://actionview/7.0.6/lib/action_view/helpers/date_helper.rb#1251
   def time_select(method, options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#881
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#883
   def time_zone_select(method, priority_zones = T.unsafe(nil), options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1696
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1696
   def to_model; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1692
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1692
   def to_partial_path; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def url_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2006
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2006
   def week_field(method, options = T.unsafe(nil)); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_options_helper.rb#893
+  # source://actionview/7.0.6/lib/action_view/helpers/form_options_helper.rb#895
   def weekday_select(method, options = T.unsafe(nil), html_options = T.unsafe(nil)); end
 
   private
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2720
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2720
   def convert_to_legacy_options(options); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2702
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2702
   def fields_for_nested_model(name, object, fields_options, block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2673
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2673
   def fields_for_with_nested_attributes(association_name, association, options, block); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2669
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2669
   def nested_attributes_association?(association_name); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2715
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2715
   def nested_child_index(name); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2640
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2640
   def objectify_options(options); end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2646
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2646
   def submit_default_value; end
 
   class << self
-    # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1688
+    # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1688
     def _to_partial_path; end
 
-    # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1665
+    # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1665
     def field_helpers; end
 
-    # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1665
+    # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1665
     def field_helpers=(value); end
 
-    # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#1665
+    # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#1665
     def field_helpers?; end
   end
 end
@@ -1255,7 +1255,7 @@ class SimpleForm::FormBuilder < ::ActionView::Helpers::FormBuilder
   # button implementation (3.2 forward (to delegate to the original when
   # calling `f.button :button`.
   #
-  # source://actionview/7.0.4.2/lib/action_view/helpers/form_helper.rb#2614
+  # source://actionview/7.0.6/lib/action_view/helpers/form_helper.rb#2614
   def button_button(value = T.unsafe(nil), options = T.unsafe(nil), &block); end
 
   # Creates a collection of check boxes for each item in the collection,
@@ -1856,10 +1856,10 @@ class SimpleForm::Inputs::Base
   # source://simple_form//lib/simple_form/inputs/base.rb#28
   def column; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/translation_helper.rb#18
+  # source://actionview/7.0.6/lib/action_view/helpers/translation_helper.rb#18
   def debug_missing_translation; end
 
-  # source://actionview/7.0.4.2/lib/action_view/helpers/translation_helper.rb#18
+  # source://actionview/7.0.6/lib/action_view/helpers/translation_helper.rb#18
   def debug_missing_translation=(val); end
 
   # source://simple_form//lib/simple_form/inputs/base.rb#33
@@ -2007,10 +2007,10 @@ class SimpleForm::Inputs::Base
   def translate_from_namespace(namespace, default = T.unsafe(nil)); end
 
   class << self
-    # source://actionview/7.0.4.2/lib/action_view/helpers/translation_helper.rb#18
+    # source://actionview/7.0.6/lib/action_view/helpers/translation_helper.rb#18
     def debug_missing_translation; end
 
-    # source://actionview/7.0.4.2/lib/action_view/helpers/translation_helper.rb#18
+    # source://actionview/7.0.6/lib/action_view/helpers/translation_helper.rb#18
     def debug_missing_translation=(val); end
 
     # source://simple_form//lib/simple_form/inputs/base.rb#33
