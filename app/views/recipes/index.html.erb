@@ -2,6 +2,11 @@
 
 <div id="recipes" class="container my-5">
   <div class="row m-0">
+    <div class="col-12 my-4">
+      <%= simple_form_for :search, method: :get do |f| %>
+        <%= f.input :query, label: false, placeholder: "Search for a recipe..." %>
+      <% end %>
+    </div>
     <% cache @recipes do %>
       <% @recipes.each_with_index do |recipe, index| %>
         <div class="col-12 col-md-6">

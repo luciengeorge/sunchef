@@ -6,8 +6,9 @@ class RecipesController < ApplicationController
   def index
     @pagy, @recipes = pagy(policy_scope(Recipe))
     @pagy, @recipes = pagy(@recipes.where(category: params[:category])) if params[:category].present?
+    @pagy, @recipes = pagy(@recipes.search_by_name(params.dig(:search, :query))) if params.dig(:search, :query).present?
   rescue Pagy::OverflowError
-    redirect_to(recipes_path(page: 1))
+    redirect_to(recipes_path(page: 1, search: { query: params.dig(:search, :query) }))
   end
 
   def show

@@ -1,6 +1,18 @@
 # frozen_string_literal: true
 
 class Recipe < ApplicationRecord
+  include PgSearch::Model
+
+  pg_search_scope :search_by_name,
+    against: [:name],
+    associated_against: {
+      ingredients: [:description],
+      instructions: [:description],
+    },
+    using: {
+      tsearch: { prefix: true, any_word: true },
+    }
+
   has_many :ingredients, dependent: :destroy
   has_many :instructions, dependent: :destroy
 
