@@ -48,19 +48,30 @@
     margin-bottom: 58px;
   }
 
-  .illustration {
+  .illustration-wrapper {
     height: 400px;
-    object-fit: contain;
-    object-position: center;
+    width: 289px;
     @include media-breakpoint-up(lg) {
       right: 50px;
       bottom: 200px;
       height: 600px;
+      width: 300px;
       position: absolute;
     }
     @include media-breakpoint-up(xl) {
-      right: 144px;
+      right: 150px;
       height: 800px;
+    }
+  }
+
+  .illustration {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      top: 0;
+      left: 0;
     }
   }
 
@@ -237,7 +248,7 @@
     }
     font-weight: bold;
     margin-left: 32px;
-    line-height: 25px;
+    line-height: 35px;
   }
 
   .breakfast__section--title-bottom {

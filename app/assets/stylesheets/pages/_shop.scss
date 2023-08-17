@@ -13,6 +13,20 @@
 
   .bag {
     width: 300px;
+    transform: translateY(165px);
+    animation: show-bag 0.5s ease-in-out 0.5s forwards;
+  }
+
+  @keyframes show-bag {
+    0% {
+      transform: translateY(165px);
+    }
+    75% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
 
   .belly {
@@ -23,6 +37,7 @@
     .belly-left {
       background-color: #d8c3dd;
       padding: 123px 50px;
+      z-index: 100;
       @include media-breakpoint-up(md) {
         padding: 123px 100px;
       }
@@ -48,6 +63,7 @@
 
     .belly-right {
       background-color: #e7e1d5;
+      z-index: 100;
       padding: 50px 25px;
       @include media-breakpoint-up(xl) {
         padding: 102px;

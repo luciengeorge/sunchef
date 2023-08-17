@@ -7,7 +7,10 @@
           <h1 class="mb-0">your</h1>
           <h1 class="mb-0 title--red">balance.</h1>
         </div>
-        <%= image_tag "home-illustration.png", alt: "illustration", class: 'illustration' %>
+        <div class="illustration-wrapper d-flex justify-content-center" data-controller="home-illustrations">
+          <%= image_tag "home-illustration.png", alt: "illustration", class: "illustration", data: { home_illustrations_target: "about" } %>
+          <%= image_tag 'illustration-about.png', alt: "illustration", class: "illustration d-none", data: { home_illustrations_target: "home" } %>
+        </div>
       </div>
     </section>
     <section class="pink_section d-flex align-items-center justify-content-center">
@@ -116,7 +119,7 @@
       <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
       <% @recipes.each_with_index do |recipe, index| %>
         <div class="carousel-item vh-100 <%= 'active' if index.zero? %>">
-          <section class="vh-100 position-relative breakfast__section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<%= recipe.images.first.url %>);">
+          <section class="vh-100 position-relative breakfast__section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<%= recipe.show_first_image_url %>);">
             <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center flex-column text-white">
               <div class="d-flex align-items-start flex-column">
                 <h2 class="breakfast__section--title-top mb-n3">latest</h2>
