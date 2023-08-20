@@ -1,49 +1,51 @@
+# frozen_string_literal: true
+
 namespace :selling_point do
   desc "Create selling points"
   task create: [:environment] do
     [
       {
-        name: "Mint Basic Market"
+        name: "Mint Basic Market",
       },
       {
-        name: "Liv Good"
+        name: "Liv Good",
       },
       {
-        name: "Emak Urban Spa"
+        name: "Emak Urban Spa",
       },
       {
-        name: "A New Earth Store"
+        name: "A New Earth Store",
       },
       {
-        name: "Amat Beirut"
+        name: "Amat Beirut",
       },
       {
-        name: "Convivio"
+        name: "Convivio",
       },
       {
-        name: "Le Panier du Coin"
+        name: "Le Panier du Coin",
       },
       {
-        name: "Tusk Bakery"
+        name: "Tusk Bakery",
       },
       {
-        name: "Fine Bouche"
+        name: "Fine Bouche",
       },
       {
-        name: "La Vie Claire"
+        name: "La Vie Claire",
       },
       {
-        name: "En Fraicheur"
+        name: "En Fraicheur",
       },
       {
-        name: "Chi Tabi3i"
+        name: "Chi Tabi3i",
       },
       {
-        name: "Akiki Frere"
+        name: "Akiki Frere",
       },
       {
-        name: "Deir el Oumara"
-      }
+        name: "Deir el Oumara",
+      },
     ].each do |selling_point|
       SellingPoint.create(selling_point)
     end
