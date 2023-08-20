@@ -34,15 +34,15 @@ class Recipe < ApplicationRecord
   end
 
   def show_first_image_url
-    images.first.representation(resize_to_limit: [2000, 1500], format: :webp).url
+    images.first.representation(resize_to_limit: [2000, 1500], format: :webp).url || images.first.url
   end
 
   def show_second_image_url
-    images.second.representation(resize_to_limit: [2000, 1500], format: :webp).url
+    images.second.representation(resize_to_limit: [2000, 1500], format: :webp).url || images.second.url
   end
 
   def index_image_url
-    images.first.representation(resize_to_limit: [624, 400], format: :webp).url
+    images.first.representation(resize_to_limit: [624, 400], format: :webp).url || images.first.url
   end
 
   private
