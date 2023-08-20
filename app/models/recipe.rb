@@ -56,6 +56,8 @@ class Recipe < ApplicationRecord
 
       show_variant.processed
       index_variant.processed
+    rescue ActiveStorage::FileNotFoundError
+      next
     end
   end
 end

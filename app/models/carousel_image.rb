@@ -21,5 +21,7 @@ class CarouselImage < ApplicationRecord
 
     variant = image.representation(resize_to_limit: [700, 300], format: :webp)
     variant.processed
+  rescue ActiveStorage::FileNotFoundError
+    nil
   end
 end
