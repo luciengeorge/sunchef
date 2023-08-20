@@ -23,7 +23,7 @@ class Recipe < ApplicationRecord
   accepts_nested_attributes_for(:ingredients)
   accepts_nested_attributes_for(:instructions)
 
-  after_commit :process_images, if: -> { images.attached? }
+  after_save :process_images, if: -> { images.attached? }
 
   def to_s
     name
