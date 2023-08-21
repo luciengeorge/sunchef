@@ -117,20 +117,18 @@
   <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <%= image_tag "recipe.svg", alt: "recipe", class: "recipe-img" %>
-      <% cache @recipes do %>
-        <% @recipes.each_with_index do |recipe, index| %>
-          <div class="carousel-item vh-100 <%= 'active' if index.zero? %>">
-            <section class="vh-100 position-relative breakfast__section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<%= recipe.show_first_image_url %>);">
-              <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center flex-column text-white">
-                <div class="d-flex align-items-start flex-column">
-                  <h2 class="breakfast__section--title-top mb-n3">latest</h2>
-                  <h2 class="breakfast__section--title-bottom "><%= recipe.category.humanize.downcase %></h2>
-                </div>
-                <%= link_to "Click here", recipes_path(category: recipe.category), class: "breakfast-btn d-flex align-items-center justify-content-center text-decoration-none text-center" %>
+      <% @recipes.each_with_index do |recipe, index| %>
+        <div class="carousel-item vh-100 <%= 'active' if index.zero? %>">
+          <section class="vh-100 position-relative breakfast__section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(<%= recipe.show_first_image_url %>);">
+            <div class="position-absolute top-0 bottom-0 start-0 end-0 d-flex align-items-center justify-content-center flex-column text-white">
+              <div class="d-flex align-items-start flex-column">
+                <h2 class="breakfast__section--title-top mb-n3">latest</h2>
+                <h2 class="breakfast__section--title-bottom "><%= recipe.category.humanize.downcase %></h2>
               </div>
-            </section>
-          </div>
-        <% end %>
+              <%= link_to "Click here", recipes_path(category: recipe.category), class: "breakfast-btn d-flex align-items-center justify-content-center text-decoration-none text-center" %>
+            </div>
+          </section>
+        </div>
       <% end %>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#recipeCarousel" data-bs-slide="prev">

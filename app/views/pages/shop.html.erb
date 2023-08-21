@@ -47,26 +47,24 @@
     </div>
   </section>
   <section class="m-md-5 p-md-5 px-2">
-    <% cache @images do %>
-      <% if @images.size > 3 %>
-        <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
-          <% @images.each do |image| %>
-            <div class="carousel-slide">
-              <div class="position-relative w-100 h-100">
-                <%= render CarouselImageComponent.new(image: image, carousel: true) %>
-              </div>
+    <% if @images.size > 3 %>
+      <div class="carousel" data-controller="carousel" data-carousel-element-class="carousel">
+        <% @images.each do |image| %>
+          <div class="carousel-slide">
+            <div class="position-relative w-100 h-100">
+              <%= render CarouselImageComponent.new(image: image, carousel: true) %>
             </div>
-          <% end %>
-        </div>
-      <% else %>
-        <div class="d-flex align-items-center justify-content-around">
-          <% @images.each do |image| %>
-            <div class="position-relative">
-              <%= render CarouselImageComponent.new(image: image, carousel: false) %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="d-flex align-items-center justify-content-around">
+        <% @images.each do |image| %>
+          <div class="position-relative">
+            <%= render CarouselImageComponent.new(image: image, carousel: false) %>
+          </div>
+        <% end %>
+      </div>
     <% end %>
   </section>
 </div>

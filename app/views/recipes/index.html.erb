@@ -7,40 +7,38 @@
         <%= f.input :query, label: false, placeholder: "Search for a recipe...", input_html: { value: params.dig(:search, :query) } %>
       <% end %>
     </div>
-    <% cache @recipes do %>
-      <% @recipes.each_with_index do |recipe, index| %>
-        <div class="col-12 col-md-6">
-          <%= link_to recipe, class: "text-decoration-none w-100" do %>
-            <div class="d-flex align-items-center justify-content-center w-100">
-              <div class="recipe mb-5 w-100">
-                <div class="position-relative image-wrapper" data-controller="lazy-loader">
-                  <div class="image-title-wrapper position-absolute p-3 d-flex align-items-end">
-                    <h3 class="text-white"><%= recipe.name %></h3>
-                  </div>
-                  <%= image_tag "", alt: recipe.name, class: "recipe__img", data: { lazy_loader_target: "image", controller: "async", src: recipe.index_image_url, async_url_value: recipe.index_image_url } %>
+    <% @recipes.each_with_index do |recipe, index| %>
+      <div class="col-12 col-md-6">
+        <%= link_to recipe, class: "text-decoration-none w-100" do %>
+          <div class="d-flex align-items-center justify-content-center w-100">
+            <div class="recipe mb-5 w-100">
+              <div class="position-relative image-wrapper" data-controller="lazy-loader">
+                <div class="image-title-wrapper position-absolute p-3 d-flex align-items-end">
+                  <h3 class="text-white"><%= recipe.name %></h3>
                 </div>
-                <div class="d-flex align-items-center justify-content-between recipe-footer mt-3">
-                  <div class="d-flex flex-column align-items-start justify-content-start">
-                    <small class="mb-0">🧑‍🍳 <%= recipe.prep_time %></small>
-                    <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
-                  </div>
-                  <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
-                    <p class="mb-0"><%= recipe.category.humanize.upcase %></p>
-                  </div>
+                <%= image_tag "", alt: recipe.name, class: "recipe__img", data: { lazy_loader_target: "image", controller: "async", src: recipe.index_image_url, async_url_value: recipe.index_image_url } %>
+              </div>
+              <div class="d-flex align-items-center justify-content-between recipe-footer mt-3">
+                <div class="d-flex flex-column align-items-start justify-content-start">
+                  <small class="mb-0">🧑‍🍳 <%= recipe.prep_time %></small>
+                  <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
+                </div>
+                <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
+                  <p class="mb-0"><%= recipe.category.humanize.upcase %></p>
                 </div>
               </div>
             </div>
-          <% end %>
-        </div>
-      <% end %>
-      <% if @recipes.empty? %>
-        <em>We're in the process of cooking many many yummy recipes! Watch this page!</em>
-      <% end %>
-       <% if @pagy.pages > 1 %>
-        <div class="d-flex justify-content-center pt-3">
-          <%== pagy_bootstrap_nav(@pagy) %>
-        </div>
-      <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @recipes.empty? %>
+      <em>We're in the process of cooking many many yummy recipes! Watch this page!</em>
+    <% end %>
+      <% if @pagy.pages > 1 %>
+      <div class="d-flex justify-content-center pt-3">
+        <%== pagy_bootstrap_nav(@pagy) %>
+      </div>
     <% end %>
   </div>
 </div>
