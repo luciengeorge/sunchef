@@ -63,4 +63,20 @@
   .recipe-footer {
     gap: 10px;
   }
+
+  .check-boxes-wrapper {
+    gap: 16px;
+  }
+
+  .check-boxes-gap {
+    gap: 5px;
+  }
+
+  .category-checkbox {
+    gap: 4px;
+  }
+
+  .box {
+    background-color: $primary !important;
+  }
 }

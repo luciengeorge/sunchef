@@ -5,6 +5,12 @@
     <div class="col-12 my-4">
       <%= simple_form_for :search, method: :get do |f| %>
         <%= f.input :query, label: false, placeholder: "Search for a recipe...", input_html: { value: params.dig(:search, :query) } %>
+        <div class="d-flex w-100 check-boxes-wrapper mb-2">
+          <%= f.collection_check_boxes :categories, @categories, :last, :first, item_wrapper_tag: 'div', item_wrapper_class: 'd-flex align-items-center check-boxes-gap' do |box| %>
+            <%= box.check_box(class: 'mr-3 form-check-input mt-0 check_boxes', checked: params.dig(:search, :categories)&.include?(box.value)) + box.label(class: 'mr-3 small') %>
+          <% end %>
+        </div>
+        <%= f.submit "Filter", class: "btn btn-primary" %>
       <% end %>
     </div>
     <% @recipes.each_with_index do |recipe, index| %>
@@ -20,8 +26,15 @@
               </div>
               <div class="d-flex align-items-center justify-content-between recipe-footer mt-3">
                 <div class="d-flex flex-column align-items-start justify-content-start">
-                  <small class="mb-0">🧑‍🍳 <%= recipe.prep_time %></small>
-                  <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
+                  <% if recipe.prep_time.present? %>
+                    <small class="mb-0">🧑‍🍳 <%= recipe.prep_time %></small>
+                  <% end %>
+                  <% if recipe.cooking_time.present? %>
+                    <small class="mb-0">🍳 <%= recipe.cooking_time %></small>
+                  <% end %>
+                  <% if recipe.freeze_time.present? %>
+                    <small class="mb-0">🧊 <%= recipe.freeze_time %></small>
+                  <% end %>
                 </div>
                 <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
                   <p class="mb-0"><%= recipe.category.humanize.upcase %></p>
