@@ -5,7 +5,7 @@
     <div class="col-12 my-4">
       <%= simple_form_for :search, method: :get do |f| %>
         <%= f.input :query, label: false, placeholder: "Search for a recipe...", input_html: { value: params.dig(:search, :query) } %>
-        <div class="d-flex w-100 check-boxes-wrapper mb-2">
+        <div class="d-flex flex-wrap w-100 check-boxes-wrapper mb-2">
           <%= f.collection_check_boxes :categories, @categories, :last, :first, item_wrapper_tag: 'div', item_wrapper_class: 'd-flex align-items-center check-boxes-gap' do |box| %>
             <%= box.check_box(class: 'mr-3 form-check-input mt-0 check_boxes', checked: params.dig(:search, :categories)&.include?(box.value)) + box.label(class: 'mr-3 small') %>
           <% end %>
