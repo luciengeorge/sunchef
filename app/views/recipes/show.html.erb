@@ -24,10 +24,18 @@
         <div class="d-flex flex-column align-items-center justify-content-center">
           <%= image_tag "sparkles.svg", alt: "sparkles", class: "ingredient-recipe-sparkles" %>
           <h5 class="ingredient-recipe-title"><%= @recipe.name %></h5>
-          <p class="ingredient-recipe-servings mb-0">👨‍👩‍👧‍👦 serves <%= @recipe.servings %></p>
-          <p class="ingredient-recipe-servings mb-0">🧑‍🍳 <%= @recipe.prep_time %></p>
-          <p class="ingredient-recipe-servings mb-0">🍳 <%= @recipe.cooking_time %></p>
-          <p class="ingredient-recipe-servings mb-0">🧊 <%= @recipe.freeze_time %></p>
+          <% if @recipe.servings.present? %>
+            <p class="ingredient-recipe-servings mb-0">👨‍👩‍👧‍👦 serves <%= @recipe.servings %></p>
+          <% end %>
+          <% if @recipe.prep_time.present? %>
+            <p class="ingredient-recipe-servings mb-0">🧑‍🍳 <%= @recipe.prep_time %></p>
+          <% end %>
+          <% if @recipe.cooking_time.present? %>
+            <p class="ingredient-recipe-servings mb-0">🍳 <%= @recipe.cooking_time %></p>
+          <% end %>
+          <% if @recipe.freeze_time.present? %>
+            <p class="ingredient-recipe-servings mb-0">🧊 <%= @recipe.freeze_time %></p>
+          <% end %>
         </div>
       </div>
       <% @recipe.ingredients.each do |ingredient| %>
