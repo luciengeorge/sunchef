@@ -16,4 +16,13 @@
     background-color: #93c37d;
     margin-bottom: 1rem;
   }
+
+  .form-intro {
+    background-color: rgba(255, 184, 80, 0.1);
+    color: rgb(255, 184, 80);
+    border: 2px solid rgb(255, 184, 80);
+    p {
+      font-family: $goodlife !important;
+    }
+  }
 }

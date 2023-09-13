@@ -1,11 +1,13 @@
 <%= simple_form_for contact, html: { data: {contact_form_target: "form", action: "ajax:success->contact-form#success ajax:error->contact-form#error turbo:submit-end->contact-form#submitEnd"}} do |f| %>
       <div class="row m-0">
         <div class="col-12">
-          <p>hello sunshine,</p>
-          <p>please fill the Health History Form below. Once I receive it, I will contact you on the email you provided and we will schedule a FREE 30 minutes call to decide how to proceed.</p>
-          <p>Let me know if you have any questions.</p>
-          <p>Kind regards,</p>
-          <p>Soraya ☀️</p>
+          <div class="form-intro rounded-5 p-3 px-5 mb-5">
+            <p>Hello sunshine,</p>
+            <p>Please fill the Health History Form below. Once I receive it, I will contact you on the email you provided and we will schedule a FREE 30 minutes call to decide how to proceed.</p>
+            <p>Let me know if you have any questions.</p>
+            <p>Kind regards,</p>
+            <p>Soraya ☀️</p>
+          </div>
           <%= f.input :gender, as: :select, label: "First, choose your gender to fill out the appropriate form 👇", collection: Contact.genders.keys, label_method: lambda { |gender| gender.humanize }, prompt: "Pick your gender", input_html: { data: { action: "change->contact-form#toggleGender" } } %>
           <h3>HEALTH HISTORY <span data-contact-form-target="word">MEN</span></h3>
           <div class="underline"></div>
@@ -44,7 +46,7 @@
           <%= f.input :weight_one_year_ago, placeholder: "50", hint: "in kg" %>
         </div>
         <div class="col-12">
-          <%= f.input :weight_change, as: :radio_buttons, label: "Would you like your weight to be different?" %>
+          <%= f.input :weight_change, as: :radio_buttons, label: "Would you like your weight to be different?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :weight_goal, label: "If so, what?", placeholder: "Tell me more..." %>
@@ -95,22 +97,22 @@
           <%= f.input :hours_of_sleep, label: "How many hours?", placeholder: "7" %>
         </div>
         <div class="col-12 col-lg-6">
-          <%= f.input :wake_up_at_night, as: :radio_buttons, label: "Do you wake up at night?" %>
+          <%= f.input :wake_up_at_night, as: :radio_buttons, label: "Do you wake up at night?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-lg-6">
           <%= f.input :wake_up_at_night_reason, label: "Why?", placeholder: "Give details..." %>
         </div>
         <div class="col-12 col-lg-6">
-          <%= f.input :serious_illnesses, as: :radio_buttons, label: "Any serious illnesses/hospitalizations/injuries?" %>
+          <%= f.input :serious_illnesses, as: :radio_buttons, label: "Any serious illnesses/hospitalizations/injuries?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-lg-6">
-          <%= f.input :pain_stiffness_or_swelling, as: :radio_buttons, label: "Any pain, stiffness or swelling?" %>
+          <%= f.input :pain_stiffness_or_swelling, as: :radio_buttons, label: "Any pain, stiffness or swelling?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-lg-6">
-          <%= f.input :constipation_diarrhea_or_gas, as: :radio_buttons, label: "Constipation/Diarrhea/Gas?" %>
+          <%= f.input :constipation_diarrhea_or_gas, as: :radio_buttons, label: "Constipation/Diarrhea/Gas?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-lg-6">
-          <%= f.input :allergies_or_sensitivities, as: :radio_buttons, label: "Allergies or sensitivities?" %>
+          <%= f.input :allergies_or_sensitivities, as: :radio_buttons, label: "Allergies or sensitivities?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :allergies_or_sensitivities_explanation, label: "Please explain", placeholder: "Give details..." %>
@@ -119,7 +121,7 @@
       <div class="row m-0 <%= contact.female? ? '' : 'd-none' %>" data-contact-form-target="women">
         <div class="col-12 col-md-6">
           <h5>WOMEN'S HEALTH</h5>
-          <%= f.input :regular_periods, as: :radio_buttons, label: "Are your periods regular?" %>
+          <%= f.input :regular_periods, as: :radio_buttons, label: "Are your periods regular?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-md-6">
           <%= f.input :flow_days, label: "How many days in your flow", placeholder: "5" %>
@@ -128,19 +130,19 @@
           <%= f.input :frequency, label: "How frequent?", placeholder: "28 days" %>
         </div>
         <div class="col-12">
-          <%= f.input :painful_or_symptomatic, as: :radio_buttons, label: "Painful or symptomatic?" %>
+          <%= f.input :painful_or_symptomatic, as: :radio_buttons, label: "Painful or symptomatic?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :painful_or_symptomatic_explanation, label: "Please explain", placeholder: "Give details..." %>
         </div>
         <div class="col-12">
-          <%= f.input :reached_or_approaching_menopause, as: :radio_buttons, label: "Reached or approaching menopause?" %>
+          <%= f.input :reached_or_approaching_menopause, as: :radio_buttons, label: "Reached or approaching menopause?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :birth_control_history, placeholder: "Give details" %>
         </div>
         <div class="col-12">
-          <%= f.input :yeast_infection_or_urinary_tract_infections, as: :radio_buttons, label: "Do you experience yeast infections or urinary tract infections?" %>
+          <%= f.input :yeast_infection_or_urinary_tract_infections, as: :radio_buttons, label: "Do you experience yeast infections or urinary tract infections?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :yeast_infection_or_urinary_tract_infections_explanation, label: "Please explain", placeholder: "Give details..." %>
@@ -149,13 +151,13 @@
       <div class="row m-0">
         <div class="col-12">
           <h5>MEDICAL INFORMATION</h5>
-          <%= f.input :supplements_or_medications, as: :radio_buttons, label: "Do you take any supplements or medications?" %>
+          <%= f.input :supplements_or_medications, as: :radio_buttons, label: "Do you take any supplements or medications?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :supplements_or_medications_list, label: "Please list", placeholder: "Give details..." %>
         </div>
         <div class="col-12">
-          <%= f.input :healers_helpers_or_therapies, as: :radio_buttons, label: "Any healers, helpers, or therapies with which you are involved?" %>
+          <%= f.input :healers_helpers_or_therapies, as: :radio_buttons, label: "Any healers, helpers, or therapies with which you are involved?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :healers_helpers_or_therapies_list, label: "Please list", placeholder: "Give details..." %>
@@ -183,16 +185,16 @@
           <%= f.input :liquids, placeholder: "List here..." %>
         </div>
         <div class="col-12">
-          <%= f.input :support_from_family, as: :radio_buttons, label: "Will family and/or friends be supportive of your desire to make food and/or lifestyle changes?" %>
+          <%= f.input :support_from_family, as: :radio_buttons, label: "Will family and/or friends be supportive of your desire to make food and/or lifestyle changes?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-md-6">
-          <%= f.input :cooks, as: :radio_buttons, label: "Do you cook?" %>
+          <%= f.input :cooks, as: :radio_buttons, label: "Do you cook?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12 col-md-6">
           <%= f.input :home_cooked_percentage, label: "What percentage of your food is home cooked?", placeholder: "75", hint: "in %" %>
         </div>
         <div class="col-12">
-          <%= f.input :craving_sugar_cigarettes_or_addictions, as: :radio_buttons, label: "Do you crave sugar, coffee, cigarettes, or have any major addictions?" %>
+          <%= f.input :craving_sugar_cigarettes_or_addictions, as: :radio_buttons, label: "Do you crave sugar, coffee, cigarettes, or have any major addictions?", collection: [ ['Yes', true], ['No', false] ], checked: ['Yes', true] %>
         </div>
         <div class="col-12">
           <%= f.input :most_important_improvements, label: "The most important thing I should do to improve my health is", placeholder: "Give details..." %>
