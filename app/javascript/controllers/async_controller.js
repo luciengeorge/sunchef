@@ -4,7 +4,6 @@ export default class extends Controller {
   static values = {url: String}
 
   connect() {
-    console.log(this.urlValue)
     const downloadingImg = new Image()
     downloadingImg.onload = () => {
       console.log('here')
