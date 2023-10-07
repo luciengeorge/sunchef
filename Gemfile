@@ -7,6 +7,7 @@ ruby "3.1.2"
 
 gem "rails", "~> 7.1"
 
+gem "actionpack", "~> 7.1"
 gem "administrate"
 gem "administrate-field-active_storage"
 gem "administrate-field-enum"
