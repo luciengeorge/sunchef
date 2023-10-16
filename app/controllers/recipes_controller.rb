@@ -8,13 +8,13 @@ class RecipesController < ApplicationController
     @categories = Recipe.categories.map do |category, _|
       [category.humanize, category]
     end
-    custom_filters = params.dig(:search, :custom_filters).compact_blank
+    custom_filters = params.dig(:search, :custom_filters)&.compact_blank
     under_20_mins = custom_filters.include?("under_20_mins") if custom_filters.present?
     no_cooking_time = custom_filters.include?("no_cooking_time") if custom_filters.present?
-    search_categories = params.dig(:search, :categories).compact_blank
+    search_categories = params.dig(:search, :categories)&.compact_blank
     @checked = @categories.map do |category|
       search_categories.include?(category[1])
-    end if search_categories.compact_blank.present?
+    end if search_categories.present?
     @pagy, @recipes = pagy(policy_scope(Recipe).order(created_at: :desc))
     @pagy, @recipes = pagy(@recipes.where(category: params[:category]).order(created_at: :desc)) if params.dig(
       :category,
