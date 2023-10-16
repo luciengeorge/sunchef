@@ -9,6 +9,9 @@
           <%= f.collection_check_boxes :categories, @categories, :last, :first, item_wrapper_tag: 'div', item_wrapper_class: 'd-flex align-items-center check-boxes-gap' do |box| %>
             <%= box.check_box(class: 'mr-3 form-check-input mt-0 check_boxes', checked: params.dig(:search, :categories)&.include?(box.value)) + box.label(class: 'mr-3 small') %>
           <% end %>
+          <%= f.collection_check_boxes :custom_filters, [['Under 20 mins', 'under_20_mins'], ['No cooking time', 'no_cooking_time']], :last, :first, item_wrapper_tag: 'div', item_wrapper_class: 'd-flex align-items-center check-boxes-gap' do |box| %>
+            <%= box.check_box(class: 'mr-3 form-check-input mt-0 check_boxes', checked: params.dig(:search, :custom_filters)&.include?(box.value)) + box.label(class: 'mr-3 small') %>
+          <% end %>
         </div>
         <%= f.submit "Filter", class: "btn btn-primary" %>
       <% end %>
