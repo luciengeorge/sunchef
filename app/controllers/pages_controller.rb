@@ -35,6 +35,21 @@ class PagesController < ApplicationController
         text: "#5F751F",
       },
     ]
+    @plans = policy_scope(Plan).includes(:features).order(:created_at)
+    @colors = [
+      {
+        background: "#A1BFCD",
+        text: "#024261",
+      },
+      {
+        background: "#D8C3DD",
+        text: "#8D29A5",
+      },
+      {
+        background: "#CBD6AB",
+        text: "#5F751F",
+      },
+    ]
   end
 
   def maintenance

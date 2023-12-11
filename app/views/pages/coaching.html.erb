@@ -76,7 +76,7 @@
       <h2 class="testimonial-text mb-5">be an expert on yourself?</h2>
     </div>
     <h2 class="testimonial-text text-center mb-0">Don't take my word for it - here's what they have to say</h2>
-    <div class="m-md-5 plans-wrapper p-md-5 px-2 carousel d-flex align-items-center justify-content-around" data-controller="<%= 'carousel' if @testimonials.size > 3 %>" data-carousel-element-class="carousel">
+    <div class="m-md-5 carousel-no-margin-bottom plans-wrapper p-md-5 px-2 carousel d-flex align-items-center justify-content-around" data-controller="<%= 'carousel' if @testimonials.size > 3 %>" data-carousel-element-class="carousel">
       <% @testimonials.each_with_index do |testimonial, index| %>
         <div class="col-12 col-sm-6 col-md-4 col-lg-3">
           <div class="testimonial py-5 px-4 d-flex flex-column align-items-center justify-content-center mx-2" style="background-color: <%= @testimonial_colors[index % @testimonial_colors.size][:background] %>">
@@ -89,4 +89,16 @@
       <% end %>
     </div>
   </section>
+  <div id="plans" class="container-fluid">
+    <section class="mb-5 mx-lg-5 plans-wrapper p-5 d-flex flex-column align-items-center jusitfy-content-center">
+      <h1 class="smaller text-center">work with me</h1>
+      <p class="default w-75 text-center">Every person is different and for that reason, my approach is very tailored to the individual at hand. In every program, my utmost priority is to create a safe space for you to share and create meaningful change. Before we start any program, please fill out the Health History Form. To get to know each other, I offer a 30 minute free session to assess the next steps.</p>
+      <div class="d-flex flex-column flex-md-row align-items-center justify-content-around gap-plans">
+      <% @plans.each_with_index do |plan, index| %>
+        <%= render PlanComponent.new(plan: plan, color: @colors[index % @colors.size]) %>
+      <% end %>
+
+      </div>
+    </section>
+  </div>
 </div>

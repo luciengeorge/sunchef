@@ -36,9 +36,6 @@
               <%= link_to "recipes", recipes_path, class: class_names("navbar__link nav-link", active: current_page?(recipes_path)) %>
             </li>
             <li class="nav-item">
-              <%= link_to "packages", plans_path, class: class_names("navbar__link nav-link", active: current_page?(plans_path)) %>
-            </li>
-            <li class="nav-item">
               <%= link_to "Book a call", new_contact_path, class: "btn btn-primary nav-link" %>
             </li>
             <% if user_signed_in && current_user.admin? %>

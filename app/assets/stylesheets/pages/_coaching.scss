@@ -86,6 +86,10 @@
     min-height: 400px;
     padding: 70px 0;
 
+    .carousel-no-margin-bottom {
+      margin-bottom: 0 !important;
+    }
+
     .sparkles {
       width: 140px;
       height: 129px;

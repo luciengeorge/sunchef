@@ -33,7 +33,6 @@ Rails.application.routes.draw do
 
   resources :recipes, only: [:index, :show]
   resources :contacts, only: [:index, :show, :new, :create], path: "forms"
-  resources :plans, only: :index, path: "packages"
   resources :users, only: [] do
     post :lock, on: :collection
   end
