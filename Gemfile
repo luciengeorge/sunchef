@@ -1,6 +1,3 @@
-def next?
-  File.basename(__FILE__) == "Gemfile.next"
-end
 # frozen_string_literal: true
 
 source "https://rubygems.org"
