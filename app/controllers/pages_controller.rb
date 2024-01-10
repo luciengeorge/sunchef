@@ -2,6 +2,8 @@
 
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
+  skip_after_action :verify_policy_scoped
+  skip_after_action :verify_authorized
 
   def home
     @recipes = Recipe.where(id: Recipe.group(:category).maximum(:id).values).order(category: :asc)
@@ -54,6 +56,6 @@ class PagesController < ApplicationController
 
   def maintenance
     admin = User.find_by(admin: true)
-    return redirect_to(root_path) unless admin.locked_website_at.present?
+    redirect_to(root_path) unless admin.locked_website_at.present?
   end
 end
