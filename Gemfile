@@ -1,11 +1,14 @@
+def next?
+  File.basename(__FILE__) == "Gemfile.next"
+end
 # frozen_string_literal: true
 
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.3.0"
+ruby file: ".ruby-version"
 
-gem "rails", "~> 7.0.4", ">= 7.0.4.2"
+gem "rails", "~> 7.1"
 
 gem "administrate"
 gem "administrate-field-active_storage"
@@ -52,6 +55,7 @@ end
 group :development do
   gem "faker"
   gem "letter_opener"
+  gem "next_rails"
   gem "rack-mini-profiler"
   gem "rubocop"
   gem "rubocop-shopify"
