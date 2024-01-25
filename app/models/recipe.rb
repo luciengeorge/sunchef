@@ -34,15 +34,33 @@ class Recipe < ApplicationRecord
   end
 
   def show_first_image_url
-    images.first.representation(resize_to_limit: [2000, 1500], format: :webp).url || images.first.url
+    images(&first&.representation(
+      resize_to_limit: [
+        2000,
+        1500,
+      ], format: :webp)&.url ||
+        images&.first&.url ||
+        ActionController::Base.helpers.asset_path("recipe-placeholder.svg"))
   end
 
   def show_second_image_url
-    images.second.representation(resize_to_limit: [2000, 1500], format: :webp).url || images.second.url
+    images&.second&.representation(
+      resize_to_limit: [
+        2000,
+        1500,
+      ], format: :webp)&.url ||
+      images&.second&.url ||
+      ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
 
   def index_image_url
-    images.first.representation(resize_to_limit: [624, 400], format: :webp).url || images.first.url
+    images&.first&.representation(
+      resize_to_limit: [
+        624,
+        400,
+      ], format: :webp)&.url ||
+      images&.first&.url ||
+      ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
 
   private
