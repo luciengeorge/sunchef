@@ -34,13 +34,13 @@ class Recipe < ApplicationRecord
   end
 
   def show_first_image_url
-    images(&first&.representation(
+    images&.first&.representation(
       resize_to_limit: [
         2000,
         1500,
       ], format: :webp)&.url ||
-        images&.first&.url ||
-        ActionController::Base.helpers.asset_path("recipe-placeholder.svg"))
+      images&.first&.url ||
+      ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
 
   def show_second_image_url
