@@ -4,9 +4,13 @@ Hi <%= @contact.first_name %> 👋
 
 Thank you for submitting your health form. I'll get back to you as soon as I can!
 
-If you need to have another look at your form, you can find it here:
+If you need to review your form, you can find it here:
 
 <%= contact_url(@contact, token: @contact.token) %>
+
+You can also book a call with me following this link:
+
+https://calendly.com/by-sunchef
 
 Speak soon
 
