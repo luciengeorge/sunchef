@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ContactPolicy < ApplicationPolicy
   class Scope < Scope
     def resolve
@@ -10,6 +12,10 @@ class ContactPolicy < ApplicationPolicy
   end
 
   def create?
+    true
+  end
+
+  def thank_you?
     true
   end
 end

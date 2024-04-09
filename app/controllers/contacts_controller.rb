@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ContactsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:show, :new, :create]
+  skip_before_action :authenticate_user!, only: [:show, :new, :create, :thank_you]
 
   def index
     @contacts = policy_scope(Contact)
@@ -23,13 +23,24 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     authorize(@contact)
     if @contact.save
-      redirect_to(coaching_path, notice: "Thank you for filling the form! I'll be in touch shortly 😊")
+      cookies.signed[:form_token] = { value: @contact.token, expires: 1.hour }
+      redirect_to(thank_you_contacts_path, notice: "Thank you for filling the form! I'll be in touch shortly 😊")
     else
       render(
         json: { form: render_to_string(Contacts::FormComponent.new(contact: @contact)) },
         status: :unprocessable_entity,
       )
     end
+  end
+
+  def thank_you
+    @form_token = cookies.signed[:form_token]
+    @contact = Contact.find_by(token: @form_token) if @form_token.present?
+    if @contact.blank?
+      skip_authorization
+      return redirect_to(new_contact_path, alert: "Please fill the form first")
+    end
+    authorize(@contact)
   end
 
   private

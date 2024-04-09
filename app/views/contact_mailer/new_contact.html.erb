@@ -49,8 +49,10 @@
   <div class="content">
     <p>Hi <%= @contact.first_name %> 👋</p>
     <p>Thank you for submitting your health form. I'll get back to you as soon as I can!</p>
-    <p>If you need to have another look at your form, you can find it here:</p>
+    <p>If you need to review your form, you can find it here:</p>
     <%= link_to "Open health form", contact_url(@contact, token: @contact.token), class: "button", target: :blank %>
+    <p>You can also book a call with me following this link:</p>
+    <%= link_to 'calendly.com/by-sunchef', 'https://calendly.com/by-sunchef', class: "button", target: :blank %>
     <p>Speak soon!</p>
     <p>Sunchef ☀️</p>
   </div>

@@ -32,7 +32,9 @@ Rails.application.routes.draw do
   get :maintenance, to: "pages#maintenance"
 
   resources :recipes, only: [:index, :show]
-  resources :contacts, only: [:index, :show, :new, :create], path: "forms"
+  resources :contacts, only: [:index, :show, :new, :create], path: "forms" do
+    get :thank_you, on: :collection
+  end
   resources :users, only: [] do
     post :lock, on: :collection
   end
