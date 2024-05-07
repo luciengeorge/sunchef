@@ -7,7 +7,7 @@ namespace :db do
   task dump: [:environment] do
     CLI::UI::Frame.open("Importing DB") do
       status = system(%x(git status --porcelain))
-      CLI::UI::SpinGroup.new do |_spin_group|
+      CLI::UI::SpinGroup.new do |spin_group|
         if status.nil?
           spin_group.add("Checking out to main...") do |spinner|
             system "git checkout main"
