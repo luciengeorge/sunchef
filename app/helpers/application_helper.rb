@@ -17,7 +17,7 @@ module ApplicationHelper
     when :drinks
       "category-img-3.svg"
     when :snacks
-      "scategory-img-4.svg"
+      "category-img-4.svg"
     when :dressings
       "category-img-5.svg"
     when :breakfast
