@@ -39,7 +39,7 @@
                     <small class="mb-0">🧊 <%= recipe.freeze_time %></small>
                   <% end %>
                 </div>
-                <div class="position-relative category-wrapper" style="background-image: url('<%= image_url "category-img-#{index % 8}.svg" %>')">
+                <div class="position-relative category-wrapper" style="background-image: url('<%= image_url category_img(recipe.category) %>')">
                   <p class="mb-0"><%= recipe.category.humanize.upcase %></p>
                 </div>
               </div>
