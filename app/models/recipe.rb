@@ -38,7 +38,9 @@ class Recipe < ApplicationRecord
       resize_to_limit: [
         2000,
         1500,
-      ], format: :webp)&.url ||
+      ],
+      format: :webp,
+    )&.url ||
       images&.first&.url ||
       ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
@@ -48,7 +50,9 @@ class Recipe < ApplicationRecord
       resize_to_limit: [
         2000,
         1500,
-      ], format: :webp)&.url ||
+      ],
+      format: :webp,
+    )&.url ||
       images&.second&.url ||
       ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
@@ -58,7 +62,9 @@ class Recipe < ApplicationRecord
       resize_to_limit: [
         624,
         400,
-      ], format: :webp)&.url ||
+      ],
+      format: :webp,
+    )&.url ||
       images&.first&.url ||
       ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
