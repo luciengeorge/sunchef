@@ -6,6 +6,8 @@ class Contact < ApplicationRecord
 
   COLORS = ["#FAD685", "#F8CFC5", "#CBD6AB", "#D5EEE9"]
 
+  attr_accessor :email_7v9s6b3jd
+
   validates :gender, presence: true
   validates :first_name, presence: true
   validates :last_name, presence: true
