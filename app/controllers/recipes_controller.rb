@@ -15,15 +15,15 @@ class RecipesController < ApplicationController
     @checked = @categories.map do |category|
       search_categories.include?(category[1])
     end if search_categories.present?
-    @pagy, @recipes = pagy(policy_scope(Recipe).order(created_at: :desc))
-    @pagy, @recipes = pagy(@recipes.where(category: params[:category]).order(created_at: :desc)) if params.dig(
+    @pagy, @recipes = pagy(policy_scope(Recipe))
+    @pagy, @recipes = pagy(@recipes.where(category: params[:category])) if params.dig(
       :category,
     ).present?
-    @pagy, @recipes = pagy(@recipes.search_by_name(params.dig(:search, :query)).order(created_at: :desc)) if params.dig(
+    @pagy, @recipes = pagy(@recipes.search_by_name(params.dig(:search, :query))) if params.dig(
       :search, :query
     ).present?
     if search_categories.present?
-      @pagy, @recipes = pagy(@recipes.where(category: search_categories).order(created_at: :desc))
+      @pagy, @recipes = pagy(@recipes.where(category: search_categories))
     end
     if under_20_mins.present? || no_cooking_time.present?
       @recipes = @recipes.select do |recipe|
@@ -32,7 +32,7 @@ class RecipesController < ApplicationController
       @recipes = @recipes.select do |recipe|
         (ChronicDuration.parse(recipe.cooking_time) || 0) == 0
       end if no_cooking_time.present?
-      @pagy, @recipes = pagy(Recipe.where(id: @recipes.map(&:id)).order(created_at: :desc))
+      @pagy, @recipes = pagy(Recipe.where(id: @recipes.map(&:id)))
     end
   rescue Pagy::OverflowError
     redirect_to(recipes_path(page: 1, search: { query: params.dig(:search, :query) }))

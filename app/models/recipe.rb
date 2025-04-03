@@ -4,13 +4,13 @@ class Recipe < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :search_by_name,
-    against: [:name],
+    against: [[:name, "A"]],
     associated_against: {
-      ingredients: [:description],
-      instructions: [:description],
+      ingredients: [[:description, "B"]],
+      instructions: [[:description, "C"]],
     },
     using: {
-      tsearch: { prefix: true, any_word: true },
+      tsearch: { prefix: true },
     }
 
   has_many :ingredients, dependent: :destroy
