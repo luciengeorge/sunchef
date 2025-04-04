@@ -25,6 +25,7 @@ gem "jquery-rails"
 gem "pagy", "~> 6.0"
 gem "pg", "~> 1.1"
 gem "pg_search"
+gem 'nokogiri', '>= 1.18.7'
 
 gem "jquery-ui-rails"
 gem "postmark-rails"

@@ -459,6 +459,7 @@ DEPENDENCIES
   jquery-rails
   jquery-ui-rails
   letter_opener
+  nokogiri (>= 1.18.7)
   pagy (~> 6.0)
   pg (~> 1.1)
   pg_search
