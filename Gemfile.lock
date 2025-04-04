@@ -335,7 +335,6 @@ GEM
     ruby-vips (2.2.3)
       ffi (~> 1.12)
       logger
-    rubygems-update (3.6.7)
     rubyzip (2.4.1)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -436,8 +435,6 @@ GEM
 
 PLATFORMS
   arm64-darwin
-  arm64-darwin-21
-  arm64-darwin-22
   universal-darwin
   x86_64-linux
 
@@ -475,7 +472,6 @@ DEPENDENCIES
   rubocop
   rubocop-shopify
   ruby-vips
-  rubygems-update (~> 3.3, >= 3.3.22)
   sass-rails
   sassc-rails
   selenium-webdriver
@@ -496,4 +492,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.6.7
+   2.5.21
