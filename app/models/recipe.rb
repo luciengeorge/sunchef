@@ -4,13 +4,13 @@ class Recipe < ApplicationRecord
   include PgSearch::Model
 
   pg_search_scope :search_by_name,
-    against: [:name],
+    against: [[:name, "A"]],
     associated_against: {
-      ingredients: [:description],
-      instructions: [:description],
+      ingredients: [[:description, "B"]],
+      instructions: [[:description, "C"]],
     },
     using: {
-      tsearch: { prefix: true, any_word: true },
+      tsearch: { prefix: true },
     }
 
   has_many :ingredients, dependent: :destroy
@@ -38,7 +38,9 @@ class Recipe < ApplicationRecord
       resize_to_limit: [
         2000,
         1500,
-      ], format: :webp)&.url ||
+      ],
+      format: :webp,
+    )&.url ||
       images&.first&.url ||
       ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
@@ -48,7 +50,9 @@ class Recipe < ApplicationRecord
       resize_to_limit: [
         2000,
         1500,
-      ], format: :webp)&.url ||
+      ],
+      format: :webp,
+    )&.url ||
       images&.second&.url ||
       ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end
@@ -58,7 +62,9 @@ class Recipe < ApplicationRecord
       resize_to_limit: [
         624,
         400,
-      ], format: :webp)&.url ||
+      ],
+      format: :webp,
+    )&.url ||
       images&.first&.url ||
       ActionController::Base.helpers.asset_path("recipe-placeholder.svg")
   end

@@ -9,6 +9,8 @@ class PagesController < ApplicationController
 
   def about; end
 
+  def course; end
+
   def cook
     @categories = Recipe.categories.keys
   end
@@ -54,6 +56,6 @@ class PagesController < ApplicationController
 
   def maintenance
     admin = User.find_by(admin: true)
-    return redirect_to(root_path) unless admin.locked_website_at.present?
+    redirect_to(root_path) unless admin.locked_website_at.present?
   end
 end

@@ -22,6 +22,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     authorize(@contact)
+
+    if contact_params[:email_7v9s6b3jd].present?
+      flash[:notice] = "Something went wrong. Please try again."
+      return redirect_to(new_contact_path)
+    end
+
     if @contact.save
       cookies.signed[:form_token] = { value: @contact.token, expires: 1.hour }
       redirect_to(thank_you_contacts_path, notice: "Thank you for filling the form! I'll be in touch shortly 😊")
@@ -51,6 +57,7 @@ class ContactsController < ApplicationController
       :first_name,
       :last_name,
       :email,
+      :email_7v9s6b3jd,
       :phone,
       :birthdate,
       :place_of_birth,

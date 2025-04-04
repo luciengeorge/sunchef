@@ -29,8 +29,11 @@
             <% end %>
           </li>
           <div class="navbar__right d-block d-lg-flex justify-content-around align-items-center">
+            <!--<li class="nav-item">-->
+              <%#= link_to "shop", shop_path, class: class_names("navbar__link nav-link", active: current_page?(shop_path)) %>
+            <!--</li>-->
             <li class="nav-item">
-              <%= link_to "shop", shop_path, class: class_names("navbar__link nav-link", active: current_page?(shop_path)) %>
+              <%= link_to "course", 'https://ac125c-e2.myshopify.com', class: "navbar__link nav-link", target: "_blank" %>
             </li>
             <li class="nav-item">
               <%= link_to "recipes", recipes_path, class: class_names("navbar__link nav-link", active: current_page?(recipes_path)) %>
@@ -60,7 +63,6 @@
               </li>
             <% end %>
           </div>
-
         </div>
       </ul>
     </div>
