@@ -27,7 +27,7 @@ gem "pg", "~> 1.1"
 gem "pg_search"
 
 gem "jquery-ui-rails"
-gem "postmark-rails"
+gem "resend"
 gem "puma", "~> 5.0"
 gem "pundit"
 gem "rack-canonical-host"
