@@ -10,7 +10,7 @@ class SunchefMailerTest < ActionMailer::TestCase
     assert_equal ["by.sunchef@gmail.com"], mail.to
   end
 
-  test "new_contact defaults to soraya" do
+  test "new_contact defaults to hello" do
     mail = SunchefMailer.with(contact: contacts(:one)).new_contact
 
     assert_equal [ApplicationMailer::SUNCHEF_EMAIL], mail.to
