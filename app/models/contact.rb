@@ -72,7 +72,9 @@ class Contact < ApplicationRecord
   private
 
   def deliver_email
-    SunchefMailer.with(contact: self).new_contact.deliver_later
+    SunchefMailer::RECIPIENTS.each do |email|
+      SunchefMailer.with(contact: self, to: email).new_contact.deliver_later
+    end
     ContactMailer.with(contact: self).new_contact.deliver_later
   end
 end
