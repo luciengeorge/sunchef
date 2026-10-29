@@ -21,7 +21,7 @@ class SunchefMailerTest < ActionMailer::TestCase
     error = Postmark::InactiveRecipientError.new(
       406,
       "",
-      { "Message" => "Found inactive addresses: soraya@sunchef.co." },
+      { "Message" => "Found inactive addresses: hello@sunchef.co." },
     )
 
     mail.message.stub(:deliver, -> { raise error }) do
